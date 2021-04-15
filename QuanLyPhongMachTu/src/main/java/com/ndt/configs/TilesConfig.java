@@ -1,4 +1,4 @@
-package com.ht.config;
+package com.ndt.configs;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

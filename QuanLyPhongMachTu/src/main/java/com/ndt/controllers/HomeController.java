@@ -1,4 +1,4 @@
-package com.ht.springmvcdemo.controller;
+package com.ndt.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -21,8 +21,9 @@ public class HomeController {
     public String login(Model model) { return "login"; }
 
     // Admin - Doctor
-    @RequestMapping(value = "/doctors")
-    public String doctors(Model model) { return "doctors"; }
+//    @RequestMapping(value = "/doctors")
+//    public String doctors(Model model) {
+//        return "doctors"; }
     @RequestMapping(value = "/add-doctor")
     public String addDoctor(Model model) { return "add-doctor"; }
     @RequestMapping(value = "/edit-doctor")

@@ -1,11 +1,9 @@
-package com.ht.config;
+package com.ndt.configs;
 
-import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.support.ResourceBundleMessageSource;
-import org.springframework.web.multipart.commons.CommonsMultipartResolver;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
@@ -15,7 +13,8 @@ import org.springframework.web.servlet.view.JstlView;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages = "com.ht.springmvcdemo")
+@EnableTransactionManagement
+@ComponentScan(basePackages = {"com.ndt.controllers", "com.ndt.models", "com.ndt.repository", "com.ndt.service"})
 public class WebApplicationContextConfig implements WebMvcConfigurer {
 
     @Override
