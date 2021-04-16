@@ -11,114 +11,120 @@ Software Foundation//DTD Tiles Configuration 3.0//EN"
         <put-attribute name="footer" value="/WEB-INF/layout/footer.jsp" />
     </definition>
 <!--Admin-->
-    <definition name="admin" template="/WEB-INF/admin/admin-templates/index.jsp">
+
+<!-- base admin layout -->
+    <definition name="baseAdminLayout" template="/WEB-INF/adminLayout/admin-templates/base-admin.jsp">
         <put-attribute name="title" value="Quản Lý Phòng Mạch Huy Trọng" />
-        <put-attribute name="index-01" value="/WEB-INF/admin/admin-templates/index-01.jsp" />
-        <put-attribute name="index-02" value="/WEB-INF/admin/admin-templates/index-02.jsp" />
+        <put-attribute name="header" value="/WEB-INF/adminLayout/admin-templates/index-01.jsp" />
+        <put-attribute name="nav-bar" value="/WEB-INF/adminLayout/admin-templates/index-02.jsp" />
+        <put-attribute name="content" value="điềm content layout vào đây"/>
+        <put-attribute name="footer" value="/WEB-INF/adminLayout/admin-templates/footer.jsp"/>
+    </definition>
+
+    <definition name="admin" extends="baseAdminLayout">
+        <put-attribute name="content" value="/WEB-INF/adminLayout/admin-templates/index.jsp"/>
     </definition>
 <!--Admin-Login-->
-    <definition name="login" template="/WEB-INF/admin/admin-templates/login.jsp">
-        <put-attribute name="title" value="Đăng Nhập -  Phòng Mạch Huy Trọng" />
-    </definition>
+<!--    <definition name="login" template="/WEB-INF/adminLayout/admin-templates/login.jsp">-->
+<!--        <put-attribute name="title" value="Đăng Nhập -  Phòng Mạch Huy Trọng" />-->
+<!--    </definition>-->
 <!--Admin-Doctor-->
-    <definition name="doctors" template="/WEB-INF/admin/admin-templates/doctors.jsp">
-        <put-attribute name="title" value="Quản Lý Phòng Mạch Huy Trọng" />
-        <put-attribute name="index-01" value="/WEB-INF/admin/admin-templates/index-01.jsp" />
-        <put-attribute name="index-02" value="/WEB-INF/admin/admin-templates/index-02.jsp" />
+    <definition name="doctors" extends="baseAdminLayout">
+        <put-attribute name="content" value="/WEB-INF/adminLayout/admin-templates/doctors.jsp"/>
     </definition>
-    <definition name="add-doctor" template="/WEB-INF/admin/admin-templates/add-doctor.jsp">
-        <put-attribute name="title" value="Quản Lý Phòng Mạch Huy Trọng" />
-        <put-attribute name="index-01" value="/WEB-INF/admin/admin-templates/index-01.jsp" />
-        <put-attribute name="index-02" value="/WEB-INF/admin/admin-templates/index-02.jsp" />
-    </definition>
-    <definition name="edit-doctor" template="/WEB-INF/admin/admin-templates/edit-doctor.jsp">
-        <put-attribute name="title" value="Quản Lý Phòng Mạch Huy Trọng" />
-        <put-attribute name="index-01" value="/WEB-INF/admin/admin-templates/index-01.jsp" />
-        <put-attribute name="index-02" value="/WEB-INF/admin/admin-templates/index-02.jsp" />
-    </definition>
-    <definition name="doctor-profile" template="/WEB-INF/admin/admin-templates/doctor-profile.jsp">
-        <put-attribute name="title" value="Quản Lý Phòng Mạch Huy Trọng" />
-        <put-attribute name="index-01" value="/WEB-INF/admin/admin-templates/index-01.jsp" />
-        <put-attribute name="index-02" value="/WEB-INF/admin/admin-templates/index-02.jsp" />
-    </definition>
-<!--Admin-Patient-->
-    <definition name="patients" template="/WEB-INF/admin/admin-templates/patients.jsp">
-        <put-attribute name="title" value="Quản Lý Phòng Mạch Huy Trọng" />
-        <put-attribute name="index-01" value="/WEB-INF/admin/admin-templates/index-01.jsp" />
-        <put-attribute name="index-02" value="/WEB-INF/admin/admin-templates/index-02.jsp" />
-    </definition>
-    <definition name="add-patient" template="/WEB-INF/admin/admin-templates/add-patient.jsp">
-        <put-attribute name="title" value="Quản Lý Phòng Mạch Huy Trọng" />
-        <put-attribute name="index-01" value="/WEB-INF/admin/admin-templates/index-01.jsp" />
-        <put-attribute name="index-02" value="/WEB-INF/admin/admin-templates/index-02.jsp" />
-    </definition>
-    <definition name="edit-patient" template="/WEB-INF/admin/admin-templates/edit-patient.jsp">
-        <put-attribute name="title" value="Quản Lý Phòng Mạch Huy Trọng" />
-        <put-attribute name="index-01" value="/WEB-INF/admin/admin-templates/index-01.jsp" />
-        <put-attribute name="index-02" value="/WEB-INF/admin/admin-templates/index-02.jsp" />
-    </definition>
-    <definition name="patient-profile" template="/WEB-INF/admin/admin-templates/patient-profile.jsp">
-        <put-attribute name="title" value="Quản Lý Phòng Mạch Huy Trọng" />
-        <put-attribute name="index-01" value="/WEB-INF/admin/admin-templates/index-01.jsp" />
-        <put-attribute name="index-02" value="/WEB-INF/admin/admin-templates/index-02.jsp" />
-    </definition>
-<!--Admin-Report-->
-    <definition name="payment-report" template="/WEB-INF/admin/admin-templates/payment-report.jsp">
-        <put-attribute name="title" value="Quản Lý Phòng Mạch Huy Trọng" />
-        <put-attribute name="index-01" value="/WEB-INF/admin/admin-templates/index-01.jsp" />
-        <put-attribute name="index-02" value="/WEB-INF/admin/admin-templates/index-02.jsp" />
-    </definition>
-    <definition name="income-report" template="/WEB-INF/admin/admin-templates/income-report.jsp">
-        <put-attribute name="title" value="Quản Lý Phòng Mạch Huy Trọng" />
-        <put-attribute name="index-01" value="/WEB-INF/admin/admin-templates/index-01.jsp" />
-        <put-attribute name="index-02" value="/WEB-INF/admin/admin-templates/index-02.jsp" />
-    </definition>
-    <definition name="sales-report" template="/WEB-INF/admin/admin-templates/sales-report.jsp">
-        <put-attribute name="title" value="Quản Lý Phòng Mạch Huy Trọng" />
-        <put-attribute name="index-01" value="/WEB-INF/admin/admin-templates/index-01.jsp" />
-        <put-attribute name="index-02" value="/WEB-INF/admin/admin-templates/index-02.jsp" />
-    </definition>
-<!--Admin-Payment-->
-    <definition name="payments" template="/WEB-INF/admin/admin-templates/payments.jsp">
-        <put-attribute name="title" value="Quản Lý Phòng Mạch Huy Trọng" />
-        <put-attribute name="index-01" value="/WEB-INF/admin/admin-templates/index-01.jsp" />
-        <put-attribute name="index-02" value="/WEB-INF/admin/admin-templates/index-02.jsp" />
-    </definition>
-    <definition name="add-payment" template="/WEB-INF/admin/admin-templates/add-payment.jsp">
-        <put-attribute name="title" value="Quản Lý Phòng Mạch Huy Trọng" />
-        <put-attribute name="index-01" value="/WEB-INF/admin/admin-templates/index-01.jsp" />
-        <put-attribute name="index-02" value="/WEB-INF/admin/admin-templates/index-02.jsp" />
-    </definition>
-    <definition name="patient-invoice" template="/WEB-INF/admin/admin-templates/patient-invoice.jsp">
-        <put-attribute name="title" value="Quản Lý Phòng Mạch Huy Trọng" />
-        <put-attribute name="index-01" value="/WEB-INF/admin/admin-templates/index-01.jsp" />
-        <put-attribute name="index-02" value="/WEB-INF/admin/admin-templates/index-02.jsp" />
-    </definition>
-<!--Admin-Appointment-->
-    <definition name="doctor-schedule" template="/WEB-INF/admin/admin-templates/doctor-schedule.jsp">
-        <put-attribute name="title" value="Quản Lý Phòng Mạch Huy Trọng" />
-        <put-attribute name="index-01" value="/WEB-INF/admin/admin-templates/index-01.jsp" />
-        <put-attribute name="index-02" value="/WEB-INF/admin/admin-templates/index-02.jsp" />
-    </definition>
-    <definition name="book-appointment" template="/WEB-INF/admin/admin-templates/book-appointment.jsp">
-        <put-attribute name="title" value="Quản Lý Phòng Mạch Huy Trọng" />
-        <put-attribute name="index-01" value="/WEB-INF/admin/admin-templates/index-01.jsp" />
-        <put-attribute name="index-02" value="/WEB-INF/admin/admin-templates/index-02.jsp" />
-    </definition>
-<!--Mail-->
-    <definition name="inbox" template="/WEB-INF/admin/admin-templates/inbox.jsp">
-        <put-attribute name="title" value="Quản Lý Phòng Mạch Huy Trọng" />
-        <put-attribute name="index-01" value="/WEB-INF/admin/admin-templates/index-01.jsp" />
-        <put-attribute name="index-02" value="/WEB-INF/admin/admin-templates/index-02.jsp" />
-    </definition>
-    <definition name="inbox-detail" template="/WEB-INF/admin/admin-templates/inbox-detail.jsp">
-        <put-attribute name="title" value="Quản Lý Phòng Mạch Huy Trọng" />
-        <put-attribute name="index-01" value="/WEB-INF/admin/admin-templates/index-01.jsp" />
-        <put-attribute name="index-02" value="/WEB-INF/admin/admin-templates/index-02.jsp" />
-    </definition>
-    <definition name="compose" template="/WEB-INF/admin/admin-templates/compose.jsp">
-        <put-attribute name="title" value="Quản Lý Phòng Mạch Huy Trọng" />
-        <put-attribute name="index-01" value="/WEB-INF/admin/admin-templates/index-01.jsp" />
-        <put-attribute name="index-02" value="/WEB-INF/admin/admin-templates/index-02.jsp" />
-    </definition>
+<!--    <definition name="add-doctor" template="/WEB-INF/adminLayout/admin-templates/add-doctor.jsp">-->
+<!--        <put-attribute name="title" value="Quản Lý Phòng Mạch Huy Trọng" />-->
+<!--        <put-attribute name="index-01" value="/WEB-INF/adminLayout/admin-templates/index-01.jsp" />-->
+<!--        <put-attribute name="index-02" value="/WEB-INF/adminLayout/admin-templates/index-02.jsp" />-->
+<!--    </definition>-->
+<!--    <definition name="edit-doctor" template="/WEB-INF/adminLayout/admin-templates/edit-doctor.jsp">-->
+<!--        <put-attribute name="title" value="Quản Lý Phòng Mạch Huy Trọng" />-->
+<!--        <put-attribute name="index-01" value="/WEB-INF/adminLayout/admin-templates/index-01.jsp" />-->
+<!--        <put-attribute name="index-02" value="/WEB-INF/adminLayout/admin-templates/index-02.jsp" />-->
+<!--    </definition>-->
+<!--    <definition name="doctor-profile" template="/WEB-INF/adminLayout/admin-templates/doctor-profile.jsp">-->
+<!--        <put-attribute name="title" value="Quản Lý Phòng Mạch Huy Trọng" />-->
+<!--        <put-attribute name="index-01" value="/WEB-INF/adminLayout/admin-templates/index-01.jsp" />-->
+<!--        <put-attribute name="index-02" value="/WEB-INF/adminLayout/admin-templates/index-02.jsp" />-->
+<!--    </definition>-->
+<!--&lt;!&ndash;Admin-Patient&ndash;&gt;-->
+<!--    <definition name="patients" template="/WEB-INF/adminLayout/admin-templates/patients.jsp">-->
+<!--        <put-attribute name="title" value="Quản Lý Phòng Mạch Huy Trọng" />-->
+<!--        <put-attribute name="index-01" value="/WEB-INF/adminLayout/admin-templates/index-01.jsp" />-->
+<!--        <put-attribute name="index-02" value="/WEB-INF/adminLayout/admin-templates/index-02.jsp" />-->
+<!--    </definition>-->
+<!--    <definition name="add-patient" template="/WEB-INF/adminLayout/admin-templates/add-patient.jsp">-->
+<!--        <put-attribute name="title" value="Quản Lý Phòng Mạch Huy Trọng" />-->
+<!--        <put-attribute name="index-01" value="/WEB-INF/adminLayout/admin-templates/index-01.jsp" />-->
+<!--        <put-attribute name="index-02" value="/WEB-INF/adminLayout/admin-templates/index-02.jsp" />-->
+<!--    </definition>-->
+<!--    <definition name="edit-patient" template="/WEB-INF/adminLayout/admin-templates/edit-patient.jsp">-->
+<!--        <put-attribute name="title" value="Quản Lý Phòng Mạch Huy Trọng" />-->
+<!--        <put-attribute name="index-01" value="/WEB-INF/adminLayout/admin-templates/index-01.jsp" />-->
+<!--        <put-attribute name="index-02" value="/WEB-INF/adminLayout/admin-templates/index-02.jsp" />-->
+<!--    </definition>-->
+<!--    <definition name="patient-profile" template="/WEB-INF/adminLayout/admin-templates/patient-profile.jsp">-->
+<!--        <put-attribute name="title" value="Quản Lý Phòng Mạch Huy Trọng" />-->
+<!--        <put-attribute name="index-01" value="/WEB-INF/adminLayout/admin-templates/index-01.jsp" />-->
+<!--        <put-attribute name="index-02" value="/WEB-INF/adminLayout/admin-templates/index-02.jsp" />-->
+<!--    </definition>-->
+<!--&lt;!&ndash;Admin-Report&ndash;&gt;-->
+<!--    <definition name="payment-report" template="/WEB-INF/adminLayout/admin-templates/payment-report.jsp">-->
+<!--        <put-attribute name="title" value="Quản Lý Phòng Mạch Huy Trọng" />-->
+<!--        <put-attribute name="index-01" value="/WEB-INF/adminLayout/admin-templates/index-01.jsp" />-->
+<!--        <put-attribute name="index-02" value="/WEB-INF/adminLayout/admin-templates/index-02.jsp" />-->
+<!--    </definition>-->
+<!--    <definition name="income-report" template="/WEB-INF/adminLayout/admin-templates/income-report.jsp">-->
+<!--        <put-attribute name="title" value="Quản Lý Phòng Mạch Huy Trọng" />-->
+<!--        <put-attribute name="index-01" value="/WEB-INF/adminLayout/admin-templates/index-01.jsp" />-->
+<!--        <put-attribute name="index-02" value="/WEB-INF/adminLayout/admin-templates/index-02.jsp" />-->
+<!--    </definition>-->
+<!--    <definition name="sales-report" template="/WEB-INF/adminLayout/admin-templates/sales-report.jsp">-->
+<!--        <put-attribute name="title" value="Quản Lý Phòng Mạch Huy Trọng" />-->
+<!--        <put-attribute name="index-01" value="/WEB-INF/adminLayout/admin-templates/index-01.jsp" />-->
+<!--        <put-attribute name="index-02" value="/WEB-INF/adminLayout/admin-templates/index-02.jsp" />-->
+<!--    </definition>-->
+<!--&lt;!&ndash;Admin-Payment&ndash;&gt;-->
+<!--    <definition name="payments" template="/WEB-INF/adminLayout/admin-templates/payments.jsp">-->
+<!--        <put-attribute name="title" value="Quản Lý Phòng Mạch Huy Trọng" />-->
+<!--        <put-attribute name="index-01" value="/WEB-INF/adminLayout/admin-templates/index-01.jsp" />-->
+<!--        <put-attribute name="index-02" value="/WEB-INF/adminLayout/admin-templates/index-02.jsp" />-->
+<!--    </definition>-->
+<!--    <definition name="add-payment" template="/WEB-INF/adminLayout/admin-templates/add-payment.jsp">-->
+<!--        <put-attribute name="title" value="Quản Lý Phòng Mạch Huy Trọng" />-->
+<!--        <put-attribute name="index-01" value="/WEB-INF/adminLayout/admin-templates/index-01.jsp" />-->
+<!--        <put-attribute name="index-02" value="/WEB-INF/adminLayout/admin-templates/index-02.jsp" />-->
+<!--    </definition>-->
+<!--    <definition name="patient-invoice" template="/WEB-INF/adminLayout/admin-templates/patient-invoice.jsp">-->
+<!--        <put-attribute name="title" value="Quản Lý Phòng Mạch Huy Trọng" />-->
+<!--        <put-attribute name="index-01" value="/WEB-INF/adminLayout/admin-templates/index-01.jsp" />-->
+<!--        <put-attribute name="index-02" value="/WEB-INF/adminLayout/admin-templates/index-02.jsp" />-->
+<!--    </definition>-->
+<!--&lt;!&ndash;Admin-Appointment&ndash;&gt;-->
+<!--    <definition name="doctor-schedule" template="/WEB-INF/adminLayout/admin-templates/doctor-schedule.jsp">-->
+<!--        <put-attribute name="title" value="Quản Lý Phòng Mạch Huy Trọng" />-->
+<!--        <put-attribute name="index-01" value="/WEB-INF/adminLayout/admin-templates/index-01.jsp" />-->
+<!--        <put-attribute name="index-02" value="/WEB-INF/adminLayout/admin-templates/index-02.jsp" />-->
+<!--    </definition>-->
+<!--    <definition name="book-appointment" template="/WEB-INF/adminLayout/admin-templates/book-appointment.jsp">-->
+<!--        <put-attribute name="title" value="Quản Lý Phòng Mạch Huy Trọng" />-->
+<!--        <put-attribute name="index-01" value="/WEB-INF/adminLayout/admin-templates/index-01.jsp" />-->
+<!--        <put-attribute name="index-02" value="/WEB-INF/adminLayout/admin-templates/index-02.jsp" />-->
+<!--    </definition>-->
+<!--&lt;!&ndash;Mail&ndash;&gt;-->
+<!--    <definition name="inbox" template="/WEB-INF/adminLayout/admin-templates/inbox.jsp">-->
+<!--        <put-attribute name="title" value="Quản Lý Phòng Mạch Huy Trọng" />-->
+<!--        <put-attribute name="index-01" value="/WEB-INF/adminLayout/admin-templates/index-01.jsp" />-->
+<!--        <put-attribute name="index-02" value="/WEB-INF/adminLayout/admin-templates/index-02.jsp" />-->
+<!--    </definition>-->
+<!--    <definition name="inbox-detail" template="/WEB-INF/adminLayout/admin-templates/inbox-detail.jsp">-->
+<!--        <put-attribute name="title" value="Quản Lý Phòng Mạch Huy Trọng" />-->
+<!--        <put-attribute name="index-01" value="/WEB-INF/adminLayout/admin-templates/index-01.jsp" />-->
+<!--        <put-attribute name="index-02" value="/WEB-INF/adminLayout/admin-templates/index-02.jsp" />-->
+<!--    </definition>-->
+<!--    <definition name="compose" template="/WEB-INF/adminLayout/admin-templates/compose.jsp">-->
+<!--        <put-attribute name="title" value="Quản Lý Phòng Mạch Huy Trọng" />-->
+<!--        <put-attribute name="index-01" value="/WEB-INF/adminLayout/admin-templates/index-01.jsp" />-->
+<!--        <put-attribute name="index-02" value="/WEB-INF/adminLayout/admin-templates/index-02.jsp" />-->
+<!--    </definition>-->
 </tiles-definitions>

@@ -128,19 +128,6 @@
     </div>
 </div>
 
-<script src="<c:url value="/admin-resources/plugins/bower_components/jquery/dist/jquery.min.js"/>"></script>
-<script src="<c:url value="/admin-resources/bootstrap/dist/js/tether.min.js"/>"></script>
-<script src="<c:url value="/admin-resources/bootstrap/dist/js/bootstrap.min.js"/>"></script>
-<script src="<c:url value="/admin-resources/plugins/bower_components/bootstrap-extension/js/bootstrap-extension.min.js"/>"></script>
-<script src="<c:url value="/admin-resources/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.js"/>"></script>
-<script src="<c:url value="/admin-resources/js/jquery.slimscroll.js"/>"></script>
-<script src="<c:url value="/admin-resources/js/waves.js"/>"></script>
-<script src="<c:url value="/admin-resources/js/custom.min.js"/>"></script>
-<script src="<c:url value="/admin-resources/plugins/bower_components/calendar/jquery-ui.min.js"/>"></script>
-<script src="<c:url value="/admin-resources/plugins/bower_components/moment/moment.js"/>"></script>
-<script src="<c:url value="/admin-resources/plugins/bower_components/calendar/dist/fullcalendar.min.js"/>"></script>
-<script src="<c:url value="/admin-resources/plugins/bower_components/calendar/dist/jquery.fullcalendar.js"/>"></script>
-<script src="<c:url value="/admin-resources/plugins/bower_components/calendar/dist/cal-init.js"/>"></script>
-<script src="<c:url value="/admin-resources/plugins/bower_components/styleswitcher/jQuery.style.switcher.js"/>"></script>
+
 </body>
 </html>
