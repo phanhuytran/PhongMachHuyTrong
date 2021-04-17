@@ -14,9 +14,11 @@ public class DoctorController {
     @Autowired
     IBacSiService iBacSiService;
 
+
     @GetMapping()
     public String index(ModelMap model) {
         model.addAttribute("doctors", iBacSiService.getAll(BacSi.class));
         return "doctors";
     }
+
 }

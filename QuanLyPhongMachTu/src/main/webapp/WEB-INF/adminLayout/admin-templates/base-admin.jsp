@@ -34,7 +34,7 @@
 </head>
 <body>
 
-<div class="wrapper">
+<div id="wrapper">
     <tiles:insertAttribute name="header"/>
     <tiles:insertAttribute name="nav-bar" />
     <tiles:insertAttribute name="content"/>
