@@ -56,7 +56,7 @@
                                                     class="fas fa-chevron-right"></span></span></a>
                 <ul class="nav nav-second-level">
                     <li><a href="/doctors">Tất cả Bác sĩ</a></li>
-                    <li><a href="/add-doctor">Thêm Bác sĩ</a></li>
+                    <li><a href="/doctors/add">Thêm Bác sĩ</a></li>
                     <li><a href="/edit-doctor">Chỉnh sửa Bác sĩ</a></li>
                     <li><a href="/doctor-profile">Thông tin Bác sĩ</a></li>
                 </ul>

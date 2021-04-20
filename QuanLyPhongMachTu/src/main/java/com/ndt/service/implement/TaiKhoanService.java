@@ -35,4 +35,9 @@ public class TaiKhoanService extends GenericService<TaiKhoan> implements ITaiKho
     public boolean themTaiKhoanVaBacSi(TaiKhoan taiKhoan, BacSi bacSi) {
         return taiKhoanRepository.themTaiKhoanVaBacSi(taiKhoan, bacSi);
     }
+
+    @Override
+    public List<TaiKhoan> getTaiKhoanBacSiTrong() {
+        return taiKhoanRepository.getTaiKhoanBacSiTrong();
+    }
 }

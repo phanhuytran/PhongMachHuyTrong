@@ -1,6 +1,8 @@
 package com.ndt.models;
 
 
+import org.springframework.web.multipart.MultipartFile;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
@@ -9,9 +11,9 @@ import java.util.Set;
 @Entity
 @Table(name = "bacsi")
 public class BacSi implements Serializable {
-    @Id
-    @Column(name = "id", length = 36)
-    private String id;
+//    @Id
+//    @Column(name = "id", length = 36)
+//    private String id;
     @Column(name = "Ho", length = 10, nullable = false)
     private String ho;
     @Column(name = "Ten", length = 45, nullable = false)
@@ -24,6 +26,8 @@ public class BacSi implements Serializable {
     private String dienThoai;
     @Column(name = "Image", length = 200)
     private String image;
+    @Transient
+    private MultipartFile img;
     @Column(name = "QueQuan")
     private String queQuan;
     @Column(name = "Email")
@@ -33,7 +37,8 @@ public class BacSi implements Serializable {
     @OneToMany(mappedBy = "bacSi", fetch = FetchType.LAZY)
     private Set<ToaThuoc> dsToaThuoc;
     @OneToOne
-    @MapsId
+    @Id
+//    @MapsId
     @JoinColumn(name = "id")
     public TaiKhoan taiKhoan;
     @OneToMany(mappedBy = "bacSi", fetch = FetchType.LAZY)
@@ -42,7 +47,7 @@ public class BacSi implements Serializable {
     @Override
     public String toString() {
         return "BacSi{" +
-                "id='" + id + '\'' +
+//                "id='" + id + '\'' +
                 ", ho='" + ho + '\'' +
                 ", ten='" + ten + '\'' +
                 ", gioiTinh='" + gioiTinh + '\'' +
@@ -55,13 +60,13 @@ public class BacSi implements Serializable {
                 '}';
     }
 
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
+//    public String getId() {
+//        return id;
+//    }
+//
+//    public void setId(String id) {
+//        this.id = id;
+//    }
 
     public String getHo() {
         return ho;
@@ -157,5 +162,13 @@ public class BacSi implements Serializable {
 
     public void setDsPhieuKhamBenh(Set<PhieuKhamBenh> dsPhieuKhamBenh) {
         this.dsPhieuKhamBenh = dsPhieuKhamBenh;
+    }
+
+    public MultipartFile getImg() {
+        return img;
+    }
+
+    public void setImg(MultipartFile img) {
+        this.img = img;
     }
 }

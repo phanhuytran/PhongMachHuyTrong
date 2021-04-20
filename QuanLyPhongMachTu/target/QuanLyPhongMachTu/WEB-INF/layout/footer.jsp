@@ -7,7 +7,7 @@
             <div class="col-sm-6 col-md-4">
                 <div class="wow fadeInDown" data-wow-delay="0.1s">
                     <div class="widget">
-                        <h5>Phòng Mạch Huy Trọng</h5>
+                        <h5>Tình báo tội phạm</h5>
                         <p>Cung cấp chất lượng chăm sóc sức khỏe tốt nhất cho bạn</p>
                     </div>
                 </div>
@@ -79,7 +79,7 @@
                 <div class="col-sm-6 col-md-6 col-lg-6">
                     <div class="wow fadeInLeft" data-wow-delay="0.1s">
                         <div class="text-left">
-                            <p>&copy;Copyright 2020 - Huy & Trọng. Đã đăng ký bản quyền.</p>
+                            <p>&copy;Copyright 2020 - Nhóm Easy Game. Đã đăng ký bản quyền.</p>
                         </div>
                     </div>
                 </div>

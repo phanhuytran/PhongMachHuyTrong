@@ -8,6 +8,7 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Repository
@@ -37,5 +38,14 @@ public class TaiKhoanRepository extends GenericRepository<TaiKhoan> implements I
         currentSession().save(bacSi);
 
         return t != null;
+    }
+
+    @Override
+    @Transactional(propagation = Propagation.REQUIRED, readOnly = true)
+    public List<TaiKhoan> getTaiKhoanBacSiTrong() {
+        List<TaiKhoan> result = new ArrayList<>();
+        result = currentSession().createSQLQuery("CALL getTaiKhoanConTrongBacSi()")
+                .addEntity(TaiKhoan.class).getResultList();
+        return result;
     }
 }

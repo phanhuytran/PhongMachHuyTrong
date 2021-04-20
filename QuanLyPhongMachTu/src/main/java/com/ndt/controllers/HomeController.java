@@ -24,8 +24,6 @@ public class HomeController {
 //    @RequestMapping(value = "/doctors")
 //    public String doctors(Model model) {
 //        return "doctors"; }
-    @RequestMapping(value = "/add-doctor")
-    public String addDoctor(Model model) { return "add-doctor"; }
     @RequestMapping(value = "/edit-doctor")
     public String editDoctor(Model model) { return "edit-doctor"; }
     @RequestMapping(value = "/doctor-profile")

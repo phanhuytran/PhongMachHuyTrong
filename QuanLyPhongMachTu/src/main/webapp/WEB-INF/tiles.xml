@@ -33,7 +33,8 @@ Software Foundation//DTD Tiles Configuration 3.0//EN"
         <put-attribute name="content" value="/WEB-INF/adminLayout/admin-templates/doctors.jsp"/>
     </definition>
     <definition name="add-doctor" extends="baseAdminLayout">
-        <put-attribute name="content" value="/WEB-INF/adminLayout/admin-templates/add-doctor" />
+        <put-attribute name="title" value="thêm bác sĩ" />
+        <put-attribute name="content" value="/WEB-INF/adminLayout/admin-templates/add-doctor.jsp" />
     </definition>
     <definition name="edit-doctor" template="/WEB-INF/adminLayout/admin-templates/edit-doctor.jsp">
         <put-attribute name="title" value="Quản Lý Phòng Mạch Huy Trọng" />
