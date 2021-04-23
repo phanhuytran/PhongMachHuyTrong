@@ -27,7 +27,6 @@
             <version>4.11</version>
             <scope>test</scope>
         </dependency>
-
         <!-- Hỗ trợ upload tập tin -->
         <dependency>
             <groupId>commons-fileupload</groupId>
@@ -76,6 +75,17 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-orm</artifactId>
             <version>5.2.3.RELEASE</version>
+        </dependency>
+        <!-- Đăng nhập -->
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-web</artifactId>
+            <version>5.2.1.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-config</artifactId>
+            <version>5.2.1.RELEASE</version>
         </dependency>
     </dependencies>
 

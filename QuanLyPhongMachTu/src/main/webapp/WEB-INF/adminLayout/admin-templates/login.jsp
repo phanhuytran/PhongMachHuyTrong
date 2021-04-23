@@ -3,6 +3,7 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles" %>
+
 <html>
 <head>
     <meta charset="utf-8">
@@ -29,15 +30,16 @@
 <section id="wrapper" class="login-register">
     <div class="login-box login-sidebar">
         <div class="white-box">
-            <form class="form-horizontal form-material" id="loginform" action="/admin">
+
+            <form class="form-horizontal form-material" id="loginform" action="${pageContext.request.contextPath}/taikhoan/login" method="POST">
                 <a href="javascript:void(0)" class="text-center db"><img style="width: 70%" src="<c:url value="/resources/img/logo.png"/>" alt="Home" /></a>
                 <div class="form-group m-t-40">
                     <div class="col-xs-12">
-                        <input class="form-control" type="text" required="" placeholder="Tên đăng nhập"> </div>
+                        <input name="username" id="usernameId" class="form-control" type="text" required="" placeholder="Tên đăng nhập"> </div>
                 </div>
                 <div class="form-group">
                     <div class="col-xs-12">
-                        <input class="form-control" type="password" required="" placeholder="Mật khẩu"> </div>
+                        <input name="password" id="passwordId" class="form-control" type="password" required="" placeholder="Mật khẩu"> </div>
                 </div>
                 <div class="form-group">
                     <div class="col-md-12">
@@ -74,7 +76,8 @@
                 </div>
                 <div class="form-group ">
                     <div class="col-xs-12">
-                        <input class="form-control" type="text" required="" placeholder="Email"> </div>
+                        <input class="form-control" type="text" required="" placeholder="Email">
+                    </div>
                 </div>
                 <div class="form-group text-center m-t-20">
                     <div class="col-xs-12">

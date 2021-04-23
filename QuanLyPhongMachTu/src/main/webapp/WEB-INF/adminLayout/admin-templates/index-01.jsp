@@ -159,13 +159,13 @@
                 <a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" style="margin-right: 20px;">
                     <img src="<c:url value="/admin-resources/plugins/images/users/d1.jpg"/>" alt="user-img"
                          width="36" class="img-circle">
-                    <b class="hidden-xs">Dr. Steave</b>
+                    <b class="hidden-xs">${pageContext.request.userPrincipal.name}</b>
                 </a>
                 <ul class="dropdown-menu dropdown-user animated flipInY">
                     <li><a href="javascript:void(0)"><i class="far fa-user"></i> Thông tin của tôi</a></li>
                     <li><a href="javascript:void(0)"><i class="far fa-envelope"></i> Hộp thư</a></li>
                     <li><a href="javascript:void(0)"><i class="fas fa-cog"></i> Cài đặt tài khoản</a></li>
-                    <li><a href="/login"><i class="fas fa-power-off"></i> Đăng xuất</a></li>
+                    <li><a href="/logout"><i class="fas fa-power-off"></i> Đăng xuất</a></li>
                 </ul>
             </li>
         </ul>

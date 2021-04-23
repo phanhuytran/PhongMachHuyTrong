@@ -1,11 +1,14 @@
 package com.ndt.configs;
 
+
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 public class DispatcherServleInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
     @Override
     protected Class<?>[] getRootConfigClasses() {
-        return new Class[] {TilesConfig.class, HibernateConfig.class};
+
+        return new Class[] {TilesConfig.class, HibernateConfig.class, SpringSecurityConfig.class
+        };
     }
 
     @Override

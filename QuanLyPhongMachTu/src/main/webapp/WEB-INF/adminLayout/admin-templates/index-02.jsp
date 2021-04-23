@@ -23,7 +23,7 @@
                     <li><a href="javascript:void(0)"><i class="far fa-user"></i> Thông tin của tôi</a></li>
                     <li><a href="javascript:void(0)"><i class="far fa-envelope"></i> Hộp thư</a></li>
                     <li><a href="javascript:void(0)"><i class="fas fa-cog"></i> Cài đặt tài khoản</a></li>
-                    <li><a href="/login"><i class="fas fa-power-off"></i> Đăng xuất</a></li>
+                    <li><a href="/logout"><i class="fas fa-power-off"></i> Đăng xuất</a></li>
                 </ul>
             </li>
             <li><a href="/admin" class="waves-effect"><i class="fas fa-tachometer-alt"
@@ -93,7 +93,7 @@
                 </ul>
             </li>
             <li>
-                <a href="/login" class="waves-effect">
+                <a href="/logout" class="waves-effect">
                     <i class="fas fa-power-off" style="margin-right: 20px"></i>
                     <span class="hide-menu"> Đăng xuất </span>
                 </a>

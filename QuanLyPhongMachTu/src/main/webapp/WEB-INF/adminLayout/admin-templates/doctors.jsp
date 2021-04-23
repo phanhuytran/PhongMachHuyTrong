@@ -13,7 +13,7 @@
                         <div class="white-box">
                             <div class="row">
                                 <div class="col-md-4 col-sm-4 text-center">
-                                    <a href="contact-detail.html">
+                                    <a href="/contact-detail">
                                         <img src="<c:url value="/admin-resources/plugins/images/users/d1.jpg"/>" alt="user" class="img-circle img-responsive">
                                     </a>
                                 </div>
