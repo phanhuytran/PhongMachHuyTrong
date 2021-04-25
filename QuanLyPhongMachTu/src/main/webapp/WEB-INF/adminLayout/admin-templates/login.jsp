@@ -31,9 +31,18 @@
 <section id="wrapper" class="login-register">
     <div class="login-box login-sidebar">
         <div class="white-box">
-
             <form class="form-horizontal form-material" id="loginform" action="${pageContext.request.contextPath}/taikhoan/login" method="POST">
                 <a href="javascript:void(0)" class="text-center db"><img style="width: 70%" src="<c:url value="/resources/img/logo.png"/>" alt="Home" /></a>
+                <c:if test="${param.error != null}">
+                    <div style="color: red; margin: 50px 0 -15px 0">
+                        Tên đăng nhập hoặc mật khẩu không hợp lệ!
+                    </div>
+                </c:if>
+                <c:if test="${param.accessDenied != null}">
+                    <div style="color: red; margin: 50px 0 -15px 0">
+                        Bạn không có quyền truy cập trang này!
+                    </div>
+                </c:if>
                 <div class="form-group m-t-40">
                     <div class="col-xs-12">
                         <input name="username" id="usernameId" class="form-control" type="text" required="" placeholder="Tên đăng nhập"> </div>
