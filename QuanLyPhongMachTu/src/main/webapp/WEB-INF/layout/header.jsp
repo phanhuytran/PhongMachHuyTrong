@@ -1,6 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%--<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>--%>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 
 <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
     <div class="top-area">
@@ -35,9 +35,9 @@
                                     <div class="sub-content">
                                         <ul>
                                             <a href="#"><li><i class="far fa-user"></i><span style="margin-left: 8%"></span>Xem thông tin</li></a>
-<%--                                            <sec:authorize access="hasAnyRole('ROLE_ADMIN')">--%>
-<%--                                                <a href="/admin"><li><i class="fas fa-tasks"></i><span style="margin-left: 8%"></span>Quản lý phòng mạch</li></a>--%>
-<%--                                            </sec:authorize>--%>
+                                            <sec:authorize access="hasAnyRole('ROLE_ADMIN')">
+                                                <a href="/admin" target="_blank"><li><i class="fas fa-tasks"></i><span style="margin-left: 8%"></span>Quản lý phòng mạch</li></a>
+                                            </sec:authorize>
                                             <a href="/logout"><li><i class="fas fa-sign-out-alt"></i><span style="margin-left: 8%"></span>Đăng xuất</li></a>
                                         </ul>
                                     </div>

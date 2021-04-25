@@ -23,6 +23,7 @@
     <link href="<c:url value="/admin-resources/css/animate.css"/>" rel="stylesheet">
     <link href="<c:url value="/admin-resources/css/style.min.css"/>" rel="stylesheet">
     <link href="<c:url value="/admin-resources/css/colors/megna.css"/>" id="theme" rel="stylesheet">
+    <link href="<c:url value="/resources/css/sub-content.css"/>" rel="stylesheet">
     <script>
         (function (i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r;
@@ -48,6 +49,9 @@
             <div class="row bg-title">
                 <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
                     <h4 class="page-title">Thêm mới bệnh nhân</h4>
+                </div>
+                <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+                    <a href="/" target="_blank" class="btn btn-danger pull-right m-l-20 btn-rounded btn-outline hidden-xs hidden-sm waves-effect waves-light">Trang chủ</a>
                 </div>
             </div>
             <div class="row">

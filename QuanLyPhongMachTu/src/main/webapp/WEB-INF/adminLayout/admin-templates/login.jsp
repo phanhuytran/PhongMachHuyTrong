@@ -21,6 +21,7 @@
     <link href="<c:url value="/admin-resources/css/animate.css"/>" rel="stylesheet">
     <link href="<c:url value="/admin-resources/css/style.min.css"/>" rel="stylesheet">
     <link href="<c:url value="/admin-resources/css/colors/megna.css"/>" id="theme" rel="stylesheet">
+    <link href="<c:url value="/resources/css/sub-content.css"/>" rel="stylesheet">
 </head>
 
 <body>

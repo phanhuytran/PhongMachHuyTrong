@@ -21,14 +21,8 @@
     <link href="<c:url value="/admin-resources/css/animate.css"/>" rel="stylesheet">
     <link href="<c:url value="/admin-resources/css/style.min.css"/>" rel="stylesheet">
     <link href="<c:url value="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>" rel="stylesheet"/>
-<%--    <link href="<c:url value="/admin-resources/bootstrap/dist/css/bootstrap.min.css"/>" rel="stylesheet">--%>
-<%--    <link href="<c:url value="/admin-resources/plugins/bower_components/bootstrap-extension/css/bootstrap-extension.css"/>" rel="stylesheet">--%>
-<%--    <link href="<c:url value="/admin-resources/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css"/>" rel="stylesheet">--%>
-<%--    <link href="<c:url value="/admin-resources/plugins/bower_components/bootstrap-datepicker/bootstrap-datepicker.min.css"/>" rel="stylesheet" type="text/css" />--%>
-<%--    <link href="<c:url value="/admin-resources/css/animate.css"/>" rel="stylesheet">--%>
-<%--    <link href="<c:url value="/admin-resources/css/style.min.css"/>" rel="stylesheet">--%>
     <link href="<c:url value="/admin-resources/css/colors/megna.css"/>" id="theme" rel="stylesheet">
-<%--    <link href="<c:url value="/admin-resources/plugins/bower_components/Magnific-Popup-master/dist/magnific-popup.css"/>" rel="stylesheet">--%>
+    <link href="<c:url value="/resources/css/sub-content.css"/>" rel="stylesheet">
 </head>
 
 <body>
@@ -40,6 +34,9 @@
             <div class="row bg-title">
                 <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
                     <h4 class="page-title">Tất cả bệnh nhân</h4>
+                </div>
+                <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+                    <a href="/" target="_blank" class="btn btn-danger pull-right m-l-20 btn-rounded btn-outline hidden-xs hidden-sm waves-effect waves-light">Trang chủ</a>
                 </div>
             </div>
             <div class="row el-element-overlay">

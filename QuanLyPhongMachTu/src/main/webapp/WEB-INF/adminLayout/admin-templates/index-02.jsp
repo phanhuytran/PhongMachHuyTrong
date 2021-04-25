@@ -16,7 +16,7 @@
             <li class="user-pro">
                 <a href="#" class="waves-effect">
                     <img src="<c:url value="/admin-resources/plugins/images/users/d1.jpg"/>" alt="user-img"
-                         class="img-circle"> <span class="hide-menu">Dr. Steve Gection <span style="margin-top: 2px"
+                         class="img-circle"> <span class="hide-menu">${pageContext.request.userPrincipal.name} <span style="margin-top: 2px"
                                                                                              class="fas fa-chevron-right"></span></span>
                 </a>
                 <ul class="nav nav-second-level">
