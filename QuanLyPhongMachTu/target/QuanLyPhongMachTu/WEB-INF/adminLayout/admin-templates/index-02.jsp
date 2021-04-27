@@ -67,7 +67,7 @@
                                                        class="fas fa-chevron-right"></span></span></a>
                 <ul class="nav nav-second-level">
                     <li><a href="/patients">Tất cả bệnh nhân</a></li>
-                    <li><a href="/add-patient">Thêm bệnh nhân</a></li>
+                    <li><a href="/patients/add">Thêm bệnh nhân</a></li>
                     <li><a href="/edit-patient">Chỉnh sửa bệnh nhân</a></li>
                     <li><a href="/patient-profile">Thông tin bệnh nhân</a></li>
                 </ul>

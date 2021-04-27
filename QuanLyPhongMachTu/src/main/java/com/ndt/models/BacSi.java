@@ -5,6 +5,8 @@ import org.springframework.web.multipart.MultipartFile;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Set;
 
@@ -24,14 +26,15 @@ public class BacSi implements Serializable {
     private Date ngaySinh;
     @Column(name = "DienThoai", length = 10, nullable = false)
     private String dienThoai;
-    @Column(name = "Image", length = 200)
-    private String image;
-    @Transient
-    private MultipartFile img;
+
     @Column(name = "QueQuan")
     private String queQuan;
     @Column(name = "Email")
     private String email;
+    @Column(name = "Image", length = 200)
+    private String image;
+    @Transient
+    private MultipartFile img;
     @OneToMany(mappedBy = "bacSi", fetch = FetchType.LAZY)
     private Set<PhieuKhamBenh> dsPhieuKhamBenh;
     @OneToMany(mappedBy = "bacSi", fetch = FetchType.LAZY)
@@ -59,7 +62,7 @@ public class BacSi implements Serializable {
                 ", taiKhoan=" + taiKhoan +
                 '}';
     }
-
+//
 //    public String getId() {
 //        return id;
 //    }
@@ -67,6 +70,7 @@ public class BacSi implements Serializable {
 //    public void setId(String id) {
 //        this.id = id;
 //    }
+
 
     public String getHo() {
         return ho;
@@ -108,22 +112,6 @@ public class BacSi implements Serializable {
         this.dienThoai = dienThoai;
     }
 
-    public Set<ToaThuoc> getDsToaThuoc() {
-        return dsToaThuoc;
-    }
-
-    public void setDsToaThuoc(Set<ToaThuoc> dsToaThuoc) {
-        this.dsToaThuoc = dsToaThuoc;
-    }
-
-    public TaiKhoan getTaiKhoan() {
-        return taiKhoan;
-    }
-
-    public void setTaiKhoan(TaiKhoan taiKhoan) {
-        this.taiKhoan = taiKhoan;
-    }
-
     public String getImage() {
         return image;
     }
@@ -132,12 +120,12 @@ public class BacSi implements Serializable {
         this.image = image;
     }
 
-    public Set<ChiTietCaKhamBenh> getDsChiTietCaKhamBenh() {
-        return dsChiTietCaKhamBenh;
+    public MultipartFile getImg() {
+        return img;
     }
 
-    public void setDsChiTietCaKhamBenh(Set<ChiTietCaKhamBenh> dsChiTietCaKhamBenh) {
-        this.dsChiTietCaKhamBenh = dsChiTietCaKhamBenh;
+    public void setImg(MultipartFile img) {
+        this.img = img;
     }
 
     public String getQueQuan() {
@@ -164,11 +152,27 @@ public class BacSi implements Serializable {
         this.dsPhieuKhamBenh = dsPhieuKhamBenh;
     }
 
-    public MultipartFile getImg() {
-        return img;
+    public Set<ToaThuoc> getDsToaThuoc() {
+        return dsToaThuoc;
     }
 
-    public void setImg(MultipartFile img) {
-        this.img = img;
+    public void setDsToaThuoc(Set<ToaThuoc> dsToaThuoc) {
+        this.dsToaThuoc = dsToaThuoc;
+    }
+
+    public TaiKhoan getTaiKhoan() {
+        return taiKhoan;
+    }
+
+    public void setTaiKhoan(TaiKhoan taiKhoan) {
+        this.taiKhoan = taiKhoan;
+    }
+
+    public Set<ChiTietCaKhamBenh> getDsChiTietCaKhamBenh() {
+        return dsChiTietCaKhamBenh;
+    }
+
+    public void setDsChiTietCaKhamBenh(Set<ChiTietCaKhamBenh> dsChiTietCaKhamBenh) {
+        this.dsChiTietCaKhamBenh = dsChiTietCaKhamBenh;
     }
 }

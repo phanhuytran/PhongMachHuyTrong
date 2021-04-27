@@ -40,8 +40,8 @@
                         <div class="user-bg"> <img width="100%" alt="user" src="<c:url value="/admin-resources/plugins/images/big/img2.jpg"/>"> </div>
                         <div class="user-btm-box">
                             <div class="row text-center m-t-10">
-                                <div class="col-md-6 b-r"><strong>Họ và Tên</strong>
-                                    <p>Đặng Hoàng Bửu</p>
+                                <div class="col-md-6 b-r"><strong>${patient.ten}</strong>
+                                    <p>${patient.ho} ${patient.ten}</p>
                                 </div>
                                 <div class="col-md-6"><strong>Nghề nghiệp</strong>
                                     <p>Code dạo</p>

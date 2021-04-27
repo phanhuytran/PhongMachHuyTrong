@@ -10,30 +10,22 @@ public class HomeController {
     @RequestMapping(value = "/")
     public String index(Model model) { return "baseLayout"; }
 
-    // Admin
-    @RequestMapping(value = "/admin")
-    public String admin(Model model) {
-        return "admin";
-    }
+
+
 
     // Admin - Login
     @RequestMapping(value = "/login")
     public String login(Model model) { return "login"; }
 
-    // Admin - Doctor
-//    @RequestMapping(value = "/doctors")
-//    public String doctors(Model model) {
-//        return "doctors"; }
+
     @RequestMapping(value = "/edit-doctor")
     public String editDoctor(Model model) { return "edit-doctor"; }
     @RequestMapping(value = "/doctor-profile")
     public String doctorProfiles(Model model) { return "doctor-profile"; }
 
     // Admin - Patient
-    @RequestMapping(value = "/patients")
-    public String patients(Model model) { return "patients"; }
-    @RequestMapping(value = "/add-patient")
-    public String addPatient(Model model) { return "add-patient"; }
+
+
     @RequestMapping(value = "/edit-patient")
     public String editPatient(Model model) { return "edit-patient"; }
     @RequestMapping(value = "/patient-profile")

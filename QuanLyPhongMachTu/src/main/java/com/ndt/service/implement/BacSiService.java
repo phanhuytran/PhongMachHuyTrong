@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.Set;
 
 @Service
-public class BacSiService extends GenericService<BacSi> implements IBacSiService {
+    public class BacSiService extends GenericService<BacSi> implements IBacSiService {
     private IBacSiRepository bacSiRepository;
 
     @Autowired
@@ -41,5 +41,10 @@ public class BacSiService extends GenericService<BacSi> implements IBacSiService
     @Override
     public Set<BenhNhan> getBenhNhanTheoBacSi(BacSi bacSi) {
         return bacSiRepository.getBenhNhanTheoBacSi(bacSi);
+    }
+
+    @Override
+    public List<BacSi> getAllbyStorProcudure() {
+        return     bacSiRepository.getAllbyStorProcudure();
     }
 }

@@ -20,10 +20,11 @@ public class BenhNhan implements Serializable {
     private String gioiTinh;
     @Column(name = "NgaySinh", nullable = false)
     private Date ngaySinh;
+    @Transient
+    private String dateString;
     @Column(name = "DienThoai", length = 10, nullable = false)
     private String dienThoai;
-    @Column(name = "Email")
-    private String email;
+
     @OneToMany(mappedBy = "benhNhan", fetch = FetchType.LAZY)
     private Set<ToaThuoc> dsToaThuoc;
     @OneToMany(mappedBy = "benhNhan", fetch = FetchType.EAGER)
@@ -93,11 +94,11 @@ public class BenhNhan implements Serializable {
         this.dsPhieuKhamBenh = dsPhieuKhamBenh;
     }
 
-    public String getEmail() {
-        return email;
+    public String getDateString() {
+        return dateString;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setDateString(String dateString) {
+        this.dateString = dateString;
     }
 }
