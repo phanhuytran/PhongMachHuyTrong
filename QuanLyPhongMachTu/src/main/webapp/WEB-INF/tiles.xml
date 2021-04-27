@@ -26,14 +26,14 @@ Software Foundation//DTD Tiles Configuration 3.0//EN"
     </definition>
 <!--Admin-Login-->
     <definition name="login" template="/WEB-INF/adminLayout/admin-templates/login.jsp">
-        <put-attribute name="title" value="Đăng Nhập -  Phòng Mạch Huy Trọng" />
+        <put-attribute name="title" value="Đăng Nhập - Phòng Mạch Huy Trọng" />
     </definition>
 <!--Admin-Doctor-->
     <definition name="doctors" extends="baseAdminLayout">
         <put-attribute name="content" value="/WEB-INF/adminLayout/admin-templates/doctors.jsp"/>
     </definition>
     <definition name="add-doctor" extends="baseAdminLayout">
-        <put-attribute name="title" value="thêm bác sĩ" />
+        <put-attribute name="title" value="Thêm Bác Sĩ" />
         <put-attribute name="content" value="/WEB-INF/adminLayout/admin-templates/add-doctor.jsp" />
     </definition>
     <definition name="edit-doctor" template="/WEB-INF/adminLayout/admin-templates/edit-doctor.jsp">

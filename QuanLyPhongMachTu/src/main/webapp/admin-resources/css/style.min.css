@@ -1281,6 +1281,10 @@ label {
     border: 1px solid #03a9f3
 }
 
+div.login-admin {
+    color: #03a9f3
+}
+
 .btn-info:hover, .btn-info.disabled:hover, .btn-info:focus, .btn-info.disabled:focus, .btn-info.focus, .btn-info.disabled.focus {
     background: #03a9f3;
     opacity: .8;
