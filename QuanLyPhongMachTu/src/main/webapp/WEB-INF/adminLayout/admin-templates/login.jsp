@@ -58,6 +58,9 @@
                             <label for="checkbox-signup"> Nhớ mật khẩu </label>
                         </div> <a href="javascript:void(0)" id="to-recover" class="text-dark pull-right"><i class="fas fa-lock m-r-5"></i> Quên mật khẩu?</a> </div>
                 </div>
+                <div class="login-admin">
+                    <a href="/admin">Đăng nhập với tư cách là Admin</a>
+                </div>
                 <div class="form-group text-center m-t-20">
                     <div class="col-xs-12">
                         <button class="btn btn-info btn-lg btn-block text-uppercase waves-effect waves-light" type="submit">Đăng nhập</button>
