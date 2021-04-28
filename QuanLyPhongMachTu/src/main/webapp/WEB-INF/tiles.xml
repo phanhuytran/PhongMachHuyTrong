@@ -17,23 +17,25 @@ Software Foundation//DTD Tiles Configuration 3.0//EN"
         <put-attribute name="title" value="Quản Lý Phòng Mạch Huy Trọng" />
         <put-attribute name="header" value="/WEB-INF/adminLayout/admin-templates/index-01.jsp" />
         <put-attribute name="nav-bar" value="/WEB-INF/adminLayout/admin-templates/index-02.jsp" />
-        <put-attribute name="content" value="điềm content layout vào đây"/>
+        <put-attribute name="content" value="Điền content layout vào đây"/>
         <put-attribute name="footer" value="/WEB-INF/adminLayout/admin-templates/footer.jsp"/>
     </definition>
 
+<!-- Log in-->
+    <definition name="login" template="/WEB-INF/adminLayout/admin-templates/login.jsp">
+        <put-attribute name="title" value="Đăng Nhập - Phòng Mạch Huy Trọng" />
+    </definition>
+
+<!-- Admin -->
     <definition name="admin" extends="baseAdminLayout">
         <put-attribute name="content" value="/WEB-INF/adminLayout/admin-templates/index.jsp"/>
     </definition>
-<!--Admin-Login-->
-<!--    <definition name="login" template="/WEB-INF/adminLayout/admin-templates/login.jsp">-->
-<!--        <put-attribute name="title" value="Đăng Nhập -  Phòng Mạch Huy Trọng" />-->
-<!--    </definition>-->
-<!--Admin-Doctor-->
+
     <definition name="doctors" extends="baseAdminLayout">
         <put-attribute name="content" value="/WEB-INF/adminLayout/admin-templates/doctors.jsp"/>
     </definition>
     <definition name="add-doctor" extends="baseAdminLayout">
-        <put-attribute name="title" value="thêm bác sĩ" />
+        <put-attribute name="title" value="Thêm Bác Sĩ" />
         <put-attribute name="content" value="/WEB-INF/adminLayout/admin-templates/add-doctor.jsp" />
     </definition>
     <definition name="edit-doctor" template="/WEB-INF/adminLayout/admin-templates/edit-doctor.jsp">

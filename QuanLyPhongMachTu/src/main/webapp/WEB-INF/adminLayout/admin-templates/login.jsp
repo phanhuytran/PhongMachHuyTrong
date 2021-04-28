@@ -20,6 +20,7 @@
     <link href="<c:url value="/admin-resources/css/animate.css"/>" rel="stylesheet">
     <link href="<c:url value="/admin-resources/css/style.min.css"/>" rel="stylesheet">
     <link href="<c:url value="/admin-resources/css/colors/megna.css"/>" id="theme" rel="stylesheet">
+    <link href="<c:url value="/resources/css/sub-content.css"/>" rel="stylesheet">
 </head>
 
 <body>
@@ -29,15 +30,27 @@
 <section id="wrapper" class="login-register">
     <div class="login-box login-sidebar">
         <div class="white-box">
-            <form class="form-horizontal form-material" id="loginform" action="/admin">
+            <form class="form-horizontal form-material" id="loginform" action="${pageContext.request.contextPath}/taikhoan/login" method="POST">
                 <a href="javascript:void(0)" class="text-center db"><img style="width: 70%" src="<c:url value="/resources/img/logo.png"/>" alt="Home" /></a>
+                <c:if test="${param.error != null}">
+                    <div style="color: red; margin: 50px 0 -15px 0">
+                        Tên đăng nhập hoặc mật khẩu không hợp lệ!
+                    </div>
+                </c:if>
+                <c:if test="${param.accessDenied != null}">
+                    <div style="color: red; margin: 50px 0 -15px 0">
+                        Bạn không có quyền truy cập trang này!
+                    </div>
+                </c:if>
                 <div class="form-group m-t-40">
                     <div class="col-xs-12">
-                        <input class="form-control" type="text" required="" placeholder="Tên đăng nhập"> </div>
+                        <input name="username" id="usernameId" class="form-control" type="text" required="" placeholder="Tên đăng nhập">
+                    </div>
                 </div>
                 <div class="form-group">
                     <div class="col-xs-12">
-                        <input class="form-control" type="password" required="" placeholder="Mật khẩu"> </div>
+                        <input name="password" id="passwordId" class="form-control" type="password" required="" placeholder="Mật khẩu">
+                    </div>
                 </div>
                 <div class="form-group">
                     <div class="col-md-12">
@@ -45,6 +58,9 @@
                             <input id="checkbox-signup" type="checkbox">
                             <label for="checkbox-signup"> Nhớ mật khẩu </label>
                         </div> <a href="javascript:void(0)" id="to-recover" class="text-dark pull-right"><i class="fas fa-lock m-r-5"></i> Quên mật khẩu?</a> </div>
+                </div>
+                <div class="login-admin">
+                    <a href="/admin">Đăng nhập với tư cách là Admin</a>
                 </div>
                 <div class="form-group text-center m-t-20">
                     <div class="col-xs-12">
@@ -74,7 +90,8 @@
                 </div>
                 <div class="form-group ">
                     <div class="col-xs-12">
-                        <input class="form-control" type="text" required="" placeholder="Email"> </div>
+                        <input class="form-control" type="text" required="" placeholder="Email">
+                    </div>
                 </div>
                 <div class="form-group text-center m-t-20">
                     <div class="col-xs-12">

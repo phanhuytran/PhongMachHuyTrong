@@ -14,21 +14,19 @@
         <tiles:insertAttribute name="title"/>
     </title>
     <!-- css -->
+    <link href="<c:url value="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>" rel="stylesheet"/>
     <link href="<c:url value="/resources/css/bootstrap.min.css"/>" rel="stylesheet" type="text/css">
     <link href="<c:url value="/resources/font-awesome/css/font-awesome.min.css"/>" rel="stylesheet" type="text/css"/>
-    <link href="<c:url value="/resources/plugins/cubeportfolio/css/cubeportfolio.min.css"/>" rel="stylesheet"
-          type="text/css">
+    <link href="<c:url value="/resources/plugins/cubeportfolio/css/cubeportfolio.min.css"/>" rel="stylesheet" type="text/css">
     <link href="<c:url value="/resources/css/nivo-lightbox.css"/>" rel="stylesheet"/>
-    <link href="<c:url value="/resources/css/nivo-lightbox-theme/default/default.css"/>" rel="stylesheet"
-          type="text/css"/>
+    <link href="<c:url value="/resources/css/nivo-lightbox-theme/default/default.css"/>" rel="stylesheet" type="text/css"/>
     <link href="<c:url value="/resources/css/owl.carousel.css"/>" rel="stylesheet" media="screen"/>
     <link href="<c:url value="/resources/css/owl.theme.css"/>" rel="stylesheet" media="screen"/>
     <link href="<c:url value="/resources/css/animate.css"/>" rel="stylesheet"/>
     <link href="<c:url value="/resources/css/style.css"/>" rel="stylesheet">
-    <!-- boxed bg -->
-    <link id="bodybg" href="<c:url value="/resources/bodybg/bg1.css"/>" rel="stylesheet" type="text/css"/>
-    <!-- template skin -->
-    <link id="t-colors" href="<c:url value="/resources/color/default.css"/>" rel="stylesheet">
+    <link href="<c:url value="/resources/bodybg/bg1.css"/>" rel="stylesheet" id="bodybg" type="text/css"/>
+    <link href="<c:url value="/resources/color/default.css"/>" id="t-colors" rel="stylesheet">
+    <link href="<c:url value="/resources/css/sub-content.css"/>" rel="stylesheet">
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-custom">
