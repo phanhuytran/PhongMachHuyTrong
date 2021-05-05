@@ -41,14 +41,26 @@
             <div class="row">
                 <div class="col-md-4 col-xs-12">
                     <div class="white-box">
-                        <div class="user-bg"> <img width="100%" alt="user" src="<c:url value="/admin-resources/plugins/images/users/1.jpg"/>"> </div>
+                        <div class="user-bg">
+                            <c:if test="${patient.gioiTinh == 'Nam'}">
+                                <img width="70%" alt="user" src="<c:url value="/admin-resources/plugins/images/users/male.jpg"/>">
+                            </c:if>
+                            <c:if test="${patient.gioiTinh == 'Nu'}">
+                                <img width="70%" alt="user" src="<c:url value="/admin-resources/plugins/images/users/female.jpg"/>">
+                            </c:if>
+                        </div>
                         <div class="user-btm-box">
                             <div class="row text-center m-t-10">
                                 <div class="col-md-6 b-r"><strong>Họ và Tên</strong>
                                     <p>${patient.ho} ${patient.ten}</p>
                                 </div>
                                 <div class="col-md-6"><strong>Giới tính</strong>
-                                    <p>${patient.gioiTinh}</p>
+                                    <c:if test="${patient.gioiTinh == 'Nam'}">
+                                        <p>Nam</p>
+                                    </c:if>
+                                    <c:if test="${patient.gioiTinh == 'Nu'}">
+                                        <p>Nữ</p>
+                                    </c:if>
                                 </div>
                             </div>
                             <hr>
@@ -60,13 +72,6 @@
                                     <p>${patient.dienThoai}</p>
                                 </div>
                             </div>
-<%--                            <hr>--%>
-<%--                            <div class="row text-center m-t-10">--%>
-<%--                                <div class="col-md-12"><strong>Địa chỉ</strong>--%>
-<%--                                    <p>Cầu Thị Nghè, Bình Thạnh--%>
-<%--                                        <br/> TP HCM, Việt Nam.</p>--%>
-<%--                                </div>--%>
-<%--                            </div>--%>
                             <hr>
                             <!-- /.row -->
                             <div class="col-md-4 col-sm-4 text-center">
@@ -90,7 +95,10 @@
                             </div>
                             <div class="col-md-3 col-xs-6 b-r"> <strong>Giới tính</strong>
                                 <br>
-                                <p class="text-muted">${patient.gioiTinh}</p>
+                                <p class="text-muted">
+                                    <c:if test="${patient.gioiTinh == 'Nam'}">Nam</c:if>
+                                    <c:if test="${patient.gioiTinh == 'Nu'}">Nữ</c:if>
+                                </p>
                             </div>
                             <div class="col-md-3 col-xs-6 b-r"> <strong>Ngày sinh</strong>
                                 <br>

@@ -3011,7 +3011,8 @@ ul.common li a:hover {
     margin: -25px;
     height: 230px;
     overflow: hidden;
-    position: relative
+    position: relative;
+    text-align: center
 }
 
 .user-bg .overlay-box {

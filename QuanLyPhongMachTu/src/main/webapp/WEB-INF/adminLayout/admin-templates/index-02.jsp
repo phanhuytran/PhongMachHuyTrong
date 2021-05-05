@@ -42,16 +42,32 @@
                 <ul class="nav nav-second-level">
                     <li><a href="/doctors">Danh sách Bác sĩ</a></li>
                     <li><a href="/doctors/add">Thêm Bác sĩ</a></li>
-                    <li><a href="/edit-doctor">Chỉnh sửa Bác sĩ</a></li>
+                    <li><a href="/edit-doctor">Cập nhật Bác sĩ</a></li>
                     <li><a href="/doctor-profile">Thông tin Bác sĩ</a></li>
+                </ul>
+            </li>
+            <li><a href="javascript:void(0);" class="waves-effect"><i class="fas fa-user" style="margin-right: 20px"></i> <span class="hide-menu"> Nhân viên <span style="float: right; margin-top: 3px" class="fas fa-chevron-right"></span></span></a>
+                <ul class="nav nav-second-level">
+                    <li><a href="#">Danh sách nhân viên</a></li>
+                    <li><a href="#">Thêm nhân viên</a></li>
+                    <li><a href="#">Cập nhật nhân viên</a></li>
+                    <li><a href="#">Thông tin nhân viên</a></li>
                 </ul>
             </li>
             <li><a href="javascript:void(0);" class="waves-effect"><i class="fas fa-users" style="margin-right: 16px"></i> <span class="hide-menu"> Bệnh nhân <span style="float: right; margin-top: 3px" class="fas fa-chevron-right"></span></span></a>
                 <ul class="nav nav-second-level">
                     <li><a href="/patients">Danh sách bệnh nhân</a></li>
                     <li><a href="/patients/add">Thêm bệnh nhân</a></li>
-                    <li><a href="/edit-patient">Chỉnh sửa bệnh nhân</a></li>
+                    <li><a href="/edit-patient">Cập nhật bệnh nhân</a></li>
                     <li><a href="/patient-profile">Thông tin bệnh nhân</a></li>
+                </ul>
+            </li>
+            <li><a href="javascript:void(0);" class="waves-effect"><i class="fas fa-capsules" style="margin-right: 20px"></i> <span class="hide-menu"> Thuốc <span style="float: right; margin-top: 3px" class="fas fa-chevron-right"></span></span></a>
+                <ul class="nav nav-second-level">
+                    <li><a href="#">Danh sách thuốc</a></li>
+                    <li><a href="#">Thêm thuốc</a></li>
+                    <li><a href="#">Cập nhật thuốc</a></li>
+                    <li><a href="#">Thông tin thuốc</a></li>
                 </ul>
             </li>
             <li><a href="javascript:void(0);" class="waves-effect"><i class="fas fa-bar-chart" style="margin-right: 20px"></i> <span class="hide-menu"> Báo cáo <span style="float: right; margin-top: 3px" class="fas fa-chevron-right"></span></span></a>

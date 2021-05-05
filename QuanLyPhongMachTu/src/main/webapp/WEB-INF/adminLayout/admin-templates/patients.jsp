@@ -21,7 +21,12 @@
                         <div class="white-box">
                             <div class="el-card-item">
                                 <div class="el-card-avatar el-overlay-1">
-                                    <img src="<c:url value="/admin-resources/plugins/images/users/1.jpg"/>"/>
+                                    <c:if test="${d.gioiTinh == 'Nam'}">
+                                        <img src="<c:url value="/admin-resources/plugins/images/users/male.jpg"/>"/>
+                                    </c:if>
+                                    <c:if test="${d.gioiTinh == 'Nu'}">
+                                        <img src="<c:url value="/admin-resources/plugins/images/users/female.jpg"/>"/>
+                                    </c:if>
                                     <div class="el-overlay">
                                         <ul class="el-info">
                                             <li>
@@ -47,7 +52,10 @@
                                 </div>
                                 <div class="el-card-content">
                                     <h3 class="box-title">${d.ho} ${d.ten}</h3>
-                                    <small>Giới tính: ${d.gioiTinh}</small><br/>
+                                    <small>Giới tính:
+                                        <c:if test="${d.gioiTinh == 'Nam'}">Nam</c:if>
+                                        <c:if test="${d.gioiTinh == 'Nu'}">Nữ</c:if>
+                                    </small><br/>
                                     <small>Số điện thoại: ${d.dienThoai}</small></div>
                             </div>
                         </div>

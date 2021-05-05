@@ -47,7 +47,7 @@
                                     <form:select path="gioiTinh" class="form-control">
                                         <form:option value="">Lựa chọn giới tính</form:option>
                                         <form:option value="Nam">Nam</form:option>
-                                        <form:option value="Nữ">Nữ</form:option>
+                                        <form:option value="Nu">Nữ</form:option>
                                     </form:select>
                                 </div>
                             </div>
