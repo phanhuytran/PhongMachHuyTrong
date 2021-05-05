@@ -43,10 +43,10 @@
                     <div class="white-box">
                         <div class="user-bg">
                             <c:if test="${patient.gioiTinh == 'Nam'}">
-                                <img width="70%" alt="user" src="<c:url value="/admin-resources/plugins/images/users/male.jpg"/>">
+                                <img width="60%" alt="user" src="<c:url value="/admin-resources/plugins/images/users/male.jpg"/>">
                             </c:if>
                             <c:if test="${patient.gioiTinh == 'Nu'}">
-                                <img width="70%" alt="user" src="<c:url value="/admin-resources/plugins/images/users/female.jpg"/>">
+                                <img width="60%" alt="user" src="<c:url value="/admin-resources/plugins/images/users/female.jpg"/>">
                             </c:if>
                         </div>
                         <div class="user-btm-box">
