@@ -17,11 +17,11 @@
             <div class="row el-element-overlay">
                 <c:forEach items="${patient}" var="d">
                     <!-- .usercard -->
-                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <div id="${d.id}"  class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                         <div class="white-box">
                             <div class="el-card-item">
                                 <div class="el-card-avatar el-overlay-1">
-                                    <img src="<c:url value="${d.image}"/>"/>
+                                    <img src="<c:url value="/admin-resources/plugins/images/users/1.jpg"/>"/>
                                     <div class="el-overlay">
                                         <ul class="el-info">
                                             <li>
@@ -32,7 +32,7 @@
                                             </li>
                                             <li>
                                                 <a class="btn default btn-outline"
-                                                   href="/edit-patient">
+                                                   href="<c:url  value="/patients/edit/${d.id}"/>">
                                                     <i class="far fa-edit"></i>
                                                 </a>
                                             </li>

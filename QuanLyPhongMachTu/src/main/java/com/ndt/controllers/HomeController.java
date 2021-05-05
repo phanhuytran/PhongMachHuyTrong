@@ -18,18 +18,13 @@ public class HomeController {
     public String login(Model model) { return "login"; }
 
 
-    @RequestMapping(value = "/edit-doctor")
-    public String editDoctor(Model model) { return "edit-doctor"; }
-    @RequestMapping(value = "/doctor-profile")
-    public String doctorProfiles(Model model) { return "doctor-profile"; }
+
+
 
     // Admin - Patient
 
 
-    @RequestMapping(value = "/edit-patient")
-    public String editPatient(Model model) { return "edit-patient"; }
-    @RequestMapping(value = "/patient-profile")
-    public String patientProfiles(Model model) { return "patient-profile"; }
+
 
     // Admin - Report
     @RequestMapping(value = "/payment-report")

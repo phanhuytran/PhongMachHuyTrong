@@ -41,7 +41,7 @@
             <div class="row">
                 <div class="col-md-4 col-xs-12">
                     <div class="white-box">
-                        <div class="user-bg"> <img width="100%" alt="user" src="<c:url value="${patient.image}"/>"> </div>
+                        <div class="user-bg"> <img width="100%" alt="user" src="<c:url value="/admin-resources/plugins/images/users/1.jpg"/>"> </div>
                         <div class="user-btm-box">
                             <div class="row text-center m-t-10">
                                 <div class="col-md-6 b-r"><strong>Họ và Tên</strong>

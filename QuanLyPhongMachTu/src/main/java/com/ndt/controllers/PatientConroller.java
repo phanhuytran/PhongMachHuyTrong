@@ -6,6 +6,7 @@ import com.ndt.service.IBenhNhanService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
@@ -63,6 +64,23 @@ public class PatientConroller {
     }
 
     // Chỉnh sửa thông tin bệnh nhân
+    @GetMapping(value = "/edit/{id}")
+    public String editPatient(@PathVariable("id") String id, Model model) {
+        model.addAttribute("patient", iBenhNhanService.getById(BenhNhan.class, id));
+
+        return "edit-patient";
+    }
+
+    @PostMapping("/edit/{id}")
+    public String editPatientPost(@ModelAttribute("patient") BenhNhan benhNhan){
+        BenhNhan b = iBenhNhanService.update(benhNhan);
+        if(b != null)
+            return "redirect:/patients/";
+        return "edit-patient";
+
+    }
+
+
     // Xóa thông tin bệnh nhân
     @PostMapping("/delete/{id}")
     @ResponseStatus(HttpStatus.OK)

@@ -47,7 +47,7 @@
     <script>
         function xoaBacSi(id) {
             if (confirm("Bạn có muốn xóa không?")) {
-                fetch("doctors/delete/" + id, {
+                fetch("/doctors/delete/" + id, {
                     method: "POST",
                     headers: {
                         "content-type": "application/json"
@@ -64,7 +64,7 @@
         }
         function xoaBenhNhan(id) {
             if (confirm("Bạn có muốn xóa không?")) {
-                fetch("patients/delete/" + id, {
+                fetch("/patients/delete/" + id, {
                     method: "POST",
                     headers: {
                         "content-type": "application/json"

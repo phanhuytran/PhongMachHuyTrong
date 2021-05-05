@@ -26,14 +26,14 @@ public class BenhNhan implements Serializable {
     private String dateString;
     @Column(name = "DienThoai", length = 10, nullable = false)
     private String dienThoai;
-    @Column(name = "Image", length = 200)
-    private String image;
-    @Transient
-    private MultipartFile img;
+//    @Column(name = "Image", length = 200)
+//    private String image;
+//    @Transient
+//    private MultipartFile img;
 
-    @OneToMany(mappedBy = "benhNhan", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "benhNhan", fetch = FetchType.LAZY,  cascade = CascadeType.REMOVE)
     private Set<ToaThuoc> dsToaThuoc;
-    @OneToMany(mappedBy = "benhNhan", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "benhNhan", fetch = FetchType.EAGER, cascade = CascadeType.REMOVE)
     private Set<PhieuKhamBenh> dsPhieuKhamBenh;
 
     public String getId() {
@@ -108,19 +108,5 @@ public class BenhNhan implements Serializable {
         this.dateString = dateString;
     }
 
-    public String getImage() {
-        return image;
-    }
 
-    public void setImage(String image) {
-        this.image = image;
-    }
-
-    public MultipartFile getImg() {
-        return img;
-    }
-
-    public void setImg(MultipartFile img) {
-        this.img = img;
-    }
 }

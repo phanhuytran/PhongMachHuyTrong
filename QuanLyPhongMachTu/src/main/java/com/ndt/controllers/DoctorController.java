@@ -36,8 +36,8 @@ public class DoctorController {
 
     @RequestMapping()
     public String index(ModelMap model) {
-        model.addAttribute("doctors", iBacSiService.getAllbyStorProcudure());
-        iBacSiService.getAllbyStorProcudure().forEach(t -> System.out.println(t));
+        model.addAttribute("doctors", iBacSiService.getAll(BacSi.class));
+        iBacSiService.getAll(BacSi.class).forEach(t -> System.out.println(t));
         return "doctors";
     }
 
