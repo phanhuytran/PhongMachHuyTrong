@@ -1,10 +1,10 @@
 package com.ndt.controllers;
 
-
 import com.ndt.models.BacSi;
 import com.ndt.models.BenhNhan;
 import com.ndt.service.IBenhNhanService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
@@ -60,5 +60,14 @@ public class PatientConroller {
         BenhNhan benhNhan = iBenhNhanService.getById(BenhNhan.class, id);
         model.addAttribute("patient", benhNhan);
         return "patient-profile";
+    }
+
+    // Chỉnh sửa thông tin bệnh nhân
+    // Xóa thông tin bệnh nhân
+    @PostMapping("/delete/{id}")
+    @ResponseStatus(HttpStatus.OK)
+    public void deletePatient(@PathVariable("id")String id) {
+        BenhNhan benhNhan = iBenhNhanService.getById(BenhNhan.class, id);
+        iBenhNhanService.delete(benhNhan);
     }
 }

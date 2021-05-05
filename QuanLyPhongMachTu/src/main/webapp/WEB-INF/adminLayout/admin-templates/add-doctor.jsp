@@ -41,7 +41,7 @@
                             <label class="col-md-12" for="bdate">Ngày sinh</span>
                             </label>
                             <div class="col-md-12">
-                                <form:input path="ngaySinh" type="date" id="bdate" name="bdate"
+                                <form:input path="ngaySinh" id="bdate" name="bdate"
                                             class="form-control mydatepicker"
                                             placeholder="nhập ngày sinh"/>
                             </div>
@@ -87,7 +87,7 @@
                             </label>
                             <div class="col-md-12">
                                 <form:input path="queQuan" type="text"
-                                            class="form-control mydatepicker"
+                                            class="form-control"
                                             placeholder="nhập quê quán"/>
                             </div>
                         </div>

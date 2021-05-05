@@ -1,10 +1,12 @@
 package com.ndt.controllers;
 
 import com.ndt.models.BacSi;
+import com.ndt.models.BenhNhan;
 import com.ndt.models.TaiKhoan;
 import com.ndt.service.IBacSiService;
 import com.ndt.service.ITaiKhoanService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
@@ -54,9 +56,9 @@ public class DoctorController {
             System.out.println(bacSi.getDienThoai());
             //set image
             MultipartFile img = bacSi.getImg();
-            String relativePath = "/admin-resources/images/" + bacSi.getTen() + ".png";
+            String relativePath = "/admin-resources/images/" + bacSi.getTen() + ".jpg";
             String targetPath = request.getSession().getServletContext()
-                    .getRealPath(String.format("/admin-resources/images/%s.png", bacSi.getTen()));
+                    .getRealPath(String.format("/admin-resources/images/%s.jpg", bacSi.getTen()));
             if (img != null && !img.isEmpty()) {
                 try {
                     img.transferTo(new File(targetPath));
@@ -74,4 +76,19 @@ public class DoctorController {
         return "add-doctor";
     }
 
+    @GetMapping("/details/{id}")
+    public String details(@PathVariable("id")String id, ModelMap model) {
+        BacSi bacSi = iBacSiService.getById(BacSi.class, id);
+        model.addAttribute("doctor", bacSi);
+        return "doctor-profile";
+    }
+
+    // Chỉnh sửa thông tin Bác sĩ
+    // Xóa thông tin Bác sĩ
+    @PostMapping("/delete/{id}")
+    @ResponseStatus(HttpStatus.OK)
+    public void deleteDoctor(@PathVariable("id")String id) {
+        BacSi bacSi = iBacSiService.getById(BacSi.class, id);
+        iBacSiService.delete(bacSi);
+    }
 }

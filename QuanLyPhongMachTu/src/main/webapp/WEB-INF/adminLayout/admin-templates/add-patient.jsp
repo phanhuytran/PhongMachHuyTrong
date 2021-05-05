@@ -24,16 +24,14 @@
                                 <label class="col-md-12" for="ho">Họ </span>
                                 </label>
                                 <div class="col-md-12">
-                                    <form:input  path="ho" type="text"  class="form-control"
-                                                 placeholder="nhập họ bênh nhân"/>
+                                    <form:input  path="ho" type="text"  class="form-control" placeholder="nhập họ bênh nhân"/>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-md-12" for="ten">Tên </span>
                                 </label>
                                 <div class="col-md-12">
-                                    <form:input  path="ten" type="text"  class="form-control"
-                                                 placeholder="nhập tên bệnh nhân"/>
+                                    <form:input  path="ten" type="text"  class="form-control" placeholder="nhập tên bệnh nhân"/>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -48,8 +46,8 @@
                                 <div class="col-sm-12">
                                     <form:select path="gioiTinh" class="form-control">
                                         <form:option value="">Lựa chọn giới tính</form:option>
-                                        <form:option value="nam">Nam</form:option>
-                                        <form:option value="nu">Nữ</form:option>
+                                        <form:option value="Nam">Nam</form:option>
+                                        <form:option value="Nữ">Nữ</form:option>
                                     </form:select>
                                 </div>
                             </div>
@@ -60,16 +58,11 @@
                                     <form:input path="dienThoai" class="form-control" placeholder="nhập sô điên thoại"/>
                                 </div>
                             </div>
-
-
-                            <button
-                                    type="submit"  class="btn btn-info waves-effect waves-light m-r-10">Thêm</button>
-<%--                            <button type="submit" class="btn btn-inverse waves-effect waves-light">Hủy</button>--%>
+                            <button type="submit" class="btn btn-info waves-effect waves-light m-r-10">Thêm</button>
                         </form:form>
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 

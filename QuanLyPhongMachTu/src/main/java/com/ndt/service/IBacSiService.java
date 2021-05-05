@@ -13,5 +13,5 @@ public interface IBacSiService extends IGenericService<BacSi> {
     List<BacSi> getTopBacSiTheoTen(int limit, String name);
     Set<ToaThuoc> getToaThuocTheoBacSi(BacSi bacSi);
     Set<BenhNhan> getBenhNhanTheoBacSi(BacSi bacSi);
-    List<BacSi> getAllbyStorProcudure ();
+    List<BacSi> getAllbyStorProcudure();
 }
