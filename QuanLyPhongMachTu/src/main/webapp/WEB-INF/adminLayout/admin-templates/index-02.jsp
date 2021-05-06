@@ -48,18 +48,10 @@
             </li>
             <li><a href="javascript:void(0);" class="waves-effect"><i class="fas fa-user" style="margin-right: 20px"></i> <span class="hide-menu"> Nhân viên <span style="float: right; margin-top: 3px" class="fas fa-chevron-right"></span></span></a>
                 <ul class="nav nav-second-level">
-                    <li><a href="#">Danh sách nhân viên</a></li>
-                    <li><a href="#">Thêm nhân viên</a></li>
-                    <li><a href="#">Cập nhật nhân viên</a></li>
-                    <li><a href="#">Thông tin nhân viên</a></li>
-                </ul>
-            </li>
-            <li><a href="javascript:void(0);" class="waves-effect"><i class="fas fa-user-md" style="margin-right: 20px"></i> <span class="hide-menu"> Nhan vien <span style="float: right; margin-top: 3px" class="fas fa-chevron-right"></span></span></a>
-                <ul class="nav nav-second-level">
-                    <li><a href="/employees">Danh sách Nhan vien</a></li>
-                    <li><a href="/employees/add-employee">Thêm Nhan vien</a></li>
-                    <li><a href="/employees/edit-employee">Chỉnh sửa Nhan vien</a></li>
-                    <li><a href="/employees/employee-profile">Thông tin Nhan vien</a></li>
+                    <li><a href="/employees">Danh sách nhân viên</a></li>
+                    <li><a href="/employees/add-employee">Thêm nhân viên</a></li>
+                    <li><a href="/employees/edit-employee">Cập nhật nhân viên</a></li>
+                    <li><a href="/employees/employee-profile">Thông tin nhân viên</a></li>
                 </ul>
             </li>
             <li><a href="javascript:void(0);" class="waves-effect"><i class="fas fa-users" style="margin-right: 16px"></i> <span class="hide-menu"> Bệnh nhân <span style="float: right; margin-top: 3px" class="fas fa-chevron-right"></span></span></a>

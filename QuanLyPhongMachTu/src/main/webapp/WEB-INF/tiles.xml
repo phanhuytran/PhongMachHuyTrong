@@ -42,7 +42,7 @@ Software Foundation//DTD Tiles Configuration 3.0//EN"
         <put-attribute name="content" value="/WEB-INF/adminLayout/admin-templates/add-doctor.jsp" />
     </definition>
     <definition name="add-employee" extends="baseAdminLayout">
-        <put-attribute name="title" value="Thêm Nhan vien" />
+        <put-attribute name="title" value="Thêm Nhân viên" />
         <put-attribute name="content" value="/WEB-INF/adminLayout/admin-templates/add-employee.jsp" />
     </definition>
     <definition name="edit-doctor" template="/WEB-INF/adminLayout/admin-templates/edit-doctor.jsp">
@@ -66,7 +66,7 @@ Software Foundation//DTD Tiles Configuration 3.0//EN"
         <put-attribute name="content" value="/WEB-INF/adminLayout/admin-templates/patients.jsp"/>
     </definition>
     <definition name="add-patient" extends="baseAdminLayout">
-        <put-attribute name="title" value="thêm bênh nhân" />
+        <put-attribute name="title" value="Thêm Bệnh Nhân" />
         <put-attribute name="content" value="/WEB-INF/adminLayout/admin-templates/add-patient.jsp" />
 
     </definition>

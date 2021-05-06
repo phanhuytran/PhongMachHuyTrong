@@ -1,4 +1,4 @@
-﻿package com.ndt.controllers;
+package com.ndt.controllers;
 
 import com.ndt.models.BacSi;
 import com.ndt.models.NhanVien;
