@@ -62,6 +62,23 @@
                 })
             }
         }
+        function xoaNhanVien(id) {
+            if (confirm("Bạn có muốn xóa không?")) {
+                fetch("/employees/delete/" + id, {
+                    method: "POST",
+                    headers: {
+                        "content-type": "application/json"
+                    }
+                }).then(res => {
+                    if (res.status == 200) {
+                        document.getElementById(id).style.display = "none";
+                        alert("Xóa thành công!!!");
+                    }
+                    else
+                        alert("Ôi hỏng!!!");
+                })
+            }
+        }
         function xoaBenhNhan(id) {
             if (confirm("Bạn có muốn xóa không?")) {
                 fetch("/patients/delete/" + id, {

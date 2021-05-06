@@ -34,11 +34,23 @@ Software Foundation//DTD Tiles Configuration 3.0//EN"
     <definition name="doctors" extends="baseAdminLayout">
         <put-attribute name="content" value="/WEB-INF/adminLayout/admin-templates/doctors.jsp"/>
     </definition>
+    <definition name="employees" extends="baseAdminLayout">
+        <put-attribute name="content" value="/WEB-INF/adminLayout/admin-templates/employees.jsp"/>
+    </definition>
     <definition name="add-doctor" extends="baseAdminLayout">
         <put-attribute name="title" value="Thêm Bác Sĩ" />
         <put-attribute name="content" value="/WEB-INF/adminLayout/admin-templates/add-doctor.jsp" />
     </definition>
+    <definition name="add-employee" extends="baseAdminLayout">
+        <put-attribute name="title" value="Thêm Nhan vien" />
+        <put-attribute name="content" value="/WEB-INF/adminLayout/admin-templates/add-employee.jsp" />
+    </definition>
     <definition name="edit-doctor" template="/WEB-INF/adminLayout/admin-templates/edit-doctor.jsp">
+        <put-attribute name="title" value="Quản Lý Phòng Mạch Huy Trọng" />
+        <put-attribute name="index-01" value="/WEB-INF/adminLayout/admin-templates/index-01.jsp" />
+        <put-attribute name="index-02" value="/WEB-INF/adminLayout/admin-templates/index-02.jsp" />
+    </definition>
+    <definition name="edit-employee" template="/WEB-INF/adminLayout/admin-templates/edit-employee.jsp">
         <put-attribute name="title" value="Quản Lý Phòng Mạch Huy Trọng" />
         <put-attribute name="index-01" value="/WEB-INF/adminLayout/admin-templates/index-01.jsp" />
         <put-attribute name="index-02" value="/WEB-INF/adminLayout/admin-templates/index-02.jsp" />
