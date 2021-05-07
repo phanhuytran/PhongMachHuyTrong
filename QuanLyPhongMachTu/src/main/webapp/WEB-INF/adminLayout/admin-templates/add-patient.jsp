@@ -58,7 +58,8 @@
                                     <form:input path="dienThoai" class="form-control" placeholder="nhập sô điên thoại"/>
                                 </div>
                             </div>
-                            <button type="submit" class="btn btn-info waves-effect waves-light m-r-10">Thêm</button>
+                            <form:button type="submit" class="btn btn-info waves-effect waves-light m-r-10">Thêm</form:button>
+                            <button type="reset" class="btn btn-inverse waves-effect waves-light">Hủy</button>
                         </form:form>
                     </div>
                 </div>

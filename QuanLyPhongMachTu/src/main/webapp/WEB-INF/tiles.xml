@@ -53,7 +53,7 @@ Software Foundation//DTD Tiles Configuration 3.0//EN"
     </definition>
     <!--employee-->
     <definition name="add-employee" extends="baseAdminLayout">
-        <put-attribute name="title" value="Thêm Nhân viên" />
+        <put-attribute name="title" value="Thêm Nhân Viên" />
         <put-attribute name="content" value="/WEB-INF/adminLayout/admin-templates/add-employee.jsp" />
     </definition>
     <definition name="employees" extends="baseAdminLayout">
@@ -84,12 +84,22 @@ Software Foundation//DTD Tiles Configuration 3.0//EN"
         <put-attribute name="index-01" value="/WEB-INF/adminLayout/admin-templates/index-01.jsp" />
         <put-attribute name="index-02" value="/WEB-INF/adminLayout/admin-templates/index-02.jsp" />
     </definition>
-<!--    prescription-->
 
-    <definition name = "prescription" extends="baseAdminLayout">
-        <put-attribute name="title" value="danh sách toa thuốc"/>
+<!--prescription-->
+    <definition name="prescriptions" extends="baseAdminLayout">
+        <put-attribute name="title" value="Danh Sách Toa Thuốc"/>
         <put-attribute name="content" value="/WEB-INF/adminLayout/admin-templates/prescriptions.jsp"/>
+    </definition>
 
+<!--medicine-->
+    <definition name="medicines" template="/WEB-INF/adminLayout/admin-templates/medicines.jsp">
+        <put-attribute name="title" value="Quản Lý Phòng Mạch Huy Trọng" />
+        <put-attribute name="index-01" value="/WEB-INF/adminLayout/admin-templates/index-01.jsp" />
+        <put-attribute name="index-02" value="/WEB-INF/adminLayout/admin-templates/index-02.jsp" />
+    </definition>
+    <definition name="add-medicine" extends="baseAdminLayout">
+        <put-attribute name="title" value="Thêm Thuốc" />
+        <put-attribute name="content" value="/WEB-INF/adminLayout/admin-templates/add-medicine.jsp" />
     </definition>
 
 <!--Admin-Report-->

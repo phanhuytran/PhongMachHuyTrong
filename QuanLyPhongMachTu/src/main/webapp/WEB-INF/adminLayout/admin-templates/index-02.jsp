@@ -48,7 +48,7 @@
             <li><a href="javascript:void(0);" class="waves-effect"><i class="fas fa-user" style="margin-right: 20px"></i> <span class="hide-menu"> Nhân viên <span style="float: right; margin-top: 3px" class="fas fa-chevron-right"></span></span></a>
                 <ul class="nav nav-second-level">
                     <li><a href="/employees">Danh sách nhân viên</a></li>
-                    <li><a href="/employees/add-employee">Thêm nhân viên</a></li>
+                    <li><a href="/employees/add">Thêm nhân viên</a></li>
 
                 </ul>
             </li>
@@ -56,13 +56,12 @@
                 <ul class="nav nav-second-level">
                     <li><a href="/patients">Danh sách bệnh nhân</a></li>
                     <li><a href="/patients/add">Thêm bệnh nhân</a></li>
-
                 </ul>
             </li>
             <li><a href="javascript:void(0);" class="waves-effect"><i class="fas fa-capsules" style="margin-right: 20px"></i> <span class="hide-menu"> Thuốc <span style="float: right; margin-top: 3px" class="fas fa-chevron-right"></span></span></a>
                 <ul class="nav nav-second-level">
-                    <li><a href="#">Danh sách thuốc</a></li>
-                    <li><a href="#">Thêm thuốc</a></li>
+                    <li><a href="/medicines">Danh sách thuốc</a></li>
+                    <li><a href="/medicines/add">Thêm thuốc</a></li>
 
                 </ul>
             </li>

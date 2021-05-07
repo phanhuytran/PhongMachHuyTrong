@@ -39,13 +39,13 @@ public class EmployeeController {
         return "employees";
     }
 
-    @GetMapping("/add-employee")
+    @GetMapping("/add")
     public String addView(ModelMap model) {
         model.addAttribute("employee", new NhanVien());
         return "add-employee";
     }
 
-    @PostMapping("/add-employee")
+    @PostMapping("/add")
     public String addProcess(@ModelAttribute("employee") @Valid NhanVien nhanVien,
                              BindingResult result, ModelMap model, HttpServletRequest request) {
         if (!result.hasErrors()) {
@@ -73,14 +73,14 @@ public class EmployeeController {
         return "add-employee";
     }
 
-    @GetMapping("/edit-employee/{id}")
+    @GetMapping("/edit/{id}")
     public String editView(@PathVariable("id")String id, ModelMap model) {
         model.addAttribute("employee", iNhanVienService.getById(NhanVien.class, id));
 
         return "edit-employee";
     }
 
-    @PostMapping("/edit-employee/{id}")
+    @PostMapping("/edit/{id}")
     public String editProcess(@ModelAttribute("employee") @Valid NhanVien nhanVien,
                               BindingResult result, ModelMap model) {
         if (!result.hasErrors()) {

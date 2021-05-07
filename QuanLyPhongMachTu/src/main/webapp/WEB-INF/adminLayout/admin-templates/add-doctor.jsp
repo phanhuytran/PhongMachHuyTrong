@@ -51,9 +51,8 @@
                             <div class="col-sm-12">
                                 <form:select path="gioiTinh" class="form-control">
                                     <form:option value="">Lựa chọn giới tính</form:option>
-                                    <form:option value="nam">Nam</form:option>
-                                    <form:option value="nu">Nữ</form:option>
-                                    <form:option value="khac">Khác</form:option>
+                                    <form:option value="Nam">Nam</form:option>
+                                    <form:option value="Nu">Nữ</form:option>
                                 </form:select>
                             </div>
                         </div>
@@ -107,7 +106,7 @@
                         </div>
 
                         <form:button type="submit" class="btn btn-info waves-effect waves-light m-r-10">Thêm</form:button>
-<%--                        <button type="submit" class="btn btn-inverse waves-effect waves-light">Hủy</button>--%>
+                        <button type="reset" class="btn btn-inverse waves-effect waves-light">Hủy</button>
                     </form:form>
 
                 </div>
