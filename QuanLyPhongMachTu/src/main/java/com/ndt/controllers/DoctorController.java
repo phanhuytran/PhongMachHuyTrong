@@ -19,6 +19,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import java.io.File;
 import java.io.IOException;
+import java.util.List;
+import java.util.stream.Collectors;
 
 @Controller
 @ControllerAdvice
@@ -100,5 +102,12 @@ public class DoctorController {
         }
 
         return "edit-doctor";
+    }
+    @GetMapping("/search")
+    public String search(@RequestParam("hoten") String cay, ModelMap model){
+        List<BacSi> doctors = iBacSiService.getAll(BacSi.class).stream()
+                .filter(n -> (n.getHo().toUpperCase() + " " + n.getTen().toUpperCase()).contains(cay.toUpperCase())).collect(Collectors.toList());
+        model.addAttribute("doctors", doctors);
+        return "doctors";
     }
 }
