@@ -1,6 +1,15 @@
 ﻿<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <div id="page-wrapper">
+
+    <form action="/employees/search">
+        <label>Tìm kiếm</label>
+        <input id="hoten" name="hoten" type="text" placeholder="Nhập họ tên">
+        <input type="submit" value="tìm">
+    </form>
+
+
     <div class="container-fluid">
         <div class="row bg-title">
             <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">

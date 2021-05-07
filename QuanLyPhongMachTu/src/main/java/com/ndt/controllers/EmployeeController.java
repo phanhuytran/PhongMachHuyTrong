@@ -16,6 +16,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import java.io.File;
 import java.io.IOException;
+import java.util.List;
+import java.util.stream.Collectors;
 
 @Controller
 @RequestMapping("/employees")
@@ -97,5 +99,13 @@ public class EmployeeController {
         if (id != null && !id.isEmpty()) {
             iNhanVienService.delete(iNhanVienService.getById(NhanVien.class, id));
         }
+    }
+
+    @GetMapping("/search")
+    public String search(@RequestParam("hoten") String cay, ModelMap model){
+        List<NhanVien> employees = iNhanVienService.getAll(NhanVien.class).stream()
+                .filter(n -> (n.getHo() + " " + n.getTen()).contains(cay)).collect(Collectors.toList());
+        model.addAttribute("employees", employees);
+        return "employees";
     }
 }

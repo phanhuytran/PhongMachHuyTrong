@@ -88,7 +88,7 @@ Software Foundation//DTD Tiles Configuration 3.0//EN"
 
     <definition name = "prescription" extends="baseAdminLayout">
         <put-attribute name="title" value="danh sách toa thuốc"/>
-        <put-attribute name="content" value=""
+        <put-attribute name="content" value="/WEB-INF/adminLayout/admin-templates/prescriptions.jsp"/>
 
     </definition>
 
