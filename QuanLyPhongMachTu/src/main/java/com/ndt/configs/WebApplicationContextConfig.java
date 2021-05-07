@@ -1,7 +1,6 @@
 package com.ndt.configs;
 
-import com.ndt.formatters.DateFormatter;
-import com.ndt.formatters.TaiKhoanFormatter;
+import com.ndt.formatters.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -47,5 +46,8 @@ public class WebApplicationContextConfig implements WebMvcConfigurer {
     public void addFormatters(FormatterRegistry registry) {
         registry.addFormatter(new DateFormatter());
         registry.addFormatter(new TaiKhoanFormatter());
+        registry.addFormatter(new BacSiFormatter());
+        registry.addFormatter(new BenhNhanFormatter());
+        registry.addFormatter(new LoaiBenhFormatter());
     }
 }

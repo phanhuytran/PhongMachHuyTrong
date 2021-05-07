@@ -68,7 +68,7 @@
             <li><a href="javascript:void(0);" class="waves-effect"><i class="fas fa-book-medical" style="margin-right: 20px"></i> <span class="hide-menu"> Toa Thuốc <span style="float: right; margin-top: 3px" class="fas fa-chevron-right"></span></span></a>
                 <ul class="nav nav-second-level">
                     <li><a href="/prescription">Danh sách toa thuốc</a></li>
-                    <li><a href="#">Thêm toa thuốc</a></li>
+                    <li><a href="/prescription/add">Thêm toa thuốc</a></li>
 
                 </ul>
             </li>
