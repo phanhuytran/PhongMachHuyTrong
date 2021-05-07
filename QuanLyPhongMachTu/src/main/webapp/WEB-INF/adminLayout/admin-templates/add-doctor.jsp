@@ -19,7 +19,7 @@
                 <div class="white-box">
                     <h3 class="box-title">Thông tin cơ bản</h3>
 
-                    <form:form cssClass="form-material form-horizontal" action="/doctors/add" modelAttribute="doctor1" method="post" enctype="multipart/form-data">
+                    <form:form cssClass="form-material form-horizontal" action="/doctors/add" modelAttribute="doctor1" method="post">
                         <form:errors path="*" element="div" cssClass="text-danger" />
                         <div class="form-group">
                             <label class="col-md-12" for="example-text">Họ</span>
@@ -57,13 +57,13 @@
                                 </form:select>
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label class="col-sm-12">Ảnh đại diện</label>
-                            <div class="col-sm-12">
-                                <form:hidden path="image" value="test" />
-                                <form:input path="img" type="file" cssClass="form-control"/>
-                            </div>
-                        </div>
+<%--                        <div class="form-group">--%>
+<%--                            <label class="col-sm-12">Ảnh đại diện</label>--%>
+<%--                            <div class="col-sm-12">--%>
+<%--                                <form:hidden path="image" value="test" />--%>
+<%--                                <form:input path="img" type="file" cssClass="form-control"/>--%>
+<%--                            </div>--%>
+<%--                        </div>--%>
                         <div class="form-group">
                             <label class="col-md-12" for="email">Email</span>
                             </label>

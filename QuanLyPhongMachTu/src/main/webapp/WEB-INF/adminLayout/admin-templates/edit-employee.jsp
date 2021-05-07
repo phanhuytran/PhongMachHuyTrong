@@ -121,34 +121,17 @@
                                                 placeholder="nhập điện thoại"/>
                                 </div>
                             </div>
-                            <%--                        <div class="form-group">--%>
-                            <%--                            <label class="col-md-12" for="queQuan">Quê quán</span>--%>
-                            <%--                            </label>--%>
-                            <%--                            <div class="col-md-12">--%>
-                            <%--                                <form:input path="queQuan" type="text"--%>
-                            <%--                                            class="form-control"--%>
-                            <%--                                            placeholder="nhập quê quán"/>--%>
-                            <%--                            </div>--%>
-                            <%--                        </div>--%>
+<%--                                                    <div class="form-group">--%>
+<%--                                                        <label class="col-md-12" for="queQuan">Quê quán</span>--%>
+<%--                                                        </label>--%>
+<%--                                                        <div class="col-md-12">--%>
+<%--                                                            <form:input path="queQuan" type="text"--%>
+<%--                                                                        class="form-control"--%>
+<%--                                                                        placeholder="nhập quê quán"/>--%>
+<%--                                                        </div>--%>
+<%--                                                    </div>--%>
 
-                            <div class="form-group">
-                                <label class="col-sm-12">Tài khoản</label>
-                                <div class="col-sm-12">
-                                    <form:select path="taiKhoan" class="form-control">
-                                        <form:option value="">Lựa chọn tài khoản</form:option>
-                                        <c:forEach items="${taiKhoan}" var="t">
-                                            <c:if test="${t.id.equals(employee.taiKhoan.id)}">
-                                                <form:option value="${t.id}" selected="true">${t.username}</form:option>
-                                            </c:if>
-                                            <c:if test="${!t.id.equals(employee.taiKhoan.id)}">
-                                                <form:option value="${t.id}">${t.username}</form:option>
-                                            </c:if>
-
-                                        </c:forEach>
-                                    </form:select>
-                                </div>
-                            </div>
-
+                            <form:hidden path="taiKhoan"/>
                             <form:button type="submit" class="btn btn-info waves-effect waves-light m-r-10">Cap nhat</form:button>
                             <%--                        <button type="submit" class="btn btn-inverse waves-effect waves-light">Hủy</button>--%>
                         </form:form>

@@ -22,7 +22,7 @@
                                 <h3 class="box-title m-b-0">${d.ho} ${d.ten}</h3>
                                 <p>
                                 <address>
-                                    Quê quán: tu them truong que quan vo di ai ranh<br/>
+
                                     Số điện thoại: ${d.dienThoai}<br/><br/>
                                     <a href="#"><i class="far fa-address-card"></i></a>
                                     <a style="padding-left: 5%" href="/employees/edit-employee/${d.id}"><i class="far fa-edit"></i></a>

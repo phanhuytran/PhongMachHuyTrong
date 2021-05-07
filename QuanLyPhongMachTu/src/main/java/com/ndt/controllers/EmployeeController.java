@@ -3,6 +3,7 @@ package com.ndt.controllers;
 import com.ndt.models.BacSi;
 import com.ndt.models.NhanVien;
 import com.ndt.service.INhanVienService;
+import com.ndt.service.ITaiKhoanService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
@@ -21,6 +22,14 @@ import java.io.IOException;
 public class EmployeeController {
     @Autowired
     INhanVienService iNhanVienService;
+
+    @Autowired
+    ITaiKhoanService iTaiKhoanService;
+
+    @ModelAttribute
+    public void modelAttribute(ModelMap model) {
+        model.addAttribute("taiKhoan", iTaiKhoanService.getTaiKhoanNhanVienTrong());
+    }
 
     @GetMapping()
     public String index(ModelMap model) {
@@ -73,6 +82,7 @@ public class EmployeeController {
     public String editProcess(@ModelAttribute("employee") @Valid NhanVien nhanVien,
                               BindingResult result, ModelMap model) {
         if (!result.hasErrors()) {
+            System.out.println(nhanVien.getTaiKhoan().getUsername());
             NhanVien nv = iNhanVienService.update(nhanVien);
             if (nv != null)
                 return "redirect:/employees";

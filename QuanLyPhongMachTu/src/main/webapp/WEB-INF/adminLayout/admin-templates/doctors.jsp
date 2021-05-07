@@ -12,7 +12,7 @@
             </div>
             <div class="row">
                 <c:forEach items="${doctors}" var="d">
-                    <div class="col-md-4 col-sm-4">
+                    <div id="${d.id}" class="col-md-4 col-sm-4">
                         <div class="white-box">
                             <div class="row">
                                 <div class="col-md-4 col-sm-4 text-center">
@@ -25,8 +25,8 @@
                                             Quê quán: ${d.queQuan}<br/>
                                             Số điện thoại: ${d.dienThoai}<br/><br/>
                                             <a href="#"><i class="far fa-address-card"></i></a>
-                                            <a style="padding-left: 5%" href="/edit-doctor"><i class="far fa-edit"></i></a>
-                                            <a style="padding-left: 5%" href="javascript:;" ><i class="far fa-trash-alt"></i></a>
+                                            <a style="padding-left: 5%" href="/doctors/edit-doctor/${d.id}"><i class="far fa-edit"></i></a>
+                                            <a style="padding-left: 5%" href="javascript:;" onclick="xoaBacSi('${d.id}')" ><i class="far fa-trash-alt"></i></a>
                                         </address>
                                     </p>
                                 </div>
@@ -37,3 +37,4 @@
             </div>
         </div>
     </div>
+

@@ -11,4 +11,5 @@ public interface ITaiKhoanService extends IGenericService<TaiKhoan>, UserDetails
     List<TaiKhoan> getTaiKhoanTheoChucVu(String kw);
     boolean themTaiKhoanVaBacSi(TaiKhoan taiKhoan, BacSi bacSi);
     List<TaiKhoan> getTaiKhoanBacSiTrong();
+    List<TaiKhoan> getTaiKhoanNhanVienTrong();
 }

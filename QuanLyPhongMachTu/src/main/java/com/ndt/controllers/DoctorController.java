@@ -2,6 +2,7 @@ package com.ndt.controllers;
 
 import com.ndt.models.BacSi;
 import com.ndt.models.BenhNhan;
+import com.ndt.models.NhanVien;
 import com.ndt.models.TaiKhoan;
 import com.ndt.service.IBacSiService;
 import com.ndt.service.ITaiKhoanService;
@@ -54,20 +55,9 @@ public class DoctorController {
             System.out.println(bacSi);
             System.out.println(bacSi.getEmail());
             System.out.println(bacSi.getDienThoai());
-            //set image
-            MultipartFile img = bacSi.getImg();
-            String relativePath = "/admin-resources/images/" + bacSi.getTen() + ".jpg";
-            String targetPath = request.getSession().getServletContext()
-                    .getRealPath(String.format("/admin-resources/images/%s.jpg", bacSi.getTen()));
-            if (img != null && !img.isEmpty()) {
-                try {
-                    img.transferTo(new File(targetPath));
-                    bacSi.setImage(relativePath);
-                } catch (IllegalStateException | IOException ex) {
-                    System.err.println(ex.getMessage());
-                }
-            }
-            bacSi.setImage(" ");
+
+            int i = (int) (Math.random() * 5) + 1;
+            bacSi.setImage("/admin-resources/plugins/images/users/d"+i+".jpg");
             BacSi b = iBacSiService.insert(bacSi);
             if (b != null)
                 return "redirect:/doctors";
@@ -90,5 +80,25 @@ public class DoctorController {
     public void deleteDoctor(@PathVariable("id")String id) {
         BacSi bacSi = iBacSiService.getById(BacSi.class, id);
         iBacSiService.delete(bacSi);
+    }
+
+    @GetMapping("/edit-doctor/{id}")
+    public String editView(@PathVariable("id")String id, ModelMap model) {
+        model.addAttribute("doctor", iBacSiService.getById(BacSi.class, id));
+
+        return "edit-doctor";
+    }
+
+    @PostMapping("/edit-doctor/{id}")
+    public String editProcess(@ModelAttribute("doctor") @Valid BacSi bacSi,
+                              BindingResult result, ModelMap model) {
+        if (!result.hasErrors()) {
+            System.out.println(bacSi.getTaiKhoan().getUsername());
+            BacSi bs = iBacSiService.update(bacSi);
+            if (bs != null)
+                return "redirect:/doctors";
+        }
+
+        return "edit-doctor";
     }
 }

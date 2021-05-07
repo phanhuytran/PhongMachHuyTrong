@@ -28,7 +28,7 @@ public class NhanVien implements Serializable {
     private String image;
     @Transient
     private MultipartFile img;
-    @OneToOne
+    @OneToOne(cascade = CascadeType.DETACH)
     @MapsId
     @JoinColumn(name = "id")
     private TaiKhoan taiKhoan;
