@@ -3,6 +3,7 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles" %>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <html>
 <head>
     <meta charset="utf-8">
@@ -54,7 +55,9 @@
                                     <th>Mô tả</th>
                                     <th>Đơn giá</th>
                                     <th>Đơn vị</th>
-                                    <th>Quản lý thuốc</th>
+                                    <sec:authorize access="hasAnyRole('ROLE_ADMIN')">
+                                        <th>Quản lý thuốc</th>
+                                    </sec:authorize>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -65,10 +68,12 @@
                                         <th>${m.moTa}</th>
                                         <th>${m.donGia}</th>
                                         <th>${m.donVi}</th>
-                                        <th>
-                                            <a href="#"><i class="far fa-edit"></i></a>
-                                            <a style="padding-left: 5%" href="#"><i class="far fa-trash-alt"></i></a>
-                                        </th>
+                                        <sec:authorize access="hasAnyRole('ROLE_ADMIN')">
+                                            <th>
+                                                <a href="#"><i class="far fa-edit"></i></a>
+                                                <a style="padding-left: 5%" href="#"><i class="far fa-trash-alt"></i></a>
+                                            </th>
+                                        </sec:authorize>
                                     </tr>
                                 </c:forEach>
                                 </tbody>

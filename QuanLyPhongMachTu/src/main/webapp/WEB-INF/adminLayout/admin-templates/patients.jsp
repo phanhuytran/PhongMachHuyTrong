@@ -3,7 +3,7 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles" %>
-
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
     <div id="page-wrapper">
         <div class="container-fluid">
             <div class="row bg-title">
@@ -35,18 +35,20 @@
                                                     <i class="far fa-address-card"></i>
                                                 </a>
                                             </li>
-                                            <li>
-                                                <a class="btn default btn-outline"
-                                                   href="<c:url  value="/patients/edit/${d.id}"/>">
-                                                    <i class="far fa-edit"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a class="btn default btn-outline"
-                                                   href="javascript:;" onclick="xoaBenhNhan('${d.id}')">
-                                                    <i class="far fa-trash-alt"></i>
-                                                </a>
-                                            </li>
+                                            <sec:authorize access="hasAnyRole('ROLE_ADMIN')">
+                                                <li>
+                                                    <a class="btn default btn-outline"
+                                                       href="<c:url  value="/patients/edit/${d.id}"/>">
+                                                        <i class="far fa-edit"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="btn default btn-outline"
+                                                       href="javascript:;" onclick="xoaBenhNhan('${d.id}')">
+                                                        <i class="far fa-trash-alt"></i>
+                                                    </a>
+                                                </li>
+                                            </sec:authorize>
                                         </ul>
                                     </div>
                                 </div>

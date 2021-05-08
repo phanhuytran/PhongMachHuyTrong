@@ -91,25 +91,25 @@ Software Foundation//DTD Tiles Configuration 3.0//EN"
         <put-attribute name="content" value="/WEB-INF/adminLayout/admin-templates/prescriptions.jsp"/>
     </definition>
     <definition name = "prescription.add" extends="baseAdminLayout">
-        <put-attribute name="title" value="thêm toa thuốc"/>
+        <put-attribute name="title" value="Thêm Toa Thuốc"/>
         <put-attribute name="content" value="/WEB-INF/adminLayout/admin-templates/add-prescription.jsp"/>
 
     </definition>
 
     <definition name = "prescription.edit" extends="baseAdminLayout">
-        <put-attribute name="title" value="chỉnh sữa toa thuốc"/>
+        <put-attribute name="title" value="Chỉnh Sửa Toa Thuốc"/>
         <put-attribute name="content" value="/WEB-INF/adminLayout/admin-templates/edit-prescription.jsp"/>
 
     </definition>
 
     <definition name = "prescription.detail" extends="baseAdminLayout">
-        <put-attribute name="title" value="chỉnh sữa toa thuốc"/>
+        <put-attribute name="title" value="Chỉnh Sửa Toa Thuốc"/>
         <put-attribute name="content" value="/WEB-INF/adminLayout/admin-templates/prescription-detail.jsp"/>
 
     </definition>
 
     <definition name = "prescription.detail.edit" extends="baseAdminLayout">
-        <put-attribute name="title" value="chỉnh sữa toa thuốc"/>
+        <put-attribute name="title" value="Chỉnh Sửa Toa Thuốc"/>
         <put-attribute name="content" value="/WEB-INF/adminLayout/admin-templates/prescription-detail.jsp"/>
 
     </definition>

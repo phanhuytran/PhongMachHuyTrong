@@ -6,29 +6,23 @@
 
 <div id="page-wrapper">
     <div class="container-fluid">
-        <h4 class="text-center text-primary">Thong tin toa thuoc</h4>
+        <h4 class="text-center text-primary">Thông tin toa thuốc</h4>
         <table class="table table-bordered">
             <thead>
-            <th>
-            ID
-            </th>
-            <th>Bac si
-
-            <th>Benh nhan
-            </th>
-            <th>Ngay ke toa
-            </th>
-            <th>Loai benh
-            </th>
+                <th>ID</th>
+                <th>Bác sĩ</th>
+                <th>Bệnh nhân</th>
+                <th>Ngày kê toa</th>
+                <th>Loại bệnh</th>
             </thead>
             <tbody>
-            <tr>
-                <td>${prescription.id}</td>
-                <td>${prescription.bacSi.ten}</td>
-                <td>${prescription.benhNhan.ten}</td>
-                <td>${prescription.ngayKeToa}</td>
-                <td>${prescription.loaiBenh.tenBenh}</td>
-            </tr>
+                <tr>
+                    <td>${prescription.id}</td>
+                    <td>${prescription.bacSi.ten}</td>
+                    <td>${prescription.benhNhan.ten}</td>
+                    <td>${prescription.ngayKeToa}</td>
+                    <td>${prescription.loaiBenh.tenBenh}</td>
+                </tr>
             </tbody>
         </table>
         <a href="javascript:;" class="btn btn-primary" onclick="showForm()">Them CTTH</a>
@@ -53,8 +47,8 @@
         <c:if test="${result != null}">
             <table style="margin-top: 50px" class="table table-bordered">
                 <thead>
-                <th>Ten thuoc</th>
-                <th>So luong</th>
+                <th>Tên thuốc</th>
+                <th>Số lượng</th>
                 </thead>
                 <tbody>
                     <c:forEach items="${result}" var="i">

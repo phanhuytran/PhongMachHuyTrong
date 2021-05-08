@@ -1,5 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
     <div id="page-wrapper">
         <div class="container-fluid">
             <div class="row bg-title">
@@ -34,8 +35,10 @@
                                             Quê quán: ${d.queQuan}<br/>
                                             Số điện thoại: ${d.dienThoai}<br/><br/>
                                             <a href="#"><i class="far fa-address-card"></i></a>
-                                            <a style="padding-left: 5%" href="/doctors/edit/${d.id}"><i class="far fa-edit"></i></a>
-                                            <a style="padding-left: 5%" href="javascript:;" onclick="xoaBacSi('${d.id}')" ><i class="far fa-trash-alt"></i></a>
+                                            <sec:authorize access="hasAnyRole('ROLE_ADMIN')">
+                                                <a style="padding-left: 5%" href="/doctors/edit/${d.id}"><i class="far fa-edit"></i></a>
+                                                <a style="padding-left: 5%" href="javascript:;" onclick="xoaBacSi('${d.id}')" ><i class="far fa-trash-alt"></i></a>
+                                            </sec:authorize>
                                         </address>
                                     </p>
                                 </div>
@@ -46,4 +49,3 @@
             </div>
         </div>
     </div>
-

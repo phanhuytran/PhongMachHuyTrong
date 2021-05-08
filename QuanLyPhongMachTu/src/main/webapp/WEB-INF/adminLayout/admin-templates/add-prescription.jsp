@@ -8,7 +8,7 @@
     <div class="container-fluid">
         <div class="row bg-title">
             <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-                <h4 class="page-title">Thêm mới Toa thuoc</h4>
+                <h4 class="page-title">Thêm mới toa thuốc</h4>
             </div>
             <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
                 <a href="/" target="_blank" class="btn btn-danger pull-right m-l-20 btn-rounded btn-outline hidden-xs hidden-sm waves-effect waves-light">Trang chủ</a>
@@ -48,7 +48,7 @@
                         </div>
 
                         <form:button type="submit" class="btn btn-info waves-effect waves-light m-r-10">Thêm</form:button>
-                        <%--                        <button type="submit" class="btn btn-inverse waves-effect waves-light">Hủy</button>--%>
+                        <button type="reset" class="btn btn-inverse waves-effect waves-light">Hủy</button>
                     </form:form>
 
                 </div>

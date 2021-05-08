@@ -60,7 +60,7 @@
                         </div> <a href="javascript:void(0)" id="to-recover" class="text-dark pull-right"><i class="fas fa-lock m-r-5"></i> Quên mật khẩu?</a> </div>
                 </div>
                 <div class="login-admin">
-                    <a href="/admin">Đăng nhập với tư cách là Admin</a>
+                    <a href="/admin">Quản lý phòng mạch Huy Trọng</a>
                 </div>
                 <div class="form-group text-center m-t-20">
                     <div class="col-xs-12">

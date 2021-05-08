@@ -41,15 +41,22 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
                 .accessDeniedPage("/login?accessDenied");
         http.authorizeRequests()
                 .antMatchers("/").permitAll()
-                .antMatchers("/admin").access("hasRole('ROLE_ADMIN')")
-                .antMatchers("/doctors").access("hasRole('ROLE_ADMIN')")
-                .antMatchers("/doctors/add").access("hasRole('ROLE_ADMIN')")
-                .antMatchers("/employees").access("hasRole('ROLE_ADMIN')")
-                .antMatchers("/employees/add").access("hasRole('ROLE_ADMIN')")
-                .antMatchers("/patients").access("hasRole('ROLE_ADMIN')")
-                .antMatchers("/patients/add").access("hasRole('ROLE_ADMIN')")
-                .antMatchers("/medicines").access("hasRole('ROLE_ADMIN')")
-                .antMatchers("/medicines/add").access("hasRole('ROLE_ADMIN')");
+                .antMatchers("/admin").access("hasAnyRole('ROLE_ADMIN', 'ROLE_BACSI', 'ROLE_NHANVIEN')")
+                .antMatchers("/doctors").access("hasAnyRole('ROLE_ADMIN', 'ROLE_BACSI', 'ROLE_NHANVIEN')")
+                .antMatchers("/doctors/detail/**").access("hasAnyRole('ROLE_ADMIN', 'ROLE_BACSI', 'ROLE_NHANVIEN')")
+                .antMatchers("/doctors/**").access("hasRole('ROLE_ADMIN')")
+                .antMatchers("/employees").access("hasAnyRole('ROLE_ADMIN', 'ROLE_BACSI', 'ROLE_NHANVIEN')")
+                .antMatchers("/employees/detail/**").access("hasAnyRole('ROLE_ADMIN', 'ROLE_BACSI', 'ROLE_NHANVIEN')")
+                .antMatchers("/employees/**").access("hasRole('ROLE_ADMIN')")
+                .antMatchers("/patients").access("hasAnyRole('ROLE_ADMIN', 'ROLE_BACSI', 'ROLE_NHANVIEN')")
+                .antMatchers("/patients/details/**").access("hasAnyRole('ROLE_ADMIN', 'ROLE_BACSI', 'ROLE_NHANVIEN')")
+                .antMatchers("/patients/**").access("hasRole('ROLE_ADMIN')")
+                .antMatchers("/medicines").access("hasAnyRole('ROLE_ADMIN', 'ROLE_BACSI', 'ROLE_NHANVIEN')")
+                .antMatchers("/medicines/detail/**").access("hasAnyRole('ROLE_ADMIN', 'ROLE_BACSI', 'ROLE_NHANVIEN')")
+                .antMatchers("/medicines/**").access("hasRole('ROLE_ADMIN')")
+                .antMatchers("/prescription").access("hasAnyRole('ROLE_ADMIN', 'ROLE_BACSI', 'ROLE_NHANVIEN')")
+                .antMatchers("/prescription/detail/**").access("hasAnyRole('ROLE_ADMIN', 'ROLE_BACSI', 'ROLE_NHANVIEN')")
+                .antMatchers("/prescription/**").access("hasRole('ROLE_ADMIN')");
         http.csrf().disable();
     }
 }

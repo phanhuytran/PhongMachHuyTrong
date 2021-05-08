@@ -35,9 +35,7 @@
                                     <div class="sub-content">
                                         <ul>
                                             <a href="#"><li><i class="far fa-user"></i><span style="margin-left: 8%"></span>Xem thông tin</li></a>
-                                            <sec:authorize access="hasAnyRole('ROLE_ADMIN')">
-                                                <a href="/admin" target="_blank"><li><i class="fas fa-tasks"></i><span style="margin-left: 8%"></span>Quản lý phòng mạch</li></a>
-                                            </sec:authorize>
+                                            <a href="/admin" target="_blank"><li><i class="fas fa-tasks"></i><span style="margin-left: 8%"></span>Quản lý phòng mạch</li></a>
                                             <a href="/logout"><li><i class="fas fa-sign-out-alt"></i><span style="margin-left: 8%"></span>Đăng xuất</li></a>
                                         </ul>
                                     </div>
