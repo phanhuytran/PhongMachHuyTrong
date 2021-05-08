@@ -1,4 +1,4 @@
-﻿package com.ndt.formatters;
+package com.ndt.formatters;
 
 import com.ndt.models.BacSi;
 import org.springframework.format.Formatter;

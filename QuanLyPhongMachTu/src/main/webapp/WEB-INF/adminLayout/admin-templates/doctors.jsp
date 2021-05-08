@@ -34,7 +34,7 @@
                                             Quê quán: ${d.queQuan}<br/>
                                             Số điện thoại: ${d.dienThoai}<br/><br/>
                                             <a href="#"><i class="far fa-address-card"></i></a>
-                                            <a style="padding-left: 5%" href="/doctors/edit-doctor/${d.id}"><i class="far fa-edit"></i></a>
+                                            <a style="padding-left: 5%" href="/doctors/edit/${d.id}"><i class="far fa-edit"></i></a>
                                             <a style="padding-left: 5%" href="javascript:;" onclick="xoaBacSi('${d.id}')" ><i class="far fa-trash-alt"></i></a>
                                         </address>
                                     </p>

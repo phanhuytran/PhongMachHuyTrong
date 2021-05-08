@@ -2,6 +2,7 @@ package com.ndt.models;
 
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.util.Date;
 import java.util.Set;
@@ -12,6 +13,7 @@ public class ToaThuoc implements Serializable {
     @Id
     @Column(name = "id", length = 36)
     private String id;
+    @NotNull(message = "Khong duoc rong")
     @Column(name = "NgayKeToa")
     private Date ngayKeToa;
     @ManyToOne()

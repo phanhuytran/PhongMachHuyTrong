@@ -99,6 +99,23 @@
                 })
             }
         }
+        function xoaToaThuoc(id) {
+            if (confirm("Bạn có muốn xóa không?")) {
+                fetch("/prescription/delete/" + id, {
+                    method: "POST",
+                    headers: {
+                        "content-type": "application/json"
+                    }
+                }).then(res => {
+                    if (res.status == 200) {
+                        document.getElementById(id).style.display = "none";
+                        alert("Xóa thành công!!!");
+                    }
+                    else
+                        alert("Ôi hỏng!!!");
+                })
+            }
+        }
     </script>
 
     <script src="<c:url value="/admin-resources/plugins/bower_components/jquery/dist/jquery.min.js"/>"></script>

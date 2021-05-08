@@ -84,14 +84,14 @@ public class DoctorController {
         iBacSiService.delete(bacSi);
     }
 
-    @GetMapping("/edit-doctor/{id}")
+    @GetMapping("/edit/{id}")
     public String editView(@PathVariable("id")String id, ModelMap model) {
         model.addAttribute("doctor", iBacSiService.getById(BacSi.class, id));
 
         return "edit-doctor";
     }
 
-    @PostMapping("/edit-doctor/{id}")
+    @PostMapping("/edit/{id}")
     public String editProcess(@ModelAttribute("doctor") @Valid BacSi bacSi,
                               BindingResult result, ModelMap model) {
         if (!result.hasErrors()) {

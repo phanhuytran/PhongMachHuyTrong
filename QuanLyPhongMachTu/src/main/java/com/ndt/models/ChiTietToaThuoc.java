@@ -1,6 +1,9 @@
 package com.ndt.models;
 
 import javax.persistence.*;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
@@ -10,6 +13,7 @@ import java.util.Set;
 @Table(name = "chitiettoathuoc")
 public class ChiTietToaThuoc implements Serializable {
     @Column(name = "SoLuong")
+    @Min(value = 1, message = "Tu ghi")
     private int soLuong;
     @Column(name = "DonGia")
     private BigDecimal donGia;
@@ -23,6 +27,7 @@ public class ChiTietToaThuoc implements Serializable {
     @Id
     @ManyToOne
     @JoinColumn(name = "MaThuoc")
+    @NotNull(message = "Tu ghi")
     private Thuoc thuoc;
 
     public int getSoLuong() {

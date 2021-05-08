@@ -49,5 +49,7 @@ public class WebApplicationContextConfig implements WebMvcConfigurer {
         registry.addFormatter(new BacSiFormatter());
         registry.addFormatter(new BenhNhanFormatter());
         registry.addFormatter(new LoaiBenhFormatter());
+        registry.addFormatter(new ThuocFormatter());
+        registry.addFormatter(new ToaThuocFormatter());
     }
 }
