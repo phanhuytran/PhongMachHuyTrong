@@ -48,7 +48,7 @@
         <div class="container-fluid">
             <div class="row bg-title">
                 <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-                    <h4 class="page-title">Cap nhat Nhan vien</h4>
+                    <h4 class="page-title">Cập nhật thông tin nhân viên</h4>
                 </div>
                 <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
                     <a href="/" target="_blank" class="btn btn-danger pull-right m-l-20 btn-rounded btn-outline hidden-xs hidden-sm waves-effect waves-light">Trang chủ</a>
@@ -58,7 +58,6 @@
                 <div class="col-sm-12">
                     <div class="white-box">
                         <h3 class="box-title">Thông tin cơ bản</h3>
-
                         <form:form cssClass="form-material form-horizontal" modelAttribute="employee" method="post">
                             <form:errors path="*" element="div" cssClass="text-danger" />
                             <div class="form-group">

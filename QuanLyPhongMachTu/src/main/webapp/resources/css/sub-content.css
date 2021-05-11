@@ -110,3 +110,12 @@ div.search-user-by-name input.search-user-by-name {
     background-color: #01c0c8;
     color: #fff
 }
+
+div.input-prescription input {
+    border: 1px solid #edf1f5;
+    border-radius: 15px
+}
+input.input-search-prescription {
+    background-color: #01c0c8;
+    color: #fff
+}

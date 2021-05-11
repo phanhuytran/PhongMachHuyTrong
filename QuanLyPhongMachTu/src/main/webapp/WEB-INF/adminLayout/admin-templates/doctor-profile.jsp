@@ -17,7 +17,7 @@
             <div class="row">
                 <div class="col-md-4 col-xs-12">
                     <div class="white-box">
-                        <div class="user-bg"> <img width="100%" alt="user" src="<c:url value="/admin-resources/plugins/images/big/d2.jpg"/>"/> </div>
+                        <div class="user-bg"> <img width="60%" alt="user" src="<c:url value="${doctor.image}"/>"/> </div>
                         <div class="user-btm-box">
                             <!-- .row -->
                             <div class="row text-center m-t-10">
@@ -70,9 +70,9 @@
                             <div class="tab-pane active" id="home">
                                 <div class="steamline">
                                     <div class="sl-item">
-                                        <div class="sl-left"> <img src="<c:url value="/admin-resources/plugins/images/users/d1.jpg"/>" alt="user" class="img-circle" /> </div>
+                                        <div class="sl-left"> <img src="<c:url value="${doctor.image}"/>" alt="user" class="img-circle" /> </div>
                                         <div class="sl-right">
-                                            <div class="m-l-40"><a href="#" class="text-info">John Doe</a> <span class="sl-date">5 phút trước</span>
+                                            <div class="m-l-40"><a href="#" class="text-info">${doctor.ho} ${doctor.ten}</a> <span class="sl-date">5 phút trước</span>
                                                 <p>giao một nhiệm vụ mới <a href="#"> Thiết kế weblayout</a></p>
                                                 <div class="m-t-20 row">
                                                     <img src="<c:url value="/admin-resources/plugins/images/img2.jpg"/>" alt="user" class="col-md-3 col-xs-12" />
@@ -84,11 +84,11 @@
                                     </div>
                                     <hr>
                                     <div class="sl-item">
-                                        <div class="sl-left"> <img src="<c:url value="/admin-resources/plugins/images/users/d1.jpg"/>" alt="user" class="img-circle" /> </div>
+                                        <div class="sl-left"> <img src="<c:url value="${doctor.image}"/>" alt="user" class="img-circle" /> </div>
                                         <div class="sl-right">
-                                            <div class="m-l-40"> <a href="#" class="text-info">John Doe</a> <span class="sl-date">5 phút trước</span>
+                                            <div class="m-l-40"> <a href="#" class="text-info">${doctor.ho} ${doctor.ten}</a> <span class="sl-date">5 phút trước</span>
                                                 <div class="m-t-20 row">
-                                                    <div class="col-md-2 col-xs-12"><img src="<c:url value="/admin-resources/plugins/images/users/pawandeep.jpg"/>" alt="user" class="img-responsive" /></div>
+                                                    <div class="col-md-2 col-xs-12"><img src="<c:url value="/admin-resources/plugins/images/users/1.jpg"/>" alt="user" class="img-responsive" /></div>
                                                     <div class="col-md-9 col-xs-12">
                                                         <p>Thời gian đã qua đi không thể trở lại. Dòng sông đã ra đi làm sao về chốn cũ. Náo nức khơi xa không thể thiếu những cánh buồm. Áng mây trên đầu đâu thể ngừng trôi. Còn đâu miền dương gian khi úa tan mặt trời. Bình minh có lên ngôi khi không còn đêm tối. Đã có sông sâu không thể thiếu những suối nguồn. Vắng anh trên đời đâu còn tình yêu.</p> <a href="#" class="btn btn-success">Thiết kế weblayout</a></div>
                                                 </div>
@@ -97,18 +97,18 @@
                                     </div>
                                     <hr>
                                     <div class="sl-item">
-                                        <div class="sl-left"> <img src="<c:url value="/admin-resources/plugins/images/users/d1.jpg"/>" alt="user" class="img-circle" /> </div>
+                                        <div class="sl-left"> <img src="<c:url value="${doctor.image}"/>" alt="user" class="img-circle" /> </div>
                                         <div class="sl-right">
-                                            <div class="m-l-40"><a href="#" class="text-info">John Doe</a> <span class="sl-date">5 phút trước</span>
+                                            <div class="m-l-40"><a href="#" class="text-info">${doctor.ho} ${doctor.ten}</a> <span class="sl-date">5 phút trước</span>
                                                 <p class="m-t-10">Thời gian đã qua đi không thể trở lại. Dòng sông đã ra đi làm sao về chốn cũ. Náo nức khơi xa không thể thiếu những cánh buồm. Áng mây trên đầu đâu thể ngừng trôi. Còn đâu miền dương gian khi úa tan mặt trời. Bình minh có lên ngôi khi không còn đêm tối. Đã có sông sâu không thể thiếu những suối nguồn. Vắng anh trên đời đâu còn tình yêu.</p>
                                             </div>
                                         </div>
                                     </div>
                                     <hr>
                                     <div class="sl-item">
-                                        <div class="sl-left"> <img src="<c:url value="/admin-resources/plugins/images/users/d1.jpg"/>" alt="user" class="img-circle" /> </div>
+                                        <div class="sl-left"> <img src="<c:url value="${doctor.image}"/>" alt="user" class="img-circle" /> </div>
                                         <div class="sl-right">
-                                            <div class="m-l-40"><a href="#" class="text-info">John Doe</a> <span class="sl-date">5 phút trước</span>
+                                            <div class="m-l-40"><a href="#" class="text-info">${doctor.ho} ${doctor.ten}</a> <span class="sl-date">5 phút trước</span>
                                                 <p>gian một nhiệm vụ mới <a href="#"> Thiết kế weblayout</a></p>
                                             </div>
                                         </div>
@@ -121,19 +121,19 @@
                                 <div class="row">
                                     <div class="col-md-3 col-xs-6 b-r"> <strong>Họ và Tên</strong>
                                         <br>
-                                        <p class="text-muted">Nguyễn Đỗ Trọng</p>
+                                        <p class="text-muted">${doctor.ho} ${doctor.ten}</p>
                                     </div>
                                     <div class="col-md-3 col-xs-6 b-r"> <strong>Mobile</strong>
                                         <br>
-                                        <p class="text-muted">094 4444 555</p>
+                                        <p class="text-muted">${doctor.dienThoai}</p>
                                     </div>
                                     <div class="col-md-3 col-xs-6 b-r"> <strong>Email</strong>
                                         <br>
-                                        <p class="text-muted">trong@gmail.com</p>
+                                        <p class="text-muted">${doctor.email}</p>
                                     </div>
                                     <div class="col-md-3 col-xs-6"> <strong>Địa điểm</strong>
                                         <br>
-                                        <p class="text-muted">TP HCM</p>
+                                        <p class="text-muted">${doctor.queQuan}</p>
                                     </div>
                                 </div>
                                 <hr>
