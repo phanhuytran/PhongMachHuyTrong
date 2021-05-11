@@ -40,10 +40,16 @@ Software Foundation//DTD Tiles Configuration 3.0//EN"
         <put-attribute name="content" value="/WEB-INF/adminLayout/admin-templates/add-doctor.jsp" />
     </definition>
 
-    <definition name="doctor-profile" template="/WEB-INF/adminLayout/admin-templates/doctor-profile.jsp">
+
+<!--    <definition name="doctor.profile" template="/WEB-INF/adminLayout/admin-templates/doctor-profile.jsp">-->
+<!--        <put-attribute name="title" value="Chi Tiết Phòng Mạch Huy Trọng" />-->
+<!--        <put-attribute name="index-01" value="/WEB-INF/adminLayout/admin-templates/index-01.jsp" />-->
+<!--        <put-attribute name="index-02" value="/WEB-INF/adminLayout/admin-templates/index-02.jsp" />-->
+<!--    </definition>-->
+
+    <definition name="doctor.profile" extends="baseAdminLayout">
         <put-attribute name="title" value="Quản Lý Phòng Mạch Huy Trọng" />
-        <put-attribute name="index-01" value="/WEB-INF/adminLayout/admin-templates/index-01.jsp" />
-        <put-attribute name="index-02" value="/WEB-INF/adminLayout/admin-templates/index-02.jsp" />
+        <put-attribute name="content" value="/WEB-INF/adminLayout/admin-templates/doctor-profile.jsp"/>
     </definition>
 
     <definition name="edit-doctor" template="/WEB-INF/adminLayout/admin-templates/edit-doctor.jsp">

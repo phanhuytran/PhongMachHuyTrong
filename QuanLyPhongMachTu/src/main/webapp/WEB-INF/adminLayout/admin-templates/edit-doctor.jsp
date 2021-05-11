@@ -59,102 +59,102 @@
                     <div class="white-box">
                         <h3 class="box-title">Thông tin cơ bản</h3>
 
-                        <form:form cssClass="form-material form-horizontal" modelAttribute="doctor" method="post">
-                            <form:errors path="*" element="div" cssClass="text-danger" />
-                            <div class="form-group">
-                                <label class="col-md-12" for="example-text">Họ</span>
-                                </label>
-                                <div class="col-md-12">
-                                    <form:input path="ho" type="text" name="example-text" cssClass="form-control"
-                                                placeholder="nhập họ"/>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-md-12" for="example-text">Tên</span>
-                                </label>
-                                <div class="col-md-12">
-                                    <form:input path="ten" type="text" name="example-text" cssClass="form-control"
-                                                placeholder="nhập tên"/>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-md-12" for="bdate">Ngày sinh</span>
-                                </label>
-                                <div class="col-md-12">
-                                    <form:input path="ngaySinh" id="bdate" name="bdate"
-                                                class="form-control mydatepicker"
-                                                placeholder="nhập ngày sinh"/>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-md-12" for="bdate">Email</span>
-                                </label>
-                                <div class="col-md-12">
-                                    <form:input path="email"
-                                                class="form-control"
-                                                placeholder="nhập email"/>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-md-12" for="bdate">Image</span>
-                                </label>
-                                <div class="col-md-12">
-                                    <form:input path="image"
-                                                class="form-control"
-                                                placeholder="Nhap link image"/>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-sm-12">Giới tính</label>
-                                <div class="col-sm-12">
-                                    <form:select path="gioiTinh" class="form-control">
-                                        <form:option value="">Lựa chọn giới tính</form:option>
-                                        <form:option value="Nam">Nam</form:option>
-                                        <form:option value="Nu">Nữ</form:option>
-                                    </form:select>
-                                </div>
-                            </div>
-                            <%--                        <div class="form-group">--%>
-                            <%--                            <label class="col-sm-12">Ảnh đại diện</label>--%>
-                            <%--                            <div class="col-sm-12">--%>
-                            <%--                                <form:hidden path="image" value="test" />--%>
-                            <%--                                <form:input path="img" type="file" cssClass="form-control"/>--%>
-                            <%--                            </div>--%>
-                            <%--                        </div>--%>
-                            <%--                        <div class="form-group">--%>
-                            <%--                            <label class="col-md-12" for="email">Email</span>--%>
-                            <%--                            </label>--%>
-                            <%--                            <div class="col-md-12">--%>
-                            <%--                                <form:input path="email" type="email"--%>
-                            <%--                                            class="form-control"--%>
-                            <%--                                            placeholder="nhập email"/>--%>
-                            <%--                            </div>--%>
-                            <%--                        </div>--%>
-                            <div class="form-group">
-                                <label class="col-md-12" for="dienThoai">Điện thoại</span>
-                                </label>
-                                <div class="col-md-12">
-                                    <form:input path="dienThoai" type="text"
-                                                class="form-control"
-                                                placeholder="nhập điện thoại"/>
-                                </div>
-                            </div>
-                                                                                <div class="form-group">
-                                                                                    <label class="col-md-12" for="queQuan">Quê quán</span>
-                                                                                    </label>
-                                                                                    <div class="col-md-12">
-                                                                                        <form:input path="queQuan" type="text"
-                                                                                                    class="form-control"
-                                                                                                    placeholder="nhập quê quán"/>
-                                                                                    </div>
-                                                                                </div>
 
-                            <form:hidden path="taiKhoan"/>
-                            <form:button type="submit" class="btn btn-info waves-effect waves-light m-r-10">Cập nhật</form:button>
-                            <%--                        <button type="submit" class="btn btn-inverse waves-effect waves-light">Hủy</button>--%>
-                        </form:form>
 
+                    </div><form:form cssClass="form-material form-horizontal" modelAttribute="doctor" method="post">
+                    <form:errors path="*" element="div" cssClass="text-danger" />
+                    <div class="form-group">
+                        <label class="col-md-12" for="example-text">Họ</span>
+                        </label>
+                        <div class="col-md-12">
+                            <form:input path="ho" type="text" name="example-text" cssClass="form-control"
+                                        placeholder="nhập họ"/>
+                        </div>
                     </div>
+                    <div class="form-group">
+                        <label class="col-md-12" for="example-text">Tên</span>
+                        </label>
+                        <div class="col-md-12">
+                            <form:input path="ten" type="text" name="example-text" cssClass="form-control"
+                                        placeholder="nhập tên"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-12" for="bdate">Ngày sinh</span>
+                        </label>
+                        <div class="col-md-12">
+                            <form:input path="ngaySinh" id="bdate" name="bdate"
+                                        class="form-control mydatepicker"
+                                        placeholder="nhập ngày sinh"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-12" for="email">Email</span>
+                        </label>
+                        <div class="col-md-12">
+                            <form:input path="email"
+                                        class="form-control"
+                                        placeholder="nhập email"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-12" for="bdate">Image</span>
+                        </label>
+                        <div class="col-md-12">
+                            <form:input path="image"
+                                        class="form-control"
+                                        placeholder="Nhap link image"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-12">Giới tính</label>
+                        <div class="col-sm-12">
+                            <form:select path="gioiTinh" class="form-control">
+                                <form:option value="">Lựa chọn giới tính</form:option>
+                                <form:option value="Nam">Nam</form:option>
+                                <form:option value="Nu">Nữ</form:option>
+                            </form:select>
+                        </div>
+                    </div>
+                    <%--                        <div class="form-group">--%>
+                    <%--                            <label class="col-sm-12">Ảnh đại diện</label>--%>
+                    <%--                            <div class="col-sm-12">--%>
+                    <%--                                <form:hidden path="image" value="test" />--%>
+                    <%--                                <form:input path="img" type="file" cssClass="form-control"/>--%>
+                    <%--                            </div>--%>
+                    <%--                        </div>--%>
+                    <%--                        <div class="form-group">--%>
+                    <%--                            <label class="col-md-12" for="email">Email</span>--%>
+                    <%--                            </label>--%>
+                    <%--                            <div class="col-md-12">--%>
+                    <%--                                <form:input path="email" type="email"--%>
+                    <%--                                            class="form-control"--%>
+                    <%--                                            placeholder="nhập email"/>--%>
+                    <%--                            </div>--%>
+                    <%--                        </div>--%>
+                    <div class="form-group">
+                        <label class="col-md-12" for="dienThoai">Điện thoại</span>
+                        </label>
+                        <div class="col-md-12">
+                            <form:input path="dienThoai" type="text"
+                                        class="form-control"
+                                        placeholder="nhập điện thoại"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-12" for="queQuan">Quê quán</span>
+                        </label>
+                        <div class="col-md-12">
+                            <form:input path="queQuan" type="text"
+                                        class="form-control"
+                                        placeholder="nhập quê quán"/>
+                        </div>
+                    </div>
+
+                    <form:hidden path="taiKhoan"/>
+                    <form:button type="submit" class="btn btn-info waves-effect waves-light m-r-10">Cập nhật</form:button>
+                    <%--                        <button type="submit" class="btn btn-inverse waves-effect waves-light">Hủy</button>--%>
+                </form:form>
                 </div>
             </div>
             <%--        <div class="row">--%>

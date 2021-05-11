@@ -3,46 +3,7 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles" %>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" type="image/png" sizes="16x16" href="<c:url value="/admin-resources/plugins/images/logo.png"/>">
-    <title>
-        <tiles:insertAttribute name="title"/>
-    </title>
-    <link href="<c:url value="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>" rel="stylesheet"/>
-    <link href="<c:url value="/admin-resources/bootstrap/dist/css/bootstrap.min.css"/>" rel="stylesheet">
-    <link href="<c:url value="/admin-resources/plugins/bower_components/bootstrap-extension/css/bootstrap-extension.css"/>" rel="stylesheet">
-    <link href="<c:url value="/admin-resources/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css"/>" rel="stylesheet">
-    <link href="<c:url value="/admin-resources/plugins/bower_components/bootstrap-datepicker/bootstrap-datepicker.min.css"/>" rel="stylesheet" type="text/css" />
-    <link href="<c:url value="/admin-resources/css/animate.css"/>" rel="stylesheet">
-    <link href="<c:url value="/admin-resources/css/style.min.css"/>" rel="stylesheet">
-    <link href="<c:url value="/admin-resources/css/colors/megna.css"/>" rel="stylesheet">
-    <link href="<c:url value="/resources/css/sub-content.css"/>" rel="stylesheet">
-    <script>
-        (function (i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r;
-            i[r] = i[r] || function () {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date();
-            a = s.createElement(o), m = s.getElementsByTagName(o)[0];
-            a.async = 1;
-            a.src = g;
-            m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-        ga('create', 'UA-19175540-9', 'auto');
-        ga('send', 'pageview');
-    </script>
-</head>
 
-<body>
-<div id="wrapper">
-    <tiles:insertAttribute name="index-01"/>
-    <tiles:insertAttribute name="index-02"/>
     <div id="page-wrapper">
         <div class="container-fluid">
             <div class="row bg-title">
@@ -61,28 +22,24 @@
                             <!-- .row -->
                             <div class="row text-center m-t-10">
                                 <div class="col-md-6 b-r"><strong>Họ và Tên</strong>
-                                    <p>Nguyễn Đỗ Trọng</p>
+                                    <p>${doctor.ho} ${doctor.ten}</p>
                                 </div>
-                                <div class="col-md-6"><strong>Ngành nghề</strong>
-                                    <p>Nha sĩ</p>
+                                <div class="col-md-6"><strong>Số điện thoại</strong>
+                                    <p>${doctor.dienThoai}</p>
                                 </div>
+
                             </div>
                             <hr>
                             <div class="row text-center m-t-10">
                                 <div class="col-md-6 b-r"><strong>Email</strong>
-                                    <p>trong@gmail.com</p>
+                                    <p>${doctor.email}</p>
                                 </div>
-                                <div class="col-md-6"><strong>Số điện thoại</strong>
-                                    <p>094 4444 555</p>
+                                <div class="col-md-6"><strong>Địa chỉ</strong>
+                                    <p>${doctor.queQuan}</p>
                                 </div>
+
                             </div>
-                            <hr>
-                            <div class="row text-center m-t-10">
-                                <div class="col-md-12"><strong>Địa chỉ</strong>
-                                    <p>371 Nguyễn Kiệm, Gò Vấp<br/> TP HCM, Việt Nam.</p>
-                                </div>
-                            </div>
-                            <hr>
+
                             <div class="col-md-4 col-sm-4 text-center">
                                 <p class="text-purple"><i class="fab fa-facebook"></i></p>
                                 <h1>258</h1> </div>
@@ -234,59 +191,101 @@
                                 </ul>
                             </div>
                             <div class="tab-pane" id="update">
-                                <form class="form-material form-horizontal">
+                                <div class="text-danger"> ${mesageError}</div>
+                                <form:form cssClass="form-material form-horizontal" modelAttribute="doctor" method="post" action="/doctors/detail/${doctor.id}">
+                                    <form:errors path="*" element="div" cssClass="text-danger" />
                                     <div class="form-group">
-                                        <label class="col-md-12" for="example-text">Họ và Tên</span>
+                                        <label class="col-md-12" for="example-text">Họ</span>
                                         </label>
                                         <div class="col-md-12">
-                                            <input type="text" id="example-text" name="example-text" class="form-control" placeholder="nhập họ và tên" value="Nguyễn Đỗ Trọng"> </div>
+                                            <form:input path="ho" type="text" name="example-text" cssClass="form-control"
+                                                        placeholder="nhập họ"/>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-12" for="example-text">Tên</span>
+                                        </label>
+                                        <div class="col-md-12">
+                                            <form:input path="ten" type="text" name="example-text" cssClass="form-control"
+                                                        placeholder="nhập tên"/>
+                                        </div>
                                     </div>
                                     <div class="form-group">
                                         <label class="col-md-12" for="bdate">Ngày sinh</span>
                                         </label>
                                         <div class="col-md-12">
-                                            <input type="text" id="bdate" name="bdate" class="form-control mydatepicker" placeholder="nhập ngày sinh" value="12/10/2017"> </div>
+                                            <form:input path="ngaySinh" id="bdate" name="bdate"
+                                                        class="form-control mydatepicker"
+                                                        placeholder="nhập ngày sinh"/>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-12" for="email">Email</span>
+                                        </label>
+                                        <div class="col-md-12">
+                                            <form:input path="email"
+                                                        class="form-control"
+                                                        placeholder="nhập email"/>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-12" for="bdate">Image</span>
+                                        </label>
+                                        <div class="col-md-12">
+                                            <form:input path="image"
+                                                        class="form-control"
+                                                        placeholder="Nhap link image"/>
+                                        </div>
                                     </div>
                                     <div class="form-group">
                                         <label class="col-sm-12">Giới tính</label>
                                         <div class="col-sm-12">
-                                            <select class="form-control">
-                                                <option>Lựa chọn giới tính</option>
-                                                <option selected="selected">Nam</option>
-                                                <option>Nữ</option>
-                                            </select>
+                                            <form:select path="gioiTinh" class="form-control">
+                                                <form:option value="">Lựa chọn giới tính</form:option>
+                                                <form:option value="Nam">Nam</form:option>
+                                                <form:option value="Nu">Nữ</form:option>
+                                            </form:select>
                                         </div>
                                     </div>
+                                    <%--                        <div class="form-group">--%>
+                                    <%--                            <label class="col-sm-12">Ảnh đại diện</label>--%>
+                                    <%--                            <div class="col-sm-12">--%>
+                                    <%--                                <form:hidden path="image" value="test" />--%>
+                                    <%--                                <form:input path="img" type="file" cssClass="form-control"/>--%>
+                                    <%--                            </div>--%>
+                                    <%--                        </div>--%>
+                                    <%--                        <div class="form-group">--%>
+                                    <%--                            <label class="col-md-12" for="email">Email</span>--%>
+                                    <%--                            </label>--%>
+                                    <%--                            <div class="col-md-12">--%>
+                                    <%--                                <form:input path="email" type="email"--%>
+                                    <%--                                            class="form-control"--%>
+                                    <%--                                            placeholder="nhập email"/>--%>
+                                    <%--                            </div>--%>
+                                    <%--                        </div>--%>
                                     <div class="form-group">
-                                        <label class="col-sm-12">Ảnh đại diện</label>
-                                        <div class="col-sm-12"> <img class="img-responsive" src="<c:url value="/admin-resources/plugins/images/big/d2.jpg"/>" alt="" style="max-width:120px;"> </div>
-                                        <div class="col-sm-12">
-                                            <div class="fileinput fileinput-new input-group" data-provides="fileinput">
-                                                <div class="form-control" data-trigger="fileinput"> <i class="glyphicon glyphicon-file fileinput-exists"></i> <span class="fileinput-filename"></span></div> <span class="input-group-addon btn btn-default btn-file"> <span class="fileinput-new">Chọn ảnh</span> <span class="fileinput-exists">Thay đổi</span>
-                                                    <input type="file" name="..."> </span> <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Xóa ảnh</a> </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-md-12" for="special">Đặc điểm</span>
+                                        <label class="col-md-12" for="dienThoai">Điện thoại</span>
                                         </label>
                                         <div class="col-md-12">
-                                            <input type="text" id="special" name="special" class="form-control" placeholder="Ví dụ: Thích Java" value="Thành thạo Python"> </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-md-12">Mô tả</label>
-                                        <div class="col-md-12">
-                                            <textarea class="form-control" rows="3">Tôi là người cầu toàn nên thỉnh thoảng làm việc gì cũng chậm.</textarea>
+                                            <form:input path="dienThoai" type="text"
+                                                        class="form-control"
+                                                        placeholder="nhập điện thoại"/>
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label class="col-md-12" for="url">Website URL</span>
+                                        <label class="col-md-12" for="queQuan">Quê quán</span>
                                         </label>
                                         <div class="col-md-12">
-                                            <input type="text" id="url" name="url" class="form-control" placeholder="nhập URL website" value="http://www.example-website.com"> </div>
+                                            <form:input path="queQuan" type="text"
+                                                        class="form-control"
+                                                        placeholder="nhập quê quán"/>
+                                        </div>
                                     </div>
-                                    <button type="submit" class="btn btn-info waves-effect waves-light m-r-10">Cập nhật</button>
-                                    <button type="submit" class="btn btn-inverse waves-effect waves-light">Hủy</button>
-                                </form>
+
+                                    <form:hidden path="taiKhoan"/>
+                                    <form:button type="submit" class="btn btn-info waves-effect waves-light m-r-10">Cập nhật</form:button>
+                                    <%--                        <button type="submit" class="btn btn-inverse waves-effect waves-light">Hủy</button>--%>
+                                </form:form>
                             </div>
                         </div>
                     </div>
@@ -294,21 +293,3 @@
             </div>
         </div>
     </div>
-    <footer class="footer text-center"> ©Copyright 2020 - Huy & Trọng. Đã đăng ký bản quyền.</footer>
-</div>
-
-<script src="<c:url value="/admin-resources/plugins/bower_components/jquery/dist/jquery.min.js"/>"></script>
-<script src="<c:url value="/admin-resources/bootstrap/dist/js/tether.min.js"/>"></script>
-<script src="<c:url value="/admin-resources/bootstrap/dist/js/bootstrap.min.js"/>"></script>
-<script src="<c:url value="/admin-resources/plugins/bower_components/bootstrap-extension/js/bootstrap-extension.min.js"/>"></script>
-<script src="<c:url value="/admin-resources/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.js"/>"></script>
-<script src="<c:url value="/admin-resources/js/jquery.slimscroll.js"/>"></script>
-<script src="<c:url value="/admin-resources/plugins/bower_components/bootstrap-datepicker/bootstrap-datepicker.min.js"/>"></script>
-<script type="text/javascript">
-    jQuery('.mydatepicker').datepicker();
-</script>
-<script src="<c:url value="/admin-resources/js/waves.js"/>"></script>
-<script src="<c:url value="/admin-resources/js/custom.min.js"/>"></script>
-<script src="<c:url value="/admin-resources/plugins/bower_components/styleswitcher/jQuery.style.switcher.js"/>"></script>
-</body>
-</html>

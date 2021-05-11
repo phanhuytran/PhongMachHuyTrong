@@ -101,6 +101,13 @@ public class EmployeeController {
         }
     }
 
+    @GetMapping("/details/{id}")
+    public String details(@PathVariable("id")String id, ModelMap model) {
+        NhanVien nhanVien = iNhanVienService.getById(NhanVien.class, id);
+        model.addAttribute("doctor", nhanVien);
+        return "doctor-profile";
+    }
+
     @GetMapping("/search")
     public String search(@RequestParam("hoten") String cay, ModelMap model){
         List<NhanVien> employees = iNhanVienService.getAll(NhanVien.class).stream()

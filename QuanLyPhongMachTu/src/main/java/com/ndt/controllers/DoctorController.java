@@ -35,7 +35,10 @@ public class DoctorController {
     @ModelAttribute
     public void modelAttribute(ModelMap model) {
         model.addAttribute("taiKhoan", iTaiKhoanService.getTaiKhoanBacSiTrong());
+
     }
+
+
 
     @RequestMapping()
     public String index(ModelMap model) {
@@ -72,7 +75,22 @@ public class DoctorController {
     public String details(@PathVariable("id")String id, ModelMap model) {
         BacSi bacSi = iBacSiService.getById(BacSi.class, id);
         model.addAttribute("doctor", bacSi);
-        return "doctor-profile";
+        return "doctor.profile";
+    }
+
+    @PostMapping("/detail/{id}")
+    public String detaitAndEditProcess(@ModelAttribute("doctor") @Valid BacSi bacSi,
+                              BindingResult result, ModelMap model) {
+        if (!result.hasErrors()) {
+            System.out.println(bacSi.getTaiKhoan().getUsername());
+            BacSi bs = iBacSiService.update(bacSi);
+            if (bs != null) {
+                model.addAttribute("mesageError","cập nhật thành công");
+                return "doctor.profile";
+            }
+        }
+        model.addAttribute("mesageError", "Lỗi cập nhật");
+        return "doctor.profile";
     }
 
     // Chỉnh sửa thông tin Bác sĩ

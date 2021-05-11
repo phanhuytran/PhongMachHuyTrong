@@ -1,5 +1,6 @@
 package com.ndt.controllers;
 
+import com.ndt.models.NhanVien;
 import com.ndt.models.Thuoc;
 import com.ndt.service.IThuocService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -47,5 +48,13 @@ public class MedicineController {
         }
 
         return "add-medicine";
+    }
+
+
+    @GetMapping("/details/{id}")
+    public String details(@PathVariable("id")String id, ModelMap model) {
+        Thuoc thuoc = iThuocService.getById(Thuoc.class, id);
+        model.addAttribute("medicine", thuoc);
+        return "medicine.detail";
     }
 }
