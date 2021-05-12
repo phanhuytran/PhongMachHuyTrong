@@ -38,7 +38,7 @@
                 <form:hidden path="toaThuoc" value="${prescription.id}" />
                 <form:errors path="*" element="div" cssClass="alert alert-danger"/>
                 <div class="form-group">
-                    <label for="tenThuoc">Thuoc</label>
+                    <label for="thuoc">Thuoc</label>
                     <form:select cssClass="form-control select" path="thuoc">
                         <c:forEach items="${medicines}" var="m">
                             <form:option value="${m.id}">${m.tenThuoc}</form:option>

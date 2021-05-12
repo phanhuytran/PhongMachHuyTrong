@@ -77,7 +77,7 @@ public class EmployeeController {
     public String editView(@PathVariable("id")String id, ModelMap model) {
         model.addAttribute("employee", iNhanVienService.getById(NhanVien.class, id));
 
-        return "edit-employee";
+        return "employee.edit";
     }
 
     @PostMapping("/edit/{id}")
@@ -90,8 +90,10 @@ public class EmployeeController {
                 return "redirect:/employees";
         }
 
-        return "edit-employee";
+        return "employee.edit";
     }
+
+
 
     @PostMapping("/delete/{id}")
     @ResponseStatus(HttpStatus.OK)
@@ -101,11 +103,11 @@ public class EmployeeController {
         }
     }
 
-    @GetMapping("/details/{id}")
+    @GetMapping("/detail/{id}")
     public String details(@PathVariable("id")String id, ModelMap model) {
         NhanVien nhanVien = iNhanVienService.getById(NhanVien.class, id);
-        model.addAttribute("doctor", nhanVien);
-        return "doctor-profile";
+        model.addAttribute("Employee", nhanVien);
+        return "employee.detail";
     }
 
     @GetMapping("/search")

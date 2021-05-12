@@ -38,9 +38,10 @@ public class MedicineController {
         if(!result.hasErrors())
         {
             System.out.println("");
-            System.out.printf("ten thuoc:%s\nmo ta: %s\ndon gia:%s\ngon vi: %s\n",
-                    thuoc.getTenThuoc(), thuoc.getMoTa(), thuoc.getDonGia(),thuoc.getDonVi());
-//            thuoc.setId(UUID.randomUUID().toString());
+            thuoc.setId(iThuocService.getAll(Thuoc.class).size() + 1);
+            System.out.printf("ten thuoc:%s\nmo ta: %s\ndon gia:%s\ndon vi: %s\nid: %s\n" ,
+                    thuoc.getTenThuoc(), thuoc.getMoTa(), thuoc.getDonGia(),thuoc.getDonVi(),thuoc.getId());
+
             Thuoc t = iThuocService.insert(thuoc);
 
             if(t != null)

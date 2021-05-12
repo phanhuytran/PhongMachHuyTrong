@@ -70,7 +70,7 @@
                                         <th>${m.donVi}</th>
                                         <sec:authorize access="hasAnyRole('ROLE_ADMIN')">
                                             <th>
-                                                <a href="#"><i class="far fa-edit"></i></a>
+                                                <a href="/medicine/edit/${m.id}"><i class="far fa-edit"></i></a>
                                                 <a style="padding-left: 5%" href="#"><i class="far fa-trash-alt"></i></a>
                                             </th>
                                         </sec:authorize>

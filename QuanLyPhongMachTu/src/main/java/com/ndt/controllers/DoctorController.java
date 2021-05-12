@@ -106,7 +106,7 @@ public class DoctorController {
     public String editView(@PathVariable("id")String id, ModelMap model) {
         model.addAttribute("doctor", iBacSiService.getById(BacSi.class, id));
 
-        return "edit-doctor";
+        return "doctor.edit";
     }
 
     @PostMapping("/edit/{id}")
@@ -119,7 +119,7 @@ public class DoctorController {
                 return "redirect:/doctors";
         }
 
-        return "edit-doctor";
+        return "doctor.edit";
     }
     @GetMapping("/search")
     public String search(@RequestParam("hoten") String cay, ModelMap model){
