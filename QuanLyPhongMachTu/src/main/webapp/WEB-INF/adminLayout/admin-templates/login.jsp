@@ -55,10 +55,12 @@
                 <div class="form-group">
                     <div class="col-md-12">
                         <div class="checkbox checkbox-primary pull-left p-t-0">
-                            <input id="checkbox-signup" type="checkbox">
+                            <input id="checkbox-signup" type="checkbox" name="remember-me">
                             <label for="checkbox-signup"> Nhớ mật khẩu </label>
-                        </div> <a href="javascript:void(0)" id="to-recover" class="text-dark pull-right"><i class="fas fa-lock m-r-5"></i> Quên mật khẩu?</a> </div>
+                        </div> <a href="javascript:void(0)" id="to-recover" class="text-dark pull-right"><i class="fas fa-lock m-r-5"></i> Quên mật khẩu?</a>
+                    </div>
                 </div>
+                <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
                 <div class="login-admin">
                     <a href="/admin">Quản lý phòng mạch Huy Trọng</a>
                 </div>
@@ -75,11 +77,6 @@
                         </div>
                     </div>
                 </div>
-<%--                <div class="form-group m-b-0">--%>
-<%--                    <div class="col-sm-12 text-center">--%>
-<%--                        <p>Bạn chưa có tài khoản? <a href="register2.html" class="text-primary m-l-5"><b>Đăng ký</b></a></p>--%>
-<%--                    </div>--%>
-<%--                </div>--%>
             </form>
             <form class="form-horizontal" id="recoverform" action="/admin">
                 <div class="form-group ">

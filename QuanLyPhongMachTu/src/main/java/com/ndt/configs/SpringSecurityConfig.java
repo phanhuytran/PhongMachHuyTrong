@@ -29,6 +29,9 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
     }
 
     protected void configure(HttpSecurity http) throws Exception {
+
+        http.rememberMe().key("uniqueAndSecret").tokenValiditySeconds(1296000);
+
         http.formLogin().loginPage("/taikhoan/login")
                 .usernameParameter("username")
                 .passwordParameter("password");
