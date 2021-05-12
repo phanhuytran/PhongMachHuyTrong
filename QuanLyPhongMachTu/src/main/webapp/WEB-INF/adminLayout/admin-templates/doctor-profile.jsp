@@ -3,7 +3,7 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles" %>
-
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
     <div id="page-wrapper">
         <div class="container-fluid">
             <div class="row bg-title">
@@ -62,9 +62,11 @@
                             <li class="tab">
                                 <a href="#biography" data-toggle="tab"> <span class="visible-xs"><i class="fa fa-home"></i></span> <span class="hidden-xs">Tiểu sửa</span> </a>
                             </li>
-                            <li class="tab">
-                                <a href="#update" data-toggle="tab"> <span class="visible-xs"><i class="fa fa-home"></i></span> <span class="hidden-xs">Cập nhật chi tiết</span> </a>
-                            </li>
+                            <sec:authorize access="hasAnyRole('ROLE_ADMIN')">
+                                <li class="tab">
+                                    <a href="#update" data-toggle="tab"> <span class="visible-xs"><i class="fa fa-home"></i></span> <span class="hidden-xs">Cập nhật chi tiết</span> </a>
+                                </li>
+                            </sec:authorize>
                         </ul>
                         <div class="tab-content">
                             <div class="tab-pane active" id="home">

@@ -85,7 +85,7 @@ public class DoctorController {
             System.out.println(bacSi.getTaiKhoan().getUsername());
             BacSi bs = iBacSiService.update(bacSi);
             if (bs != null) {
-                model.addAttribute("mesageError","cập nhật thành công");
+                model.addAttribute("mesageError","Cập nhật thành công");
                 return "doctor.profile";
             }
         }
