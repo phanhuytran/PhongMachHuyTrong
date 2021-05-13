@@ -12,4 +12,5 @@ public interface IBenhNhanService extends IGenericService<BenhNhan> {
     int getSoLuongPhieuKhamBenhCuaBenhNhan(BenhNhan benhNhan);
     boolean themBenhNhanVaPhieuKhamBenh(BenhNhan benhNhan, PhieuKhamBenh phieuKhamBenh);
     BenhNhan getBenhNhanTheoSoDienThoai(String sdt);
+    int[] getTotalPatients(int year);
 }

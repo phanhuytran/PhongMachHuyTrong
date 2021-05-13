@@ -20,7 +20,7 @@
                     <h3 class="box-title">Thông tin cơ bản</h3>
 
                     <form:form cssClass="form-material form-horizontal" action="/doctors/add" modelAttribute="doctor1" method="post">
-                        <form:errors path="*" element="div" cssClass="text-danger" />
+<%--                        <form:errors path="*" element="div" cssClass="text-danger" />--%>
                         <div class="form-group">
                             <label class="col-md-12" for="example-text">Họ</span>
                             </label>
@@ -40,10 +40,10 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-md-12" for="bdate">Ngày sinh</span>
+                            <label class="col-md-12" for="ngaySinh">Ngày sinh</span>
                             </label>
                             <div class="col-md-12">
-                                <form:input path="ngaySinh" id="bdate" name="bdate"
+                                <form:input path="ngaySinh"
                                             class="form-control mydatepicker"
                                             placeholder="nhập ngày sinh"/>
                                 <form:errors path="ngaySinh" cssClass="text-danger"/>
@@ -135,10 +135,7 @@
 <script src="<c:url value="/admin-resources/plugins/bower_components/styleswitcher/jQuery.style.switcher.js"/>"></script>
 <script>
     $(document).ready(function() {
-        $("#ngaySinh").datetimepicker({
-            format: 'DD/MM/YYYY',
-            minDate: new Date()
-        })
+
         let bornDate = new Date();
         bornDate.setFullYear(bornDate.getFullYear() - 10);
         $("#ngaySinh").datetimepicker({

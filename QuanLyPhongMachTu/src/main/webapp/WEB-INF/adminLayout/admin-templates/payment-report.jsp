@@ -47,18 +47,28 @@
         <div class="container-fluid">
             <div class="row bg-title">
                 <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-                    <h4 class="page-title">Báo cáo thanh toán</h4>
+                    <h4 class="page-title">Báo cáo số liệu bệnh nhân và doanh thu</h4>
                 </div>
                 <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
                     <a href="/" target="_blank" class="btn btn-danger pull-right m-l-20 btn-rounded btn-outline hidden-xs hidden-sm waves-effect waves-light">Trang chủ</a>
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-6">
+                <div style="display:none;" class="col-sm-6">
                     <div class="white-box">
                         <h3 class="box-title">Line Chart</h3>
                         <div>
                             <canvas id="chart1" height="150"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                //có du lieu
+                <div class="col-sm-6">
+                    <div class="white-box">
+                        <h3 class="box-title">Biểu đồ thống kế lượng bệnh nhân  theo tháng</h3>
+                        <div>
+                            <canvas id="chart11" height="150"></canvas>
                         </div>
                     </div>
                 </div>
@@ -126,5 +136,36 @@
 <script src="<c:url value="/admin-resources/plugins/bower_components/Chart.js/chartjs.init.js"/>"></script>
 <script src="<c:url value="/admin-resources/plugins/bower_components/Chart.js/Chart.min.js"/>"></script>
 <script src="<c:url value="/admin-resources/plugins/bower_components/styleswitcher/jQuery.style.switcher.js"/>"></script>
+<script
+        src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+</script>
+<script>
+    fetch('/api/getTotalPatients').then(res => res.json()).then(data => {
+        let lineChartData = {
+            labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
+            datasets: [{
+                label: "Tong so benh nhan trong nam",
+                backgroundColor: "#234323",
+                fill: true,
+                data: data
+            }]
+        }
+        let line = document.getElementById("chart11");
+        new Chart(line, {
+            type: 'line',
+            data: lineChartData,
+            options: {
+                esponsive: true,
+                legend: {
+                    display: false,
+                },
+                tooltips: {
+                    mode: 'index',
+                    intersect: false,
+                }
+            }
+        })
+    })
+</script>
 </body>
 </html>

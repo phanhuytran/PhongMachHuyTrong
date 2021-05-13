@@ -2,6 +2,7 @@ package com.ndt.service.implement;
 
 import com.ndt.models.BacSi;
 import com.ndt.models.BenhNhan;
+import com.ndt.models.CaKhamBenh;
 import com.ndt.models.ToaThuoc;
 import com.ndt.repository.IBacSiRepository;
 import com.ndt.repository.IGenericRepository;
@@ -10,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Set;
 
@@ -46,5 +48,10 @@ import java.util.Set;
     @Override
     public List<BacSi> getAllbyStorProcudure() {
         return     bacSiRepository.getAllbyStorProcudure();
+    }
+
+    @Override
+    public List<BacSi> getBacSiTheoCa(CaKhamBenh caKhamBenh, Date ngay) {
+        return bacSiRepository.getBacSiTheoCa(caKhamBenh,ngay);
     }
 }

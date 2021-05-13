@@ -2,6 +2,7 @@ package com.ndt.repository.implement;
 
 import com.ndt.models.BacSi;
 import com.ndt.models.BenhNhan;
+import com.ndt.models.CaKhamBenh;
 import com.ndt.models.ToaThuoc;
 import com.ndt.repository.IBacSiRepository;
 import org.hibernate.HibernateError;
@@ -10,6 +11,7 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -76,4 +78,14 @@ public class BacSiRepository extends GenericRepository<BacSi> implements IBacSiR
 
 
     }
+
+    @Override
+    public List<BacSi> getBacSiTheoCa(CaKhamBenh caKhamBenh, Date ngay) {
+        Query q = currentSession().createSQLQuery("CALL getBaSiTheoCaKhamBenh(:ca,:ngay)")
+                .addEntity(BacSi.class).setParameter("ca",caKhamBenh.getId())
+                .setParameter("ngay", ngay);
+
+        return q.getResultList();
+    }
 }
+

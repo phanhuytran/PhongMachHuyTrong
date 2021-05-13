@@ -23,6 +23,8 @@
                         <form:errors path="*" element="div" cssClass="text-danger" />
 
                         <div class="form-group">
+                            <label class="col-md-12" for="bacSi">Bác sĩ</span>
+                            </label>
                             <form:select path="bacSi" cssClass="form-control select">
                                 <c:forEach items="${doctors}" var="d">
                                     <form:option value="${d.id}">${d.ho} ${d.ten}</form:option>
@@ -30,6 +32,8 @@
                             </form:select>
                         </div>
                         <div class="form-group">
+                            <label class="col-md-12" for="benhNhan">Chọn bệnh nhân</span>
+                            </label>
                             <form:select path="benhNhan" cssClass="form-control select">
                                 <c:forEach items="${patients}" var="p">
                                     <form:option value="${p.id}">${p.ho} ${p.ten}</form:option>
@@ -37,9 +41,14 @@
                             </form:select>
                         </div>
                         <div class="form-group">
-                            <form:input path="ngayKeToa" cssClass="form-control" />
+                            <label class="col-md-12" for="ngayKeToa">Ngày kê toa</span>
+                            </label>
+                            <form:errors path="ngayKeToa"
+                            <form:input path="ngayKeToa" placeholder="nhập ngày kê toa" cssClass="form-control" />
                         </div>
                         <div class="form-group">
+                            <label class="col-md-12" for="loaiBenh">Loại Bệnh</span>
+                            </label>
                             <form:select path="loaiBenh" cssClass="form-control select">
                                 <c:forEach items="${diseases}" var="benh">
                                     <form:option value="${benh.id}">${benh.tenBenh}</form:option>

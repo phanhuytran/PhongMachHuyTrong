@@ -50,4 +50,9 @@ public class BenhNhanService extends GenericService<BenhNhan> implements IBenhNh
     public BenhNhan getBenhNhanTheoSoDienThoai(String sdt) {
         return benhNhanRepository.getBenhNhanhTheoSDT(sdt);
     }
+
+    @Override
+    public int[] getTotalPatients(int year) {
+        return benhNhanRepository.getTotalPatients(year);
+    }
 }

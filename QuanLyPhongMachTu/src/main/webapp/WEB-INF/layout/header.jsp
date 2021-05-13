@@ -61,8 +61,8 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#intro">Trang chủ</a></li>
-                <li><a href="/search-pateint" </li>
+                <li class="active"><a href="/">Trang chủ</a></li>
+                <li><a href="/user/search-patient/">Tra cứu bệnh nhân</a></li>
                 <li><a href="#service">Dịch vụ</a></li>
                 <li><a href="#doctor">Bác sĩ</a></li>
                 <li><a href="#facilities">Cơ sở vật chất</a></li>
@@ -70,3 +70,6 @@
         </div>
     </div>
 </nav>
+
+
+

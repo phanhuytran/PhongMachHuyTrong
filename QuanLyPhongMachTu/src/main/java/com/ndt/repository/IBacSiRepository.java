@@ -2,8 +2,10 @@ package com.ndt.repository;
 
 import com.ndt.models.BacSi;
 import com.ndt.models.BenhNhan;
+import com.ndt.models.CaKhamBenh;
 import com.ndt.models.ToaThuoc;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Set;
 
@@ -13,4 +15,5 @@ public interface IBacSiRepository extends IGenericRepository<BacSi> {
     Set<ToaThuoc> getToaThuocTheoBacSi(BacSi bacSi);
     Set<BenhNhan> getBenhNhanTheoBacSi(BacSi bacSi);
     List<BacSi> getAllbyStorProcudure ();
+    List<BacSi> getBacSiTheoCa(CaKhamBenh caKhamBenh, Date ngay);
 }

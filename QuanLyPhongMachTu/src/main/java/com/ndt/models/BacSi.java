@@ -22,6 +22,7 @@ public class BacSi implements Serializable {
     @NotEmpty(message = "This field cannot be null")
     @Column(name = "Ho", length = 10, nullable = false)
     private String ho;
+
     @NotEmpty(message = "This field cannot be null")
     @Column(name = "Ten", length = 45, nullable = false)
     private String ten;

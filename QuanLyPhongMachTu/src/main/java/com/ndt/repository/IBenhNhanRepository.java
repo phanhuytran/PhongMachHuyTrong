@@ -12,4 +12,5 @@ public interface IBenhNhanRepository extends IGenericRepository<BenhNhan> {
     int getSoLuongPhieuKhamBenhCuaBenhNhan(BenhNhan benhNhan);
     boolean themBenhNhanVaPhieuKhamBenh(BenhNhan benhNhan, PhieuKhamBenh phieuKhamBenh);
     BenhNhan getBenhNhanhTheoSDT(String sdt);
+    int[] getTotalPatients(int year);
 }

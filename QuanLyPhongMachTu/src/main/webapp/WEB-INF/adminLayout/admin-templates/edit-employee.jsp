@@ -48,6 +48,15 @@
                                 </div>
                             </div>
                             <div class="form-group">
+                                <div class="form-group">
+                                    <label class="col-md-12" for="image">Hình ảnh</span>
+                                    </label>
+                                    <div class="col-md-12">
+                                        <form:input path="image"
+                                                    class="form-control"
+                                                    placeholder="nhập link hình ảnh"/>
+                                    </div>
+                                </div>
                                 <label class="col-sm-12">Giới tính</label>
                                 <div class="col-sm-12">
                                     <form:select path="gioiTinh" class="form-control">
