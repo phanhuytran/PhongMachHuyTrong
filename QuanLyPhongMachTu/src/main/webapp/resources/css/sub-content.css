@@ -1,4 +1,4 @@
-div.sub-content {
+﻿div.sub-content {
     margin-top: 4%;
     position: absolute;
     visibility: hidden;
@@ -85,4 +85,37 @@ li.info-admin-hover:hover  div.sub-content-2 {
     visibility: visible;
     transition: visibility 1s, opacity 1s;
     opacity: 0.98
+}
+
+div.search-user-by-name {
+    display: flex;
+    width: 100%;
+    padding: 10px 5px 0px 8px
+}
+div.search-user-by-name div:first-child {
+    width: 70%;
+}
+div.search-user-by-name div:nth-child(2){
+    width: 30%;
+}
+div.search-user-by-name input {
+    width: 70%;
+    margin-left: 1%;
+    padding: 2%;
+    border: 1px solid #eaeef2;
+    border-radius: 15px
+}
+div.search-user-by-name input.search-user-by-name {
+    width: 25%;
+    background-color: #01c0c8;
+    color: #fff
+}
+
+div.input-prescription input {
+    border: 1px solid #edf1f5;
+    border-radius: 15px
+}
+input.input-search-prescription {
+    background-color: #01c0c8;
+    color: #fff
 }

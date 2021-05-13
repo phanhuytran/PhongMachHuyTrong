@@ -58,38 +58,50 @@
                 <div class="col-sm-12">
                     <div class="white-box">
                         <h3 class="box-title">Thông tin cơ bản</h3>
-                        <form class="form-material form-horizontal">
+                        <form:form class="form-material form-horizontal"  modelAttribute="patient"  method="post">
                             <div class="form-group">
-                                <label class="col-md-12" for="example-text">Họ và Tên</span>
+                                <label class="col-md-12" for="ho">Họ
                                 </label>
                                 <div class="col-md-12">
-                                    <input type="text" id="example-text" name="example-text" class="form-control" placeholder="nhập họ và tên" value="Jonathan Doe"> </div>
+                                    <form:input type="text" path="ho" class="form-control" placeholder="nhập họ " value="${d.ho}"/> </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-md-12" for="bdate">Ngày sinh</span>
+                                <label class="col-md-12" for="ten">Tên
                                 </label>
                                 <div class="col-md-12">
-                                    <input type="text" id="bdate" name="bdate" class="form-control mydatepicker" placeholder="nhập ngày sinh" value="12/10/2017"> </div>
+                                    <form:input path="ten" type="text"  class="form-control" placeholder="nhập tên" value="${d.ten}"/> </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-12" for="ngaySinh">Ngày sinh</span>
+                                </label>
+                                <div class="col-md-12">
+                                    <form:input path="ngaySinh" type="text"  class="form-control mydatepicker" placeholder="nhập ngày sinh" value="${d.ngaySinh}"/> </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-sm-12">Giới tính</label>
                                 <div class="col-sm-12">
-                                    <select class="form-control">
+                                    <form:select path="gioiTinh" class="form-control">
                                         <option>Lựa chọn giới tính</option>
-                                        <option selected="selected">Nam</option>
-                                        <option>Nữ</option>
-                                    </select>
+                                        <form:option value="Nam">Nam</form:option>
+                                        <form:option value="Nu">Nữ</form:option>
+                                    </form:select>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-sm-12">Ảnh đại diện</label>
-                                <div class="col-sm-12"> <img class="img-responsive" src="<c:url value="/admin-resources/plugins/images/users/varun.jpg"/>" alt="" style="max-width:120px;"> </div>
-                                <div class="col-sm-12">
-                                    <div class="fileinput fileinput-new input-group" data-provides="fileinput">
-                                        <div class="form-control" data-trigger="fileinput"> <i class="glyphicon glyphicon-file fileinput-exists"></i> <span class="fileinput-filename"></span></div> <span class="input-group-addon btn btn-default btn-file"> <span class="fileinput-new">Chọn ảnh</span> <span class="fileinput-exists">Thay đổi</span>
-                                            <input type="file" name="..."> </span> <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Xóa ảnh</a> </div>
-                                </div>
+                                <label class="col-md-12" for="dienThoai">Số điện thoại</span>
+                                </label>
+                                <div class="col-md-12">
+                                    <form:input path="dienThoai" type="text"  class="form-control" placeholder="Số điện thoại" value="${d.dienThoai}"/> </div>
                             </div>
+<%--                            <div class="form-group">--%>
+<%--                                <label class="col-sm-12">Ảnh đại diện</label>--%>
+<%--                                <div class="col-sm-12"> <img class="img-responsive" src="<c:url value="/admin-resources/plugins/images/users/varun.jpg"/>" alt="" style="max-width:120px;"> </div>--%>
+<%--                                <div class="col-sm-12">--%>
+<%--                                    <div class="fileinput fileinput-new input-group" data-provides="fileinput">--%>
+<%--                                        <div class="form-control" data-trigger="fileinput"> <i class="glyphicon glyphicon-file fileinput-exists"></i> <span class="fileinput-filename"></span></div> <span class="input-group-addon btn btn-default btn-file"> <span class="fileinput-new">Chọn ảnh</span> <span class="fileinput-exists">Thay đổi</span>--%>
+<%--                                            <input type="file" name="..."> </span> <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Xóa ảnh</a> </div>--%>
+<%--                                </div>--%>
+<%--                            </div>--%>
                             <div class="form-group">
                                 <label class="col-md-12">Mô tả</label>
                                 <div class="col-md-12">
@@ -97,79 +109,12 @@
                                 </div>
                             </div>
                             <button type="submit" class="btn btn-info waves-effect waves-light m-r-10">Cập nhật</button>
-                            <button type="submit" class="btn btn-inverse waves-effect waves-light">Hủy</button>
-                        </form>
+<%--                            <button type="submit" class="btn btn-inverse waves-effect waves-light">Hủy</button>--%>
+                        </form:form>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-sm-6">
-                    <div class="white-box">
-                        <h3 class="box-title">Thông tin tài khoản</h3>
-                        <form class="form-material form-horizontal">
-                            <div class="form-group">
-                                <label class="col-md-12" for="example-email">Email</span>
-                                </label>
-                                <div class="col-md-12">
-                                    <input type="email" id="example-email" name="example-email" class="form-control" placeholder="nhập email" value="1851050056huy@ou.edu.vn"> </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-md-12" for="example-phone">Số điện thoại</span>
-                                </label>
-                                <div class="col-md-12">
-                                    <input type="text" id="example-phone" name="example-phone" class="form-control" placeholder="nhập số điện thoại" data-mask="(999) 999-9999" value="077 5398 511"> </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-md-12" for="pwd">Mật khẩu</span>
-                                </label>
-                                <div class="col-md-12">
-                                    <input type="password" id="pwd" name="pwd" class="form-control" placeholder="nhập mật khẩu"> </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-md-12" for="cpwd">Xác nhận mật khẩu</span>
-                                </label>
-                                <div class="col-md-12">
-                                    <input type="password" id="cpwd" name="cpwd" class="form-control" placeholder="nhập lại mật khẩu"> </div>
-                            </div>
-                            <button type="submit" class="btn btn-info waves-effect waves-light m-r-10">Cập nhật</button>
-                            <button type="submit" class="btn btn-inverse waves-effect waves-light">Hủy</button>
-                        </form>
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="white-box">
-                        <h3 class="box-title">Phương tiện truyền thông</h3>
-                        <form class="form-material form-horizontal">
-                            <div class="form-group">
-                                <label class="col-md-12" for="furl">Facebook URL</span>
-                                </label>
-                                <div class="col-md-12">
-                                    <input type="text" id="furl" name="furl" class="form-control" value="http://www.facebook.com/tranphanhuy1502"> </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-md-12" for="turl">Twitter URL</span>
-                                </label>
-                                <div class="col-md-12">
-                                    <input type="text" id="turl" name="turl" class="form-control" value="http://www.twitter.com/tranphanhuy1502"> </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-md-12" for="gurl">Google Plus URL</span>
-                                </label>
-                                <div class="col-md-12">
-                                    <input type="text" id="gurl" name="gurl" class="form-control" value="http://www.plus.google.com/tranphanhuy1502"> </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-md-12" for="inurl">LinkedIN URL</span>
-                                </label>
-                                <div class="col-md-12">
-                                    <input type="text" id="inurl" name="inurl" class="form-control" value="http://www.linkedin.com/tranphanhuy1502"> </div>
-                            </div>
-                            <button type="submit" class="btn btn-info waves-effect waves-light m-r-10">Cập nhật</button>
-                            <button type="submit" class="btn btn-inverse waves-effect waves-light">Hủy</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
+
         </div>
     </div>
     <footer class="footer text-center"> ©Copyright 2020 - Huy & Trọng. Đã đăng ký bản quyền.</footer>

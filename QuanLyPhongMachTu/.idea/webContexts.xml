@@ -6,7 +6,9 @@
         <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/admin-templates/doctor-profile.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/admin-templates" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/admin-templates/index.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/admin-templates" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/adminLayout/admin-templates/add-doctor.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/adminLayout/admin-templates" />
-        <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/layout/header.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/layout" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/adminLayout/admin-templates/add-patient.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/adminLayout/admin-templates" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/adminLayout/admin-templates/doctor-profile.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/adminLayout/admin-templates" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/page/index.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/page" />
       </map>
     </option>
   </component>

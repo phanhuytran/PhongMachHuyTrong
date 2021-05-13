@@ -17,39 +17,106 @@
     <meta name="author" content="">
     <link rel="icon" type="image/png" sizes="16x16" href="<c:url value="/admin-resources/plugins/images/logo.png"/>">
 
-    <link href="<c:url value="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>"
-          rel="stylesheet"/>
+    <link href="<c:url value="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>" rel="stylesheet"/>
     <link href="<c:url value="/admin-resources/bootstrap/dist/css/bootstrap.min.css"/>" rel="stylesheet">
-    <link href="<c:url value="/admin-resources/plugins/bower_components/bootstrap-extension/css/bootstrap-extension.css"/>"
-          rel="stylesheet">
-    <link href="<c:url value="/admin-resources/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css"/>"
-          rel="stylesheet">
+    <link href="<c:url value="/admin-resources/plugins/bower_components/bootstrap-extension/css/bootstrap-extension.css"/>" rel="stylesheet">
+    <link href="<c:url value="/admin-resources/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css"/>" rel="stylesheet">
     <link href="<c:url value="/admin-resources/plugins/bower_components/morrisjs/morris.css"/>" rel="stylesheet">
     <link href="<c:url value="/admin-resources/css/animate.css"/>" rel="stylesheet">
     <link href="<c:url value="/admin-resources/css/style.min.css"/>" rel="stylesheet">
     <link href="<c:url value="/admin-resources/css/colors/megna.css"/>" id="theme" rel="stylesheet">
+    <link href="<c:url value="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/>" rel="stylesheet">
     <link href="<c:url value="/resources/css/sub-content.css"/>" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.css" integrity="sha512-63+XcK3ZAZFBhAVZ4irKWe9eorFG0qYsy2CaM5Z+F3kUn76ukznN0cp4SArgItSbDFD1RrrWgVMBY9C/2ZoURA==" crossorigin="anonymous" />
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.js"></script>
+
     <title>
         <tiles:insertAttribute name="title"/>
     </title>
 </head>
 <body>
 
-<div id="wrapper">
-    <tiles:insertAttribute name="header"/>
-    <tiles:insertAttribute name="nav-bar" />
-    <tiles:insertAttribute name="content"/>
-    <tiles:insertAttribute name="footer"/>
-</div>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-            crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-            crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-            crossorigin="anonymous"></script>
+    <div id="wrapper">
+        <tiles:insertAttribute name="header"/>
+        <tiles:insertAttribute name="nav-bar" />
+        <tiles:insertAttribute name="content"/>
+        <tiles:insertAttribute name="footer"/>
+    </div>
+
+    <script>
+        function xoaBacSi(id) {
+            if (confirm("Bạn có muốn xóa không?")) {
+                fetch("/doctors/delete/" + id, {
+                    method: "POST",
+                    headers: {
+                        "content-type": "application/json"
+                    }
+                }).then(res => {
+                    if (res.status == 200) {
+                        document.getElementById(id).style.display = "none";
+                        alert("Xóa thành công!!!");
+                    }
+                    else
+                        alert("Ôi hỏng!!!");
+                })
+            }
+        }
+        function xoaNhanVien(id) {
+            if (confirm("Bạn có muốn xóa không?")) {
+                fetch("/employees/delete/" + id, {
+                    method: "POST",
+                    headers: {
+                        "content-type": "application/json"
+                    }
+                }).then(res => {
+                    if (res.status == 200) {
+                        document.getElementById(id).style.display = "none";
+                        alert("Xóa thành công!!!");
+                    }
+                    else
+                        alert("Ôi hỏng!!!");
+                })
+            }
+        }
+        function xoaBenhNhan(id) {
+            if (confirm("Bạn có muốn xóa không?")) {
+                fetch("/patients/delete/" + id, {
+                    method: "POST",
+                    headers: {
+                        "content-type": "application/json"
+                    }
+                }).then(res => {
+                    if (res.status == 200) {
+                        document.getElementById(id).style.display = "none";
+                        alert("Xóa thành công!!!");
+                    }
+                    else
+                        alert("Ôi hỏng!!!");
+                })
+            }
+        }
+        function xoaToaThuoc(id) {
+            if (confirm("Bạn có muốn xóa không?")) {
+                fetch("/prescription/delete/" + id, {
+                    method: "POST",
+                    headers: {
+                        "content-type": "application/json"
+                    }
+                }).then(res => {
+                    if (res.status == 200) {
+                        document.getElementById(id).style.display = "none";
+                        alert("Xóa thành công!!!");
+                    }
+                    else
+                        alert("Ôi hỏng!!!");
+                })
+            }
+        }
+    </script>
 
     <script src="<c:url value="/admin-resources/plugins/bower_components/jquery/dist/jquery.min.js"/>"></script>
     <script src="<c:url value="/admin-resources/bootstrap/dist/js/tether.min.js"/>"></script>
@@ -64,7 +131,6 @@
     <script src="<c:url value="/admin-resources/plugins/bower_components/calendar/dist/fullcalendar.min.js"/>"></script>
     <script src="<c:url value="/admin-resources/plugins/bower_components/calendar/dist/jquery.fullcalendar.js"/>"></script>
     <script src="<c:url value="/admin-resources/plugins/bower_components/calendar/dist/cal-init.js"/>"></script>
-
-<script src="<c:url value="/admin-resources/plugins/bower_components/styleswitcher/jQuery.style.switcher.js"/>"></script>
+    <script src="<c:url value="/admin-resources/plugins/bower_components/styleswitcher/jQuery.style.switcher.js"/>"></script>
 </body>
 </html>

@@ -1,6 +1,8 @@
 package com.ndt.models;
 
 
+import org.springframework.web.multipart.MultipartFile;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
@@ -20,13 +22,18 @@ public class BenhNhan implements Serializable {
     private String gioiTinh;
     @Column(name = "NgaySinh", nullable = false)
     private Date ngaySinh;
+    @Transient
+    private String dateString;
     @Column(name = "DienThoai", length = 10, nullable = false)
     private String dienThoai;
-    @Column(name = "Email")
-    private String email;
-    @OneToMany(mappedBy = "benhNhan", fetch = FetchType.LAZY)
+//    @Column(name = "Image", length = 200)
+//    private String image;
+//    @Transient
+//    private MultipartFile img;
+
+    @OneToMany(mappedBy = "benhNhan", fetch = FetchType.LAZY,  cascade = CascadeType.REMOVE)
     private Set<ToaThuoc> dsToaThuoc;
-    @OneToMany(mappedBy = "benhNhan", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "benhNhan", fetch = FetchType.EAGER, cascade = CascadeType.REMOVE)
     private Set<PhieuKhamBenh> dsPhieuKhamBenh;
 
     public String getId() {
@@ -93,11 +100,13 @@ public class BenhNhan implements Serializable {
         this.dsPhieuKhamBenh = dsPhieuKhamBenh;
     }
 
-    public String getEmail() {
-        return email;
+    public String getDateString() {
+        return dateString;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setDateString(String dateString) {
+        this.dateString = dateString;
     }
+
+
 }

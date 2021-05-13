@@ -49,6 +49,10 @@ public class TaiKhoanService extends GenericService<TaiKhoan> implements ITaiKho
         return taiKhoanRepository.getTaiKhoanBacSiTrong();
     }
 
+    @Override
+    public List<TaiKhoan> getTaiKhoanNhanVienTrong() {
+        return taiKhoanRepository.getTaiKhoanNhanVienTrong();
+    }
 
     @Autowired
     private BCryptPasswordEncoder bCryptPasswordEncoder;

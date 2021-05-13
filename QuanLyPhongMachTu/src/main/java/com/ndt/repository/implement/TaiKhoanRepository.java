@@ -48,4 +48,14 @@ public class TaiKhoanRepository extends GenericRepository<TaiKhoan> implements I
                 .addEntity(TaiKhoan.class).getResultList();
         return result;
     }
+
+    @Override
+    @Transactional(propagation = Propagation.REQUIRED, readOnly = true)
+    public List<TaiKhoan> getTaiKhoanNhanVienTrong() {
+        List<TaiKhoan> result;
+        result = currentSession().createSQLQuery("CALL getTaiKhoanConTrongNhanVien()")
+                .addEntity(TaiKhoan.class).getResultList();
+
+        return  result;
+    }
 }

@@ -1,18 +1,26 @@
 package com.ndt.controllers;
 
 import com.ndt.models.BacSi;
+import com.ndt.models.BenhNhan;
+import com.ndt.models.NhanVien;
 import com.ndt.models.TaiKhoan;
 import com.ndt.service.IBacSiService;
 import com.ndt.service.ITaiKhoanService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.validation.Valid;
 import java.io.File;
 import java.io.IOException;
+import java.util.List;
+import java.util.stream.Collectors;
 
 @Controller
 @ControllerAdvice
@@ -27,42 +35,97 @@ public class DoctorController {
     @ModelAttribute
     public void modelAttribute(ModelMap model) {
         model.addAttribute("taiKhoan", iTaiKhoanService.getTaiKhoanBacSiTrong());
+
     }
 
-    @GetMapping()
+
+
+    @RequestMapping()
     public String index(ModelMap model) {
         model.addAttribute("doctors", iBacSiService.getAll(BacSi.class));
+        iBacSiService.getAll(BacSi.class).forEach(t -> System.out.println(t));
         return "doctors";
     }
 
     @GetMapping("/add")
-    public String addView(ModelMap model) {
-        model.addAttribute("doctor", new BacSi());
+    public String addView(Model model) {
+        model.addAttribute("doctor1", new BacSi());
         return "add-doctor";
     }
 
     @PostMapping("/add")
-    public String addProcess(@ModelAttribute("doctor")BacSi bacSi, HttpServletRequest request) {
-        System.out.println(bacSi);
-        System.out.println(bacSi.getEmail());
-        System.out.println(bacSi.getDienThoai());
-        //set image
-        MultipartFile img = bacSi.getImg();
-        String relativePath = "/admin-resources/images/" + bacSi.getTen() + ".png";
-        String targetPath = request.getSession().getServletContext()
-                .getRealPath(String.format("/admin-resources/images/%s.png", bacSi.getTen()));
-        if (img != null && !img.isEmpty()) {
-            try {
-                img.transferTo(new File(targetPath));
-                bacSi.setImage(relativePath);
-            } catch (IllegalStateException | IOException ex) {
-                System.err.println(ex.getMessage());
-            }
+    public String addProcess(@ModelAttribute("bacsi1") BacSi bacSi,
+                             BindingResult result, HttpServletRequest request) {
+        if (!result.hasErrors()) {
+            System.out.println(bacSi);
+            System.out.println(bacSi.getEmail());
+            System.out.println(bacSi.getDienThoai());
+
+            int i = (int) (Math.random() * 5) + 1;
+            bacSi.setImage("/admin-resources/plugins/images/users/d"+i+".jpg");
+            BacSi b = iBacSiService.insert(bacSi);
+            if (b != null)
+                return "redirect:/doctors";
         }
-        BacSi b = iBacSiService.insert(bacSi);
-        if (b != null)
-            return "redirect:/doctors";
+
         return "add-doctor";
     }
 
+    @GetMapping("/details/{id}")
+    public String details(@PathVariable("id")String id, ModelMap model) {
+        BacSi bacSi = iBacSiService.getById(BacSi.class, id);
+        model.addAttribute("doctor", bacSi);
+        return "doctor.profile";
+    }
+
+    @PostMapping("/detail/{id}")
+    public String detaitAndEditProcess(@ModelAttribute("doctor") @Valid BacSi bacSi,
+                              BindingResult result, ModelMap model) {
+        if (!result.hasErrors()) {
+            System.out.println(bacSi.getTaiKhoan().getUsername());
+            BacSi bs = iBacSiService.update(bacSi);
+            if (bs != null) {
+                model.addAttribute("mesageError","Cập nhật thành công");
+                return "doctor.profile";
+            }
+        }
+        model.addAttribute("mesageError", "Lỗi cập nhật");
+        return "doctor.profile";
+    }
+
+    // Chỉnh sửa thông tin Bác sĩ
+    // Xóa thông tin Bác sĩ
+    @PostMapping("/delete/{id}")
+    @ResponseStatus(HttpStatus.OK)
+    public void deleteDoctor(@PathVariable("id")String id) {
+        BacSi bacSi = iBacSiService.getById(BacSi.class, id);
+        iBacSiService.delete(bacSi);
+    }
+
+    @GetMapping("/edit/{id}")
+    public String editView(@PathVariable("id")String id, ModelMap model) {
+        model.addAttribute("doctor", iBacSiService.getById(BacSi.class, id));
+
+        return "doctor.edit";
+    }
+
+    @PostMapping("/edit/{id}")
+    public String editProcess(@ModelAttribute("doctor") @Valid BacSi bacSi,
+                              BindingResult result, ModelMap model) {
+        if (!result.hasErrors()) {
+            System.out.println(bacSi.getTaiKhoan().getUsername());
+            BacSi bs = iBacSiService.update(bacSi);
+            if (bs != null)
+                return "redirect:/doctors";
+        }
+
+        return "doctor.edit";
+    }
+    @GetMapping("/search")
+    public String search(@RequestParam("hoten") String cay, ModelMap model){
+        List<BacSi> doctors = iBacSiService.getAll(BacSi.class).stream()
+                .filter(n -> (n.getHo().toUpperCase() + " " + n.getTen().toUpperCase()).contains(cay.toUpperCase())).collect(Collectors.toList());
+        model.addAttribute("doctors", doctors);
+        return "doctors";
+    }
 }

@@ -1,49 +1,34 @@
 package com.ndt.models;
 
 import javax.persistence.*;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.util.Date;
+import java.util.Set;
 
 @Entity
 @Table(name = "chitiettoathuoc")
 public class ChiTietToaThuoc implements Serializable {
-    @Id
-    @Column(name = "MaToaThuoc", length = 36)
-    private String maToaThuoc;
-    @Id
-    @Column(name = "MaThuoc")
-    private int maThuoc;
     @Column(name = "SoLuong")
+    @Min(value = 1, message = "Tu ghi")
     private int soLuong;
     @Column(name = "DonGia")
     private BigDecimal donGia;
     @Column(name = "ThanhTien")
     private BigDecimal thanhTien;
 
+    @Id
     @ManyToOne
-    @MapsId
     @JoinColumn(name = "MaToaThuoc")
     private ToaThuoc toaThuoc;
+    @Id
     @ManyToOne
-    @MapsId
     @JoinColumn(name = "MaThuoc")
+    @NotNull(message = "Tu ghi")
     private Thuoc thuoc;
-
-    public String getMaToaThuoc() {
-        return maToaThuoc;
-    }
-
-    public void setMaToaThuoc(String maToaThuoc) {
-        this.maToaThuoc = maToaThuoc;
-    }
-
-    public int getMaThuoc() {
-        return maThuoc;
-    }
-
-    public void setMaThuoc(int maThuoc) {
-        this.maThuoc = maThuoc;
-    }
 
     public int getSoLuong() {
         return soLuong;

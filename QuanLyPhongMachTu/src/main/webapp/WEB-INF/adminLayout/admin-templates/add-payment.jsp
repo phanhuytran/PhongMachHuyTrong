@@ -126,7 +126,7 @@
                                 </div>
                             </div>
                             <button type="submit" class="btn btn-info waves-effect waves-light m-r-10">Thêm</button>
-                            <button type="submit" class="btn btn-inverse waves-effect waves-light">Hủy</button>
+                            <button type="reset" class="btn btn-inverse waves-effect waves-light">Hủy</button>
                         </form>
                     </div>
                 </div>

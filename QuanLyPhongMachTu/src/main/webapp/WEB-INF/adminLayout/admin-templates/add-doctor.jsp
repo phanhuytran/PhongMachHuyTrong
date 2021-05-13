@@ -18,7 +18,9 @@
             <div class="col-sm-12">
                 <div class="white-box">
                     <h3 class="box-title">Thông tin cơ bản</h3>
-                    <form:form cssClass="form-material form-horizontal" action="/doctors/add" modelAttribute="doctor" method="post" enctype="multipart/form-data">
+
+                    <form:form cssClass="form-material form-horizontal" action="/doctors/add" modelAttribute="doctor1" method="post">
+                        <form:errors path="*" element="div" cssClass="text-danger" />
                         <div class="form-group">
                             <label class="col-md-12" for="example-text">Họ</span>
                             </label>
@@ -39,7 +41,7 @@
                             <label class="col-md-12" for="bdate">Ngày sinh</span>
                             </label>
                             <div class="col-md-12">
-                                <form:input path="ngaySinh" type="date" id="bdate" name="bdate"
+                                <form:input path="ngaySinh" id="bdate" name="bdate"
                                             class="form-control mydatepicker"
                                             placeholder="nhập ngày sinh"/>
                             </div>
@@ -49,18 +51,18 @@
                             <div class="col-sm-12">
                                 <form:select path="gioiTinh" class="form-control">
                                     <form:option value="">Lựa chọn giới tính</form:option>
-                                    <form:option value="nam">Nam</form:option>
-                                    <form:option value="nu">Nữ</form:option>
-                                    <form:option value="khac">Khác</form:option>
+                                    <form:option value="Nam">Nam</form:option>
+                                    <form:option value="Nu">Nữ</form:option>
                                 </form:select>
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label class="col-sm-12">Ảnh đại diện</label>
-                            <div class="col-sm-12">
-                                <form:input path="img" type="file" cssClass="form-control"/>
-                            </div>
-                        </div>
+<%--                        <div class="form-group">--%>
+<%--                            <label class="col-sm-12">Ảnh đại diện</label>--%>
+<%--                            <div class="col-sm-12">--%>
+<%--                                <form:hidden path="image" value="test" />--%>
+<%--                                <form:input path="img" type="file" cssClass="form-control"/>--%>
+<%--                            </div>--%>
+<%--                        </div>--%>
                         <div class="form-group">
                             <label class="col-md-12" for="email">Email</span>
                             </label>
@@ -80,12 +82,12 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-md-12" for="bdate">Quê quán</span>
+                            <label class="col-md-12" for="queQuan">Quê quán</span>
                             </label>
                             <div class="col-md-12">
-                                <form:input path="queQuan" type="text" id="queQuan" name="queQuan"
-                                            class="form-control mydatepicker"
-                                            placeholder="nhập ngày sinh"/>
+                                <form:input path="queQuan" type="text"
+                                            class="form-control"
+                                            placeholder="nhập quê quán"/>
                             </div>
                         </div>
 
@@ -93,18 +95,18 @@
                             <label class="col-sm-12">Tài khoản</label>
                             <div class="col-sm-12">
                                 <form:select path="taiKhoan" class="form-control">
-                                    <option>Lựa chọn tài khoản</option>
+                                    <form:option value="">Lựa chọn tài khoản</form:option>
                                     <c:forEach items="${taiKhoan}" var="t">
 
-                                        <option value="${t.id}">${t.username}</option>
+                                        <form:option value="${t.id}">${t.username}</form:option>
 
                                     </c:forEach>
                                 </form:select>
                             </div>
                         </div>
 
-                        <button type="submit" class="btn btn-info waves-effect waves-light m-r-10">Thêm</button>
-                        <button type="submit" class="btn btn-inverse waves-effect waves-light">Hủy</button>
+                        <form:button type="submit" class="btn btn-info waves-effect waves-light m-r-10">Thêm</form:button>
+                        <button type="reset" class="btn btn-inverse waves-effect waves-light">Hủy</button>
                     </form:form>
 
                 </div>

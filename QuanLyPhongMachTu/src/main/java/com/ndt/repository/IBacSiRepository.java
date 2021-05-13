@@ -12,4 +12,5 @@ public interface IBacSiRepository extends IGenericRepository<BacSi> {
     List<BacSi> getTopBacSiTheoTen(int limit, String name);
     Set<ToaThuoc> getToaThuocTheoBacSi(BacSi bacSi);
     Set<BenhNhan> getBenhNhanTheoBacSi(BacSi bacSi);
+    List<BacSi> getAllbyStorProcudure ();
 }

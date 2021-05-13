@@ -1,6 +1,8 @@
 package com.ndt.models;
 
 
+import org.springframework.web.multipart.MultipartFile;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
@@ -24,7 +26,9 @@ public class NhanVien implements Serializable {
     private String dienThoai;
     @Column(name = "Image", length = 100)
     private String image;
-    @OneToOne
+    @Transient
+    private MultipartFile img;
+    @OneToOne(cascade = CascadeType.DETACH)
     @MapsId
     @JoinColumn(name = "id")
     private TaiKhoan taiKhoan;
@@ -100,5 +104,13 @@ public class NhanVien implements Serializable {
 
     public void setImage(String image) {
         this.image = image;
+    }
+
+    public MultipartFile getImg() {
+        return img;
+    }
+
+    public void setImg(MultipartFile img) {
+        this.img = img;
     }
 }

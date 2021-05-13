@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: ndt05
-  Date: 4/19/2021
-  Time: 1:41 PM
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
@@ -38,7 +31,7 @@
                     <input type="text" id="inurl" name="inurl" class="form-control"></div>
             </div>
             <button type="submit" class="btn btn-info waves-effect waves-light m-r-10">Thêm</button>
-            <button type="submit" class="btn btn-inverse waves-effect waves-light">Hủy</button>
+            <button type="reset" class="btn btn-inverse waves-effect waves-light">Hủy</button>
         </form>
     </div>
 </div>

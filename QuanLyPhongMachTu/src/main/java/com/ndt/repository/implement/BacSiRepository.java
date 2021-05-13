@@ -69,4 +69,11 @@ public class BacSiRepository extends GenericRepository<BacSi> implements IBacSiR
             return null;
         }
     }
+    @Override
+    @Transactional(propagation = Propagation.REQUIRED, readOnly = true)
+    public List<BacSi> getAllbyStorProcudure() {
+        return   currentSession().createSQLQuery("Call getTatCaBacSi()").addEntity(BacSi.class).getResultList();
+
+
+    }
 }

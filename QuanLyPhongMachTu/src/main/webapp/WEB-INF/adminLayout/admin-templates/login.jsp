@@ -3,7 +3,6 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles" %>
-
 <html>
 <head>
     <meta charset="utf-8">
@@ -45,21 +44,25 @@
                 </c:if>
                 <div class="form-group m-t-40">
                     <div class="col-xs-12">
-                        <input name="username" id="usernameId" class="form-control" type="text" required="" placeholder="Tên đăng nhập"> </div>
+                        <input name="username" id="usernameId" class="form-control" type="text" required="" placeholder="Tên đăng nhập">
+                    </div>
                 </div>
                 <div class="form-group">
                     <div class="col-xs-12">
-                        <input name="password" id="passwordId" class="form-control" type="password" required="" placeholder="Mật khẩu"> </div>
+                        <input name="password" id="passwordId" class="form-control" type="password" required="" placeholder="Mật khẩu">
+                    </div>
                 </div>
                 <div class="form-group">
                     <div class="col-md-12">
                         <div class="checkbox checkbox-primary pull-left p-t-0">
-                            <input id="checkbox-signup" type="checkbox">
+                            <input id="checkbox-signup" type="checkbox" name="remember-me">
                             <label for="checkbox-signup"> Nhớ mật khẩu </label>
-                        </div> <a href="javascript:void(0)" id="to-recover" class="text-dark pull-right"><i class="fas fa-lock m-r-5"></i> Quên mật khẩu?</a> </div>
+                        </div> <a href="javascript:void(0)" id="to-recover" class="text-dark pull-right"><i class="fas fa-lock m-r-5"></i> Quên mật khẩu?</a>
+                    </div>
                 </div>
+                <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
                 <div class="login-admin">
-                    <a href="/admin">Đăng nhập với tư cách là Admin</a>
+                    <a href="/admin">Quản lý phòng mạch Huy Trọng</a>
                 </div>
                 <div class="form-group text-center m-t-20">
                     <div class="col-xs-12">
@@ -74,11 +77,6 @@
                         </div>
                     </div>
                 </div>
-<%--                <div class="form-group m-b-0">--%>
-<%--                    <div class="col-sm-12 text-center">--%>
-<%--                        <p>Bạn chưa có tài khoản? <a href="register2.html" class="text-primary m-l-5"><b>Đăng ký</b></a></p>--%>
-<%--                    </div>--%>
-<%--                </div>--%>
             </form>
             <form class="form-horizontal" id="recoverform" action="/admin">
                 <div class="form-group ">

@@ -17,18 +17,18 @@
             <div class="row">
                 <div class="col-md-3 col-sm-6">
                     <div class="white-box">
-                        <div class="r-icon-stats"><i class="far fa-user"></i>
+                        <div class="r-icon-stats"><i class="fas fa-user-md"></i>
                             <div class="bodystate">
-                                <h4>370</h4> <span class="text-muted">Bệnh nhân mới</span>
+                                <h4>370</h4> <span class="text-muted">Bác sĩ</span>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6">
                     <div class="white-box">
-                        <div class="r-icon-stats"><i class="fas fa-shopping-bag"></i>
+                        <div class="r-icon-stats"><i class="fas fa-users"></i>
                             <div class="bodystate">
-                                <h4>342</h4> <span class="text-muted">Bệnh nhân OPD</span>
+                                <h4>342</h4> <span class="text-muted">Bệnh nhân</span>
                             </div>
                         </div>
                     </div>
