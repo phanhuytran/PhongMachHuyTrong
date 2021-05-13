@@ -53,13 +53,16 @@ public class DoctorController {
         return "add-doctor";
     }
 
+
     @PostMapping("/add")
-    public String addProcess(@ModelAttribute("bacsi1") BacSi bacSi,
+    public String addProcess(@ModelAttribute("doctor1") @Valid BacSi bacSi,
                              BindingResult result, HttpServletRequest request) {
         if (!result.hasErrors()) {
             System.out.println(bacSi);
             System.out.println(bacSi.getEmail());
             System.out.println(bacSi.getDienThoai());
+
+
 
             int i = (int) (Math.random() * 5) + 1;
             bacSi.setImage("/admin-resources/plugins/images/users/d"+i+".jpg");

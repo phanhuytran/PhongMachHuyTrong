@@ -59,11 +59,12 @@
                     <div class="white-box">
                         <h3 class="box-title">Thông tin cơ bản</h3>
                         <form:form cssClass="form-material form-horizontal" modelAttribute="doctor" method="post">
-                            <form:errors path="*" element="div" cssClass="text-danger" />
+
                             <div class="form-group">
                                 <label class="col-md-12" for="example-text">Họ</span>
                                 </label>
                                 <div class="col-md-12">
+                                    <form:errors path="*" element="div" cssClass="text-danger" />
                                     <form:input path="ho" type="text" name="example-text" cssClass="form-control"
                                                 placeholder="nhập họ"/>
                                 </div>
@@ -72,6 +73,7 @@
                                 <label class="col-md-12" for="example-text">Tên</span>
                                 </label>
                                 <div class="col-md-12">
+                                    <form:errors path="*" element="div" cssClass="text-danger" />
                                     <form:input path="ten" type="text" name="example-text" cssClass="form-control"
                                                 placeholder="nhập tên"/>
                                 </div>
@@ -80,6 +82,7 @@
                                 <label class="col-md-12" for="bdate">Ngày sinh</span>
                                 </label>
                                 <div class="col-md-12">
+                                    <form:errors path="*" element="div" cssClass="text-danger" />
                                     <form:input path="ngaySinh" id="bdate" name="bdate"
                                                 class="form-control mydatepicker"
                                                 placeholder="nhập ngày sinh"/>
@@ -89,6 +92,7 @@
                                 <label class="col-md-12" for="email">Email</span>
                                 </label>
                                 <div class="col-md-12">
+                                    <form:errors path="*" element="div" cssClass="text-danger" />
                                     <form:input path="email"
                                                 class="form-control"
                                                 placeholder="nhập email"/>
@@ -98,6 +102,7 @@
                                 <label class="col-md-12" for="bdate">Image</span>
                                 </label>
                                 <div class="col-md-12">
+
                                     <form:input path="image"
                                                 class="form-control"
                                                 placeholder="nhập link hình ảnh"/>
@@ -106,6 +111,7 @@
                             <div class="form-group">
                                 <label class="col-sm-12">Giới tính</label>
                                 <div class="col-sm-12">
+                                    <form:errors path="*" element="div" cssClass="text-danger" />
                                     <form:select path="gioiTinh" class="form-control">
                                         <form:option value="">Lựa chọn giới tính</form:option>
                                         <form:option value="Nam">Nam</form:option>
@@ -126,9 +132,11 @@
                                 <label class="col-md-12" for="queQuan">Quê quán</span>
                                 </label>
                                 <div class="col-md-12">
+                                    <form:errors path="*" element="div" cssClass="text-danger" />
                                     <form:input path="queQuan" type="text"
                                                 class="form-control"
                                                 placeholder="nhập quê quán"/>
+
                                 </div>
                             </div>
                             <form:hidden path="taiKhoan"/>

@@ -27,6 +27,7 @@
                             <div class="col-md-12">
                                 <form:input path="ho" type="text" name="example-text" cssClass="form-control"
                                             placeholder="nhập họ"/>
+                                <form:errors path="ho" cssClass="text-danger"/>
                             </div>
                         </div>
                         <div class="form-group">
@@ -35,6 +36,7 @@
                             <div class="col-md-12">
                                 <form:input path="ten" type="text" name="example-text" cssClass="form-control"
                                             placeholder="nhập tên"/>
+                                <form:errors path="ten" cssClass="text-danger"/>
                             </div>
                         </div>
                         <div class="form-group">
@@ -44,6 +46,7 @@
                                 <form:input path="ngaySinh" id="bdate" name="bdate"
                                             class="form-control mydatepicker"
                                             placeholder="nhập ngày sinh"/>
+                                <form:errors path="ngaySinh" cssClass="text-danger"/>
                             </div>
                         </div>
                         <div class="form-group">
@@ -54,6 +57,7 @@
                                     <form:option value="Nam">Nam</form:option>
                                     <form:option value="Nu">Nữ</form:option>
                                 </form:select>
+                                <form:errors path="gioiTinh" cssClass="text-danger"/>
                             </div>
                         </div>
 <%--                        <div class="form-group">--%>
@@ -70,6 +74,7 @@
                                 <form:input path="email" type="email"
                                             class="form-control"
                                             placeholder="nhập email"/>
+                                <form:errors path="email" cssClass="text-danger"/>
                             </div>
                         </div>
                         <div class="form-group">
@@ -79,6 +84,7 @@
                                 <form:input path="dienThoai" type="text"
                                             class="form-control"
                                             placeholder="nhập điện thoại"/>
+                                <form:errors path="dienThoai" cssClass="text-danger"/>
                             </div>
                         </div>
                         <div class="form-group">
@@ -88,6 +94,7 @@
                                 <form:input path="queQuan" type="text"
                                             class="form-control"
                                             placeholder="nhập quê quán"/>
+                                <form:errors path="queQuan" cssClass="text-danger"/>
                             </div>
                         </div>
 
@@ -102,6 +109,7 @@
 
                                     </c:forEach>
                                 </form:select>
+                                <form:errors path="taiKhoan" cssClass="text-danger"/>
                             </div>
                         </div>
 
@@ -112,63 +120,11 @@
                 </div>
             </div>
         </div>
-<%--        <div class="row">--%>
-<%--            <div class="col-sm-6">--%>
-<%--                <div class="white-box">--%>
-<%--                    <h3 class="box-title">Thông tin tài khoản</h3>--%>
-<%--                    <form class="form-material form-horizontal">--%>
-<%--                        <div class="form-group">--%>
-<%--                            <label class="col-md-12" for="example-email">Email</span>--%>
-<%--                            </label>--%>
-<%--                            <div class="col-md-12">--%>
-<%--                                <input type="email" id="example-email" name="example-email" class="form-control"--%>
-<%--                                       placeholder="nhập email"></div>--%>
-<%--                        </div>--%>
-<%--                        <div class="form-group">--%>
-<%--                            <label class="col-md-12" for="example-phone">Số điện thoại</span>--%>
-<%--                            </label>--%>
-<%--                            <div class="col-md-12">--%>
-<%--                                <input type="text" id="example-phone" name="example-phone" class="form-control"--%>
-<%--                                       placeholder="nhập số điện thoại" data-mask="(999) 999-9999"></div>--%>
-<%--                        </div>--%>
-<%--                        <div class="form-group">--%>
-<%--                            <label class="col-md-12" for="pwd">Mật khẩu</span>--%>
-<%--                            </label>--%>
-<%--                            <div class="col-md-12">--%>
-<%--                                <input type="password" id="pwd" name="pwd" class="form-control"--%>
-<%--                                       placeholder="nhập mật khẩu"></div>--%>
-<%--                        </div>--%>
-<%--                        <div class="form-group">--%>
-<%--                            <label class="col-md-12" for="cpwd">Xác nhận mật khẩu</span>--%>
-<%--                            </label>--%>
-<%--                            <div class="col-md-12">--%>
-<%--                                <input type="password" id="cpwd" name="cpwd" class="form-control"--%>
-<%--                                       placeholder="nhập lại mật khẩu"></div>--%>
-<%--                        </div>--%>
-<%--                        <button type="submit" class="btn btn-info waves-effect waves-light m-r-10">Thêm</button>--%>
-<%--                        <button type="submit" class="btn btn-inverse waves-effect waves-light">Hủy</button>--%>
-<%--                    </form>--%>
-<%--                </div>--%>
-<%--            </div>--%>
 
-<%--        </div>--%>
     </div>
 </div>
 
-<script>
-    (function (i, s, o, g, r, a, m) {
-        i['GoogleAnalyticsObject'] = r;
-        i[r] = i[r] || function () {
-            (i[r].q = i[r].q || []).push(arguments)
-        }, i[r].l = 1 * new Date();
-        a = s.createElement(o), m = s.getElementsByTagName(o)[0];
-        a.async = 1;
-        a.src = g;
-        m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-    ga('create', 'UA-19175540-9', 'auto');
-    ga('send', 'pageview');
-</script>
+
 
 <script type="text/javascript">
     jQuery('.mydatepicker').datepicker();
@@ -177,3 +133,17 @@
 <script src="<c:url value="/admin-resources/js/jasny-bootstrap.js"/>"></script>
 <script src="<c:url value="/admin-resources/js/mask.js"/>"></script>
 <script src="<c:url value="/admin-resources/plugins/bower_components/styleswitcher/jQuery.style.switcher.js"/>"></script>
+<script>
+    $(document).ready(function() {
+        $("#ngaySinh").datetimepicker({
+            format: 'DD/MM/YYYY',
+            minDate: new Date()
+        })
+        let bornDate = new Date();
+        bornDate.setFullYear(bornDate.getFullYear() - 10);
+        $("#ngaySinh").datetimepicker({
+            format: 'DD/MM/YYYY',
+            maxDate: bornDate
+        })
+    })
+</script>

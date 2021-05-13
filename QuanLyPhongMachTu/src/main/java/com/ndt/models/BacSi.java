@@ -1,9 +1,11 @@
 package com.ndt.models;
 
 
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.persistence.*;
+import javax.validation.constraints.*;
 import java.io.Serializable;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -16,21 +18,38 @@ public class BacSi implements Serializable {
     @Id
     @Column(name = "id", length = 36)
     private String id;
+
+    @NotEmpty(message = "This field cannot be null")
     @Column(name = "Ho", length = 10, nullable = false)
     private String ho;
+    @NotEmpty(message = "This field cannot be null")
     @Column(name = "Ten", length = 45, nullable = false)
     private String ten;
+
+    @NotEmpty(message = "This field cannot be null")
     @Column(name = "GioiTinh", length = 10, nullable = false)
     private String gioiTinh;
+
+    @NotNull(message = "This field cannot be null")
+    @Past(message = "not date in past")
+    @DateTimeFormat(pattern = "dd/MM/yyyy")
+    @Temporal(TemporalType.DATE)
     @Column(name = "NgaySinh", nullable = false)
     private Date ngaySinh;
+
     @Column(name = "DienThoai", length = 10, nullable = false)
+    @Pattern(regexp = "[0-9]{10}", message = "Khong duoc nhap chu, 10 so ")
+    @NotEmpty(message = "This field cannot be null")
     private String dienThoai;
 
+    @NotEmpty(message = "This field cannot be null")
     @Column(name = "QueQuan")
     private String queQuan;
+
+    @NotEmpty(message = "This field cannot be null")
     @Column(name = "Email")
     private String email;
+
     @Column(name = "Image", length = 200)
     private String image;
     @Transient
@@ -42,6 +61,7 @@ public class BacSi implements Serializable {
     @OneToOne
     @MapsId
     @JoinColumn(name = "id")
+    @NotNull(message = "This field cannot be null")
     public TaiKhoan taiKhoan;
     @OneToMany(mappedBy = "bacSi", fetch = FetchType.LAZY)
     private Set<ChiTietCaKhamBenh> dsChiTietCaKhamBenh;

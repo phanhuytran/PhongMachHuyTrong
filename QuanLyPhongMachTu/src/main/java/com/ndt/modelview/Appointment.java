@@ -13,10 +13,20 @@ public class Appointment {
     private String gioiTinh;
     private String ngaySinh;
     private String dienThoai;
+    private String diaChi;
     private CaKhamBenh caKhamBenh;
     private String ngayKham;
     private BacSi bacSi;
     private LoaiBenh loaiBenh;
+
+
+    public String getDiaChi() {
+        return diaChi;
+    }
+
+    public void setDiaChi(String diaChi) {
+        this.diaChi = diaChi;
+    }
 
     public String getHo() {
         return ho;

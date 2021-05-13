@@ -27,6 +27,11 @@
     <link href="<c:url value="/resources/bodybg/bg1.css"/>" rel="stylesheet" id="bodybg" type="text/css"/>
     <link href="<c:url value="/resources/color/default.css"/>" id="t-colors" rel="stylesheet">
     <link href="<c:url value="/resources/css/sub-content.css"/>" rel="stylesheet">
+
+    <script src="<c:url value="/resources/js/jquery.min.js"/>"/></script>
+    <script src="<c:url value="/resources/js/bootstrap.min.js"/>"/></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js" integrity="sha512-GDey37RZAxFkpFeJorEUwNoIbkTwsyC736KNSYucu1WJWFK9qTdzYub8ATxktr6Dwke7nbFaioypzbDOQykoRg==" crossorigin="anonymous"></script>
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-custom">
@@ -37,8 +42,6 @@
     </div>
     <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
     <!-- Core JavaScript Files -->
-    <script src="<c:url value="/resources/js/jquery.min.js"/>"/></script>
-    <script src="<c:url value="/resources/js/bootstrap.min.js"/>"/></script>
     <script src="<c:url value="/resources/js/jquery.easing.min.js"/>"/></script>
     <script src="<c:url value="/resources/js/wow.min.js"/>"/></script>
     <script src="<c:url value="/resources/js/jquery.scrollTo.js"/>"/></script>

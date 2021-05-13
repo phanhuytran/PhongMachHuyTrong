@@ -47,6 +47,7 @@
                                                 <div class="form-group">
                                                     <label>Tên</label>
                                                     <form:input path="ten" cssClass="form-control input-md" />
+<%--                                                    <input type="text" name="first_name" id="first_name" class="form-control input-md">--%>
                                                 </div>
                                             </div>
                                         </div>
@@ -55,32 +56,33 @@
                                                 <div class="form-group">
                                                     <label>Số Điện Thoại</label>
                                                     <form:input path="dienThoai" cssClass="form-control input-md"/>
+<%--                                                    <input type="text" name="phone" id="phone" class="form-control input-md">--%>
                                                 </div>
                                             </div>
                                             <div class="col-xs-6 col-sm-6 col-md-6">
                                                 <div class="form-group">
                                                     <label>Ngày sinh</label>
                                                     <form:input path="ngaySinh" cssClass="form-control input-md"/>
+<%--                                                    <input type="email" name="email" id="email" class="form-control input-md">--%>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div><br/>
                                         <div class="row">
                                             <div class="col-xs-6 col-sm-6 col-md-6">
                                                 <div class="form-group">
                                                     <label>Giới tính</label>
-                                                    <form:select path="gioiTinh" cssClass="form-control input-md">
-                                                        <form:option value="Nam">Nam</form:option>
-                                                        <form:option value="Nu">Nữ</form:option>
-                                                    </form:select>
+                                                    <form:input path="gioiTinh" cssClass="form-control input-md"/>
+                                                        <%--                                                    <input type="text" name="phone" id="phone" class="form-control input-md">--%>
                                                 </div>
                                             </div>
                                             <div class="col-xs-6 col-sm-6 col-md-6">
                                                 <div class="form-group">
-                                                    <label>Ngày khám</label>
-                                                    <form:input path="ngayKham" cssClass="form-control input-md datepicker"/>
+                                                    <label>Địa Chỉ</label>
+                                                    <form:input path="diaChi" cssClass="form-control input-md"/>
+                                                        <%--                                                    <input type="email" name="email" id="email" class="form-control input-md">--%>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div><br/>
                                         <div class="row">
                                             <div class="col-xs-6 col-sm-6 col-md-6">
                                                 <div class="form-group">
@@ -90,6 +92,7 @@
                                                             <form:option value="${d.id}">${d.tenCa}</form:option>
                                                         </c:forEach>
                                                     </form:select>
+                                                        <%--                                                    <input type="text" name="phone" id="phone" class="form-control input-md">--%>
                                                 </div>
                                             </div>
                                             <div class="col-xs-6 col-sm-6 col-md-6">
@@ -100,9 +103,10 @@
                                                             <form:option value="${d.id}">${d.ten}</form:option>
                                                         </c:forEach>
                                                     </form:select>
+                                                        <%--                                                    <input type="email" name="email" id="email" class="form-control input-md">--%>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div><br/>
                                         <div class="row">
                                             <div class="col-xs-6 col-sm-6 col-md-6">
                                                 <div class="form-group">
@@ -112,10 +116,132 @@
                                                             <form:option value="${d.id}">${d.tenBenh}</form:option>
                                                         </c:forEach>
                                                     </form:select>
+                                                        <%--                                                    <input type="text" name="phone" id="phone" class="form-control input-md">--%>
+                                                </div>
+
+                                            </div>
+                                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                                <div class="form-group">
+                                                    <label>Ngày khám</label>
+                                                    <form:input path="ngayKham" cssClass="form-control input-md"/>
+                                                        <%--                                                    <input type="email" name="email" id="email" class="form-control input-md">--%>
                                                 </div>
                                             </div>
                                         </div><br/>
                                         <input type="submit" value="Gửi" class="btn btn-skin btn-block btn-lg">
+                                        <p class="lead-footer">Chúng tôi sẽ sớm liên hệ với bạn qua số điện thoại và email</p>
+                                    </form:form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+
+                    <div class="form-wrapper">
+                        <div class="wow fadeInRight" data-wow-duration="2s" data-wow-delay="0.2s">
+                            <div class="panel panel-skin">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title"><span class="fa fa-pencil-square-o"></span> Tra cứu lịch sử bệnh nhân</h3>
+                                </div>
+                                <div class="panel-body">
+                                    <form:form modelAttribute="appointment" role="form" class="lead">
+                                        <div class="row">
+                                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                                <div class="form-group">
+                                                    <label>Họ</label>
+                                                    <form:input path="ho" cssClass="form-control input-md" />
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                                <div class="form-group">
+                                                    <label>Tên</label>
+                                                    <form:input path="ten" cssClass="form-control input-md" />
+                                                        <%--                                                    <input type="text" name="first_name" id="first_name" class="form-control input-md">--%>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                                <div class="form-group">
+                                                    <label>Số Điện Thoại</label>
+                                                    <form:input path="dienThoai" cssClass="form-control input-md"/>
+                                                        <%--                                                    <input type="text" name="phone" id="phone" class="form-control input-md">--%>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                                <div class="form-group">
+                                                    <label>Ngày sinh</label>
+                                                    <form:input path="ngaySinh" cssClass="form-control input-md"/>
+                                                        <%--                                                    <input type="email" name="email" id="email" class="form-control input-md">--%>
+                                                </div>
+                                            </div>
+                                        </div><br/>
+                                        <div class="row">
+                                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                                <div class="form-group">
+                                                    <label>Giới tính</label>
+                                                    <form:input path="gioiTinh" cssClass="form-control input-md"/>
+                                                        <%--                                                    <input type="text" name="phone" id="phone" class="form-control input-md">--%>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                                <div class="form-group">
+                                                    <label>Địa Chỉ</label>
+                                                    <form:input path="diaChi" cssClass="form-control input-md"/>
+                                                        <%--                                                    <input type="email" name="email" id="email" class="form-control input-md">--%>
+                                                </div>
+                                            </div>
+                                        </div><br/>
+                                        <div class="row">
+                                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                                <div class="form-group">
+                                                    <label>Ca khám</label>
+                                                    <form:select path="caKhamBenh" cssClass="form-control input-md">
+                                                        <c:forEach items="${shifts}" var="d">
+                                                            <form:option value="${d.id}">${d.tenCa}</form:option>
+                                                        </c:forEach>
+                                                    </form:select>
+                                                        <%--                                                    <input type="text" name="phone" id="phone" class="form-control input-md">--%>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                                <div class="form-group">
+                                                    <label>Bác sĩ</label>
+                                                    <form:select path="bacSi" cssClass="form-control input-md">
+                                                        <c:forEach items="${doctors}" var="d">
+                                                            <form:option value="${d.id}">${d.ten}</form:option>
+                                                        </c:forEach>
+                                                    </form:select>
+                                                        <%--                                                    <input type="email" name="email" id="email" class="form-control input-md">--%>
+                                                </div>
+                                            </div>
+                                        </div><br/>
+                                        <div class="row">
+                                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                                <div class="form-group">
+                                                    <label>Loại bệnh</label>
+                                                    <form:select path="loaiBenh" cssClass="form-control input-md">
+                                                        <c:forEach items="${diseases}" var="d">
+                                                            <form:option value="${d.id}">${d.tenBenh}</form:option>
+                                                        </c:forEach>
+                                                    </form:select>
+                                                        <%--                                                    <input type="text" name="phone" id="phone" class="form-control input-md">--%>
+                                                </div>
+
+                                            </div>
+                                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                                <div class="form-group">
+                                                    <label>Ngày khám</label>
+                                                    <form:input path="ngayKham" cssClass="form-control input-md"/>
+                                                        <%--                                                    <input type="email" name="email" id="email" class="form-control input-md">--%>
+                                                </div>
+                                            </div>
+                                        </div><br/>
+                                        <input type="submit" value="Gửi" class="btn btn-skin btn-block btn-lg">
+                                        <p class="lead-footer">Chúng tôi sẽ sớm liên hệ với bạn qua số điện thoại và email</p>
                                     </form:form>
                                 </div>
                             </div>
@@ -581,3 +707,18 @@
         </div>
     </div>
 </section>
+
+<script>
+    $(document).ready(function() {
+        $("#ngayKham").datetimepicker({
+            format: 'DD/MM/YYYY',
+            minDate: new Date()
+        })
+        let bornDate = new Date();
+        bornDate.setFullYear(bornDate.getFullYear() - 18);
+        $("#ngaySinh").datetimepicker({
+            format: 'DD/MM/YYYY',
+            maxDate: bornDate
+        })
+    })
+</script>

@@ -11,4 +11,5 @@ public interface IBenhNhanService extends IGenericService<BenhNhan> {
     List<BenhNhan> getTopNewBenhNhan(int limit);
     int getSoLuongPhieuKhamBenhCuaBenhNhan(BenhNhan benhNhan);
     boolean themBenhNhanVaPhieuKhamBenh(BenhNhan benhNhan, PhieuKhamBenh phieuKhamBenh);
+    BenhNhan getBenhNhanTheoSoDienThoai(String sdt);
 }

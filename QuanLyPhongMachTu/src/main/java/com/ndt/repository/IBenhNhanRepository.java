@@ -11,4 +11,5 @@ public interface IBenhNhanRepository extends IGenericRepository<BenhNhan> {
     List<BenhNhan> getTopNewBenhNhan(int limit);
     int getSoLuongPhieuKhamBenhCuaBenhNhan(BenhNhan benhNhan);
     boolean themBenhNhanVaPhieuKhamBenh(BenhNhan benhNhan, PhieuKhamBenh phieuKhamBenh);
+    BenhNhan getBenhNhanhTheoSDT(String sdt);
 }

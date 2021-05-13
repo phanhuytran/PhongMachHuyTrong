@@ -86,4 +86,12 @@ public class BenhNhanRepository extends GenericRepository<BenhNhan> implements I
             return true;
         return false;
     }
+
+    @Override
+    @Transactional(readOnly = true)
+    public BenhNhan getBenhNhanhTheoSDT(String sdt) {
+        List<BenhNhan> result = currentSession().createQuery("From BenhNhan where dienThoai=:sdt")
+                .setParameter("sdt", sdt).getResultList();
+        return result.isEmpty() ? null : result.get(0);
+    }
 }

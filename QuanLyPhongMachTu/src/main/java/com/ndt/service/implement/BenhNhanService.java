@@ -45,4 +45,9 @@ public class BenhNhanService extends GenericService<BenhNhan> implements IBenhNh
     public boolean themBenhNhanVaPhieuKhamBenh(BenhNhan benhNhan, PhieuKhamBenh phieuKhamBenh) {
         return benhNhanRepository.themBenhNhanVaPhieuKhamBenh(benhNhan, phieuKhamBenh);
     }
+
+    @Override
+    public BenhNhan getBenhNhanTheoSoDienThoai(String sdt) {
+        return benhNhanRepository.getBenhNhanhTheoSDT(sdt);
+    }
 }

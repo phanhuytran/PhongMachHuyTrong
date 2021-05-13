@@ -60,7 +60,7 @@ public class HomeController {
         phieuKhamBenh.setThanhToan(false);
         phieuKhamBenh.setNgayKham(format.parse(appointment.getNgayKham()));
         phieuKhamBenh.setCaKhamBenh(appointment.getCaKhamBenh());
-        phieuKhamBenh.setDiaChi("371 Nguyen Kiem");
+        phieuKhamBenh.setDiaChi(appointment.getDiaChi());
         phieuKhamBenh.setBacSi(appointment.getBacSi());
         Set<LoaiBenh> loaiBenhs = new HashSet<>();
         loaiBenhs.add(appointment.getLoaiBenh());
@@ -73,6 +73,14 @@ public class HomeController {
 
         return "index";
     }
+
+    // Admin - Login
+    @RequestMapping(value = "/login")
+    public String login(Model model) { return "login"; }
+
+
+
+
 
     // Admin - Patient
     // Admin - Report

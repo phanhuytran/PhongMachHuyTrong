@@ -16,6 +16,15 @@ Software Foundation//DTD Tiles Configuration 3.0//EN"
         <put-attribute name="content" value="/WEB-INF/page/index.jsp" />
 
     </definition>
+<!--    searchPatient-->
+    <definition name="user.patient.search" extends="baseLayout">
+        <put-attribute name="title" value="Tra cứu bệnh nhân" />
+        <put-attribute name="content" value="/WEB-INF/page/search-patient.jsp"/>
+    </definition>
+    <definition name="user.patient.profile" extends="baseLayout">
+        <put-attribute name="title" value="Tra cứu bệnh nhân" />
+        <put-attribute name="content" value="/WEB-INF/page/patient-profile.jsp"/>
+    </definition>
 <!--Admin-->
 
 <!-- base admin layout -->
