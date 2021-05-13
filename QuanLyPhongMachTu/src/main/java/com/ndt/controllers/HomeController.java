@@ -42,8 +42,8 @@ public class HomeController {
     @PostMapping(value = "/")
     public String book(@ModelAttribute("appointment")Appointment appointment) throws ParseException {
         SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
-        //Trên giao diê?n nhâ?p nga?y theo ?i?nh da?ng na?o thi?
-        // simpledateformat theo ?i?nh da?ng ?o?, ?? ?ây la? nga?y/tha?ng/n?m
+        //Trï¿½n giao diï¿½?n nhï¿½?p nga?y theo ?i?nh da?ng na?o thi?
+        // simpledateformat theo ?i?nh da?ng ?o?, ?? ?ï¿½y la? nga?y/tha?ng/n?m
         BenhNhan benhNhan = new BenhNhan();
         benhNhan.setId(UUID.randomUUID().toString());
         benhNhan.setTen(appointment.getTen());
@@ -74,22 +74,7 @@ public class HomeController {
         return "index";
     }
 
-
-
-
-    // Admin - Login
-    @RequestMapping(value = "/login")
-    public String login(Model model) { return "login"; }
-
-
-
-
-
     // Admin - Patient
-
-
-
-
     // Admin - Report
     @RequestMapping(value = "/payment-report")
     public String paymentReport(Model model) { return "payment-report"; }

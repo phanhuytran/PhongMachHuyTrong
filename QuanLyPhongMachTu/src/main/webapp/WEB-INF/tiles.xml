@@ -36,26 +36,21 @@ Software Foundation//DTD Tiles Configuration 3.0//EN"
     <definition name="admin" extends="baseAdminLayout">
         <put-attribute name="content" value="/WEB-INF/adminLayout/admin-templates/index.jsp"/>
     </definition>
-
     <definition name="doctors" extends="baseAdminLayout">
+        <put-attribute name="title" value="Danh Sách Bác Sĩ" />
         <put-attribute name="content" value="/WEB-INF/adminLayout/admin-templates/doctors.jsp"/>
     </definition>
-
     <definition name="add-doctor" extends="baseAdminLayout">
         <put-attribute name="title" value="Thêm Bác Sĩ" />
         <put-attribute name="content" value="/WEB-INF/adminLayout/admin-templates/add-doctor.jsp" />
     </definition>
-
-
-
-
     <definition name="doctor.profile" extends="baseAdminLayout">
-        <put-attribute name="title" value="Quản Lý Phòng Mạch Huy Trọng" />
+        <put-attribute name="title" value="Thông Tin Bác Sĩ" />
         <put-attribute name="content" value="/WEB-INF/adminLayout/admin-templates/doctor-profile.jsp"/>
     </definition>
 
     <definition name="doctor.edit" template="/WEB-INF/adminLayout/admin-templates/edit-doctor.jsp">
-        <put-attribute name="title" value="Quản Lý Phòng Mạch Huy Trọng" />
+        <put-attribute name="title" value="Cập Nhật Thông Tin Bác Sĩ" />
         <put-attribute name="index-01" value="/WEB-INF/adminLayout/admin-templates/index-01.jsp" />
         <put-attribute name="index-02" value="/WEB-INF/adminLayout/admin-templates/index-02.jsp" />
     </definition>
@@ -64,21 +59,23 @@ Software Foundation//DTD Tiles Configuration 3.0//EN"
         <put-attribute name="title" value="Thêm Nhân Viên" />
         <put-attribute name="content" value="/WEB-INF/adminLayout/admin-templates/add-employee.jsp" />
     </definition>
+
     <definition name="employees" extends="baseAdminLayout">
+        <put-attribute name="title" value="Danh Sách Nhân Viên" />
         <put-attribute name="content" value="/WEB-INF/adminLayout/admin-templates/employees.jsp"/>
     </definition>
     <definition name="employee.edit" extends="baseAdminLayout" >
-        <put-attribute name="title" value="Chỉnh sữa thông tin nhân viên" />
+        <put-attribute name="title" value="Cập Nhật Thông Tin Nhân Viên" />
         <put-attribute name = "content" value="/WEB-INF/adminLayout/admin-templates/edit-employee.jsp"/>
     </definition>
     <definition name="employee.detail" extends="baseAdminLayout" >
-        <put-attribute name="title" value="Thông tin nhân viên" />
+        <put-attribute name="title" value="Thông Tin Nhân Viên" />
         <put-attribute name="content" value="/WEB-INF/adminLayout/admin-templates/employee-profile.jsp"/>
     </definition>
 
 <!--Admin-Patient-->
     <definition name="patients" extends="baseAdminLayout">
-        <put-attribute name="title" value="Quản Lý Phòng Mạch Huy Trọng" />
+        <put-attribute name="title" value="Danh Sách Bệnh Nhân" />
         <put-attribute name="content" value="/WEB-INF/adminLayout/admin-templates/patients.jsp"/>
     </definition>
     <definition name="add-patient" extends="baseAdminLayout">
@@ -86,12 +83,12 @@ Software Foundation//DTD Tiles Configuration 3.0//EN"
         <put-attribute name="content" value="/WEB-INF/adminLayout/admin-templates/add-patient.jsp" />
     </definition>
     <definition name="edit-patient" template="/WEB-INF/adminLayout/admin-templates/edit-patient.jsp">
-        <put-attribute name="title" value="Quản Lý Phòng Mạch Huy Trọng" />
+        <put-attribute name="title" value="Cập Nhật Thông Tin Bệnh Nhân" />
         <put-attribute name="index-01" value="/WEB-INF/adminLayout/admin-templates/index-01.jsp" />
         <put-attribute name="index-02" value="/WEB-INF/adminLayout/admin-templates/index-02.jsp" />
     </definition>
     <definition name="patient-profile" template="/WEB-INF/adminLayout/admin-templates/patient-profile.jsp">
-        <put-attribute name="title" value="Quản Lý Phòng Mạch Huy Trọng" />
+        <put-attribute name="title" value="Thông Tin Bệnh Nhân" />
         <put-attribute name="index-01" value="/WEB-INF/adminLayout/admin-templates/index-01.jsp" />
         <put-attribute name="index-02" value="/WEB-INF/adminLayout/admin-templates/index-02.jsp" />
     </definition>
@@ -104,30 +101,27 @@ Software Foundation//DTD Tiles Configuration 3.0//EN"
     <definition name = "prescription.add" extends="baseAdminLayout">
         <put-attribute name="title" value="Thêm Toa Thuốc"/>
         <put-attribute name="content" value="/WEB-INF/adminLayout/admin-templates/add-prescription.jsp"/>
-
     </definition>
-
     <definition name = "prescription.edit" extends="baseAdminLayout">
-        <put-attribute name="title" value="Chỉnh Sửa Toa Thuốc"/>
+        <put-attribute name="title" value="Cập Nhật Thông Tin Toa Thuốc"/>
         <put-attribute name="content" value="/WEB-INF/adminLayout/admin-templates/edit-prescription.jsp"/>
-
     </definition>
 
     <definition name = "prescription.detail" extends="baseAdminLayout">
-        <put-attribute name="title" value="Chỉnh Sửa Toa Thuốc"/>
+        <put-attribute name="title" value="Thông Tin Toa Thuốc"/>
         <put-attribute name="content" value="/WEB-INF/adminLayout/admin-templates/prescription-detail.jsp"/>
 
     </definition>
 
     <definition name = "prescription.detail.edit" extends="baseAdminLayout">
-        <put-attribute name="title" value="Chỉnh Sửa Toa Thuốc"/>
+        <put-attribute name="title" value="Thông Tin Toa Thuốc"/>
         <put-attribute name="content" value="/WEB-INF/adminLayout/admin-templates/prescription-detail.jsp"/>
 
     </definition>
 
 <!--medicine-->
     <definition name="medicines" template="/WEB-INF/adminLayout/admin-templates/medicines.jsp">
-        <put-attribute name="title" value="Quản Lý Phòng Mạch Huy Trọng" />
+        <put-attribute name="title" value="Danh Sách Thuốc" />
         <put-attribute name="index-01" value="/WEB-INF/adminLayout/admin-templates/index-01.jsp" />
         <put-attribute name="index-02" value="/WEB-INF/adminLayout/admin-templates/index-02.jsp" />
     </definition>
@@ -136,63 +130,62 @@ Software Foundation//DTD Tiles Configuration 3.0//EN"
         <put-attribute name="content" value="/WEB-INF/adminLayout/admin-templates/add-medicine.jsp" />
     </definition>
 
-
 <!--Admin-Report-->
     <definition name="payment-report" template="/WEB-INF/adminLayout/admin-templates/payment-report.jsp">
-        <put-attribute name="title" value="Quản Lý Phòng Mạch Huy Trọng" />
+        <put-attribute name="title" value="Báo Cáo Thanh Toán" />
         <put-attribute name="index-01" value="/WEB-INF/adminLayout/admin-templates/index-01.jsp" />
         <put-attribute name="index-02" value="/WEB-INF/adminLayout/admin-templates/index-02.jsp" />
     </definition>
     <definition name="income-report" template="/WEB-INF/adminLayout/admin-templates/income-report.jsp">
-        <put-attribute name="title" value="Quản Lý Phòng Mạch Huy Trọng" />
+        <put-attribute name="title" value="Báo Cáo Thu Nhập" />
         <put-attribute name="index-01" value="/WEB-INF/adminLayout/admin-templates/index-01.jsp" />
         <put-attribute name="index-02" value="/WEB-INF/adminLayout/admin-templates/index-02.jsp" />
     </definition>
     <definition name="sales-report" template="/WEB-INF/adminLayout/admin-templates/sales-report.jsp">
-        <put-attribute name="title" value="Quản Lý Phòng Mạch Huy Trọng" />
+        <put-attribute name="title" value="Báo Cáo Bán Hàng" />
         <put-attribute name="index-01" value="/WEB-INF/adminLayout/admin-templates/index-01.jsp" />
         <put-attribute name="index-02" value="/WEB-INF/adminLayout/admin-templates/index-02.jsp" />
     </definition>
 <!--Admin-Payment-->
     <definition name="payments" template="/WEB-INF/adminLayout/admin-templates/payments.jsp">
-        <put-attribute name="title" value="Quản Lý Phòng Mạch Huy Trọng" />
+        <put-attribute name="title" value="Chi Tiết Hóa Đơn Thanh Toán" />
         <put-attribute name="index-01" value="/WEB-INF/adminLayout/admin-templates/index-01.jsp" />
         <put-attribute name="index-02" value="/WEB-INF/adminLayout/admin-templates/index-02.jsp" />
     </definition>
     <definition name="add-payment" template="/WEB-INF/adminLayout/admin-templates/add-payment.jsp">
-        <put-attribute name="title" value="Quản Lý Phòng Mạch Huy Trọng" />
+        <put-attribute name="title" value="Thêm Chi Tiết Hóa Đơn"/>
         <put-attribute name="index-01" value="/WEB-INF/adminLayout/admin-templates/index-01.jsp" />
         <put-attribute name="index-02" value="/WEB-INF/adminLayout/admin-templates/index-02.jsp" />
     </definition>
     <definition name="patient-invoice" template="/WEB-INF/adminLayout/admin-templates/patient-invoice.jsp">
-        <put-attribute name="title" value="Quản Lý Phòng Mạch Huy Trọng" />
+        <put-attribute name="title" value="Hóa Đơn Bệnh Nhân" />
         <put-attribute name="index-01" value="/WEB-INF/adminLayout/admin-templates/index-01.jsp" />
         <put-attribute name="index-02" value="/WEB-INF/adminLayout/admin-templates/index-02.jsp" />
     </definition>
 <!--Admin-Appointment-->
     <definition name="doctor-schedule" template="/WEB-INF/adminLayout/admin-templates/doctor-schedule.jsp">
-        <put-attribute name="title" value="Quản Lý Phòng Mạch Huy Trọng" />
+        <put-attribute name="title" value="Lịch Hẹn Bác Sĩ" />
         <put-attribute name="index-01" value="/WEB-INF/adminLayout/admin-templates/index-01.jsp" />
         <put-attribute name="index-02" value="/WEB-INF/adminLayout/admin-templates/index-02.jsp" />
     </definition>
     <definition name="book-appointment" template="/WEB-INF/adminLayout/admin-templates/book-appointment.jsp">
-        <put-attribute name="title" value="Quản Lý Phòng Mạch Huy Trọng" />
+        <put-attribute name="title" value="Đặt Lịch Khám" />
         <put-attribute name="index-01" value="/WEB-INF/adminLayout/admin-templates/index-01.jsp" />
         <put-attribute name="index-02" value="/WEB-INF/adminLayout/admin-templates/index-02.jsp" />
     </definition>
 <!--Mail-->
     <definition name="inbox" template="/WEB-INF/adminLayout/admin-templates/inbox.jsp">
-        <put-attribute name="title" value="Quản Lý Phòng Mạch Huy Trọng" />
+        <put-attribute name="title" value="Hộp Thư" />
         <put-attribute name="index-01" value="/WEB-INF/adminLayout/admin-templates/index-01.jsp" />
         <put-attribute name="index-02" value="/WEB-INF/adminLayout/admin-templates/index-02.jsp" />
     </definition>
     <definition name="inbox-detail" template="/WEB-INF/adminLayout/admin-templates/inbox-detail.jsp">
-        <put-attribute name="title" value="Quản Lý Phòng Mạch Huy Trọng" />
+        <put-attribute name="title" value="Chi Tiết Hộp Thư" />
         <put-attribute name="index-01" value="/WEB-INF/adminLayout/admin-templates/index-01.jsp" />
         <put-attribute name="index-02" value="/WEB-INF/adminLayout/admin-templates/index-02.jsp" />
     </definition>
     <definition name="compose" template="/WEB-INF/adminLayout/admin-templates/compose.jsp">
-        <put-attribute name="title" value="Quản Lý Phòng Mạch Huy Trọng" />
+        <put-attribute name="title" value="Soạn Thư" />
         <put-attribute name="index-01" value="/WEB-INF/adminLayout/admin-templates/index-01.jsp" />
         <put-attribute name="index-02" value="/WEB-INF/adminLayout/admin-templates/index-02.jsp" />
     </definition>

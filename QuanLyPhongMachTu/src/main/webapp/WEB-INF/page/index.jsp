@@ -47,7 +47,6 @@
                                                 <div class="form-group">
                                                     <label>Tên</label>
                                                     <form:input path="ten" cssClass="form-control input-md" />
-<%--                                                    <input type="text" name="first_name" id="first_name" class="form-control input-md">--%>
                                                 </div>
                                             </div>
                                         </div>
@@ -56,33 +55,32 @@
                                                 <div class="form-group">
                                                     <label>Số Điện Thoại</label>
                                                     <form:input path="dienThoai" cssClass="form-control input-md"/>
-<%--                                                    <input type="text" name="phone" id="phone" class="form-control input-md">--%>
                                                 </div>
                                             </div>
                                             <div class="col-xs-6 col-sm-6 col-md-6">
                                                 <div class="form-group">
                                                     <label>Ngày sinh</label>
                                                     <form:input path="ngaySinh" cssClass="form-control input-md"/>
-<%--                                                    <input type="email" name="email" id="email" class="form-control input-md">--%>
                                                 </div>
                                             </div>
-                                        </div><br/>
+                                        </div>
                                         <div class="row">
                                             <div class="col-xs-6 col-sm-6 col-md-6">
                                                 <div class="form-group">
                                                     <label>Giới tính</label>
-                                                    <form:input path="gioiTinh" cssClass="form-control input-md"/>
-                                                        <%--                                                    <input type="text" name="phone" id="phone" class="form-control input-md">--%>
+                                                    <form:select path="gioiTinh" cssClass="form-control input-md">
+                                                        <form:option value="Nam">Nam</form:option>
+                                                        <form:option value="Nu">Nữ</form:option>
+                                                    </form:select>
                                                 </div>
                                             </div>
                                             <div class="col-xs-6 col-sm-6 col-md-6">
                                                 <div class="form-group">
                                                     <label>Ngày khám</label>
-                                                    <form:input path="ngayKham" cssClass="form-control input-md"/>
-                                                        <%--                                                    <input type="email" name="email" id="email" class="form-control input-md">--%>
+                                                    <form:input path="ngayKham" cssClass="form-control input-md datepicker"/>
                                                 </div>
                                             </div>
-                                        </div><br/>
+                                        </div>
                                         <div class="row">
                                             <div class="col-xs-6 col-sm-6 col-md-6">
                                                 <div class="form-group">
@@ -92,7 +90,6 @@
                                                             <form:option value="${d.id}">${d.tenCa}</form:option>
                                                         </c:forEach>
                                                     </form:select>
-                                                        <%--                                                    <input type="text" name="phone" id="phone" class="form-control input-md">--%>
                                                 </div>
                                             </div>
                                             <div class="col-xs-6 col-sm-6 col-md-6">
@@ -103,10 +100,9 @@
                                                             <form:option value="${d.id}">${d.ten}</form:option>
                                                         </c:forEach>
                                                     </form:select>
-                                                        <%--                                                    <input type="email" name="email" id="email" class="form-control input-md">--%>
                                                 </div>
                                             </div>
-                                        </div><br/>
+                                        </div>
                                         <div class="row">
                                             <div class="col-xs-6 col-sm-6 col-md-6">
                                                 <div class="form-group">
@@ -116,12 +112,10 @@
                                                             <form:option value="${d.id}">${d.tenBenh}</form:option>
                                                         </c:forEach>
                                                     </form:select>
-                                                        <%--                                                    <input type="text" name="phone" id="phone" class="form-control input-md">--%>
                                                 </div>
                                             </div>
                                         </div><br/>
                                         <input type="submit" value="Gửi" class="btn btn-skin btn-block btn-lg">
-                                        <p class="lead-footer">Chúng tôi sẽ sớm liên hệ với bạn qua số điện thoại và email</p>
                                     </form:form>
                                 </div>
                             </div>
