@@ -30,6 +30,7 @@
                                     <form:option value="${d.id}">${d.ho} ${d.ten}</form:option>
                                 </c:forEach>
                             </form:select>
+                            <form:errors path="bacSi" cssClass="text-danger"/>
                         </div>
                         <div class="form-group">
                             <label class="col-md-12" for="benhNhan">Chọn bệnh nhân</span>
@@ -39,12 +40,14 @@
                                     <form:option value="${p.id}">${p.ho} ${p.ten}</form:option>
                                 </c:forEach>
                             </form:select>
+                            <form:errors path="benhNhan" cssClass="text-danger"/>
                         </div>
                         <div class="form-group">
                             <label class="col-md-12" for="ngayKeToa">Ngày kê toa</span>
                             </label>
-                            <form:errors path="ngayKeToa"
+
                             <form:input path="ngayKeToa" placeholder="nhập ngày kê toa" cssClass="form-control" />
+                            <form:errors path="ngayKeToa" cssClass="text-danger input-md"/>
                         </div>
                         <div class="form-group">
                             <label class="col-md-12" for="loaiBenh">Loại Bệnh</span>
@@ -54,6 +57,7 @@
                                     <form:option value="${benh.id}">${benh.tenBenh}</form:option>
                                 </c:forEach>
                             </form:select>
+                            <form:errors path="loaiBenh" cssClass="text-danger"/>
                         </div>
 
                         <form:button type="submit" class="btn btn-info waves-effect waves-light m-r-10">Thêm</form:button>
@@ -128,3 +132,17 @@
 <script src="<c:url value="/admin-resources/js/jasny-bootstrap.js"/>"></script>
 <script src="<c:url value="/admin-resources/js/mask.js"/>"></script>
 <script src="<c:url value="/admin-resources/plugins/bower_components/styleswitcher/jQuery.style.switcher.js"/>"></script>
+<script>
+    $(document).ready(function() {
+        $("#ngayKeToa").datetimepicker({
+            format: 'DD/MM/YYYY',
+            minDate: new Date()
+        })
+        let bornDate = new Date();
+        bornDate.setFullYear(bornDate.getFullYear() - 18);
+        $("#ngaySinh").datetimepicker({
+            format: 'DD/MM/YYYY',
+            maxDate: bornDate
+        })
+    })
+</script>

@@ -54,16 +54,30 @@
                 </div>
             </div>
             <div class="row">
-                <div style="display:none;" class="col-sm-6">
+                <div class="row-sm-12 stselect2-arrow">
+                    <label>chọn năm</label>
+                    <select class="form-select" aria-label="Default select example">
+                        <option value="2018"> <a href="#" onclick="myChart1(2018)">2018</a></option>
+                        <option value="2019"> <a href="#" onclick="myChart1(2019)">2019</a></option>
+                        <option value="2020"> <a href="#" onclick="myChart1(2020)">2020</a></option>
+                        <option selected value="2021"> <a href="#" onclick="myChart1(2021)">2021</a></option>
+                    </select>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+
                     <div class="white-box">
-                        <h3 class="box-title">Line Chart</h3>
+                        <h3 class="box-title">>Biểu đồ thống kế lượng bệnh nhân  theo quý</h3>
+
                         <div>
                             <canvas id="chart1" height="150"></canvas>
                         </div>
                     </div>
                 </div>
 
-                //có du lieu
+<%--                có du lieu--%>
                 <div class="col-sm-6">
                     <div class="white-box">
                         <h3 class="box-title">Biểu đồ thống kế lượng bệnh nhân  theo tháng</h3>
@@ -72,21 +86,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6">
-                    <div class="white-box">
-                        <h3 class="box-title">Bar Chart</h3>
-                        <div>
-                            <canvas id="chart2" height="150"></canvas>
-                        </div>
-                    </div>
-                </div>
+
             </div>
             <!-- /.row -->
             <!-- .row -->
             <div class="row">
                 <div class="col-lg-6">
                     <div class="white-box">
-                        <h3 class="box-title">Pie Chart</h3>
+                        <h3 class="box-title">Biểu đồ thống kế lượng bệnh nhân  theo năm</h3>
                         <div>
                             <canvas id="chart3" height="150"></canvas>
                         </div>
@@ -140,7 +147,7 @@
         src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
 </script>
 <script>
-    fetch('/api/getTotalPatients').then(res => res.json()).then(data => {
+    fetch('/api/getTotalPatients?year=2021').then(res => res.json()).then(data => {
         let lineChartData = {
             labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
             datasets: [{
@@ -166,6 +173,69 @@
             }
         })
     })
+</script>
+<script>
+
+        fetch('/api/getTotalPatientsOfSet?year=2021').then(res => res.json()).then(data => {
+            let lineChartData = {
+                labels: ['1', '2', '3', '4'],
+                datasets: [{
+                    label: "Tong so benh nhan trong nam",
+                    backgroundColor: "#234323",
+                    fill: true,
+                    data: data
+                }]
+            }
+            let line = document.getElementById("chart1");
+            new Chart(line, {
+                type: 'line',
+                data: lineChartData,
+                options: {
+                    esponsive: true,
+                    legend: {
+                        display: false,
+                    },
+                    tooltips: {
+                        mode: 'index',
+                        intersect: false,
+                    }
+                }
+            })
+        })
+
+
+</script>
+
+<script>
+
+    fetch('/api/getTotalPatientsOfYear').then(res => res.json()).then(data => {
+        let lineChartData = {
+            labels: ['2018', '2019', '2020', '2021'],
+            datasets: [{
+                label: "Tong so benh nhan trong nam",
+                backgroundColor: "#234323",
+                fill: true,
+                data: data
+            }]
+        }
+        let line = document.getElementById("chart3");
+        new Chart(line, {
+            type: 'line',
+            data: lineChartData,
+            options: {
+                esponsive: true,
+                legend: {
+                    display: false,
+                },
+                tooltips: {
+                    mode: 'index',
+                    intersect: false,
+                }
+            }
+        })
+    })
+
+
 </script>
 </body>
 </html>

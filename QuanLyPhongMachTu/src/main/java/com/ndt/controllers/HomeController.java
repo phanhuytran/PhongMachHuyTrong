@@ -84,14 +84,13 @@ public class HomeController {
 
         }
 
-
-
         model.addAttribute("message", "Có lỗi, vui lòng kiểm tra lại thông tin");
         return "index";
     }
 
     @RequestMapping("/api/getTotalPatients")
     public @ResponseBody String getTotalPatients(@RequestParam(value = "year", required = false)String year) throws JsonProcessingException {
+
         String result = "";
         ObjectMapper mapper = new ObjectMapper();
         if (year != null && !year.isEmpty()) {
@@ -99,14 +98,42 @@ public class HomeController {
         }
         else
             result = mapper.writeValueAsString(iBenhNhanService.getTotalPatients(new Date().getYear() + 1900));
+
         return result;
     }
+
+    @RequestMapping("/api/getTotalPatientsOfSet")
+    public @ResponseBody String getTotalPatientsOfSet(@RequestParam(value = "year", required = false)String year) throws JsonProcessingException {
+
+        String result = "";
+        ObjectMapper mapper = new ObjectMapper();
+        if (year != null && !year.isEmpty()) {
+            int da[] = iBenhNhanService.getTotalPatients(Integer.parseInt(year));
+            int [] ds = new int[4];
+            ds[0] = da[0] + da[1] +da[2] ;
+            ds[1] = da[3] + da[4] + da[5]  ;
+            ds[2] = da[6] + da[7] + da[8] ;
+            ds[3] = da[9] + da[10] + da[11];
+
+            result = mapper.writeValueAsString(ds);
+        }
+        else{
+            int da[] = iBenhNhanService.getTotalPatients(new Date().getYear() + 1900);
+            int [] ds = new int[4];
+            ds[0] = da[0] + da[1] +da[2] ;
+            ds[1] = da[3] + da[4] + da[5]  ;
+            ds[2] = da[6] + da[7] + da[8] ;
+            ds[3] = da[9] + da[10] + da[11];
+            result = mapper.writeValueAsString(ds);
+        }
+
+        return result;
+    }
+
 
     // Admin - Login
     @RequestMapping(value = "/login")
     public String login(Model model) { return "login"; }
-
-
 
 
 

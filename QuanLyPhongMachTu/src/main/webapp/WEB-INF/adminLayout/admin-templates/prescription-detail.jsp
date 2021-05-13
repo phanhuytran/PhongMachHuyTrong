@@ -11,31 +11,38 @@
                 <h4 class="page-title">Thông tin toa thuốc</h4>
             </div>
             <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
-                <a href="/" target="_blank" class="btn btn-danger pull-right m-l-20 btn-rounded btn-outline hidden-xs hidden-sm waves-effect waves-light">Trang chủ</a>
+                <a href="/" target="_blank"
+                   class="btn btn-danger pull-right m-l-20 btn-rounded btn-outline hidden-xs hidden-sm waves-effect waves-light">Trang
+                    chủ</a>
             </div>
         </div>
         <div class="row">
             <table class="table table-bordered table-striped table-hover">
                 <thead class="thead-dark">
-                    <th>ID</th>
-                    <th>Bác sĩ</th>
-                    <th>Bệnh nhân</th>
-                    <th>Ngày kê toa</th>
-                    <th>Loại bệnh</th>
+                <th>ID</th>
+                <th>Bác sĩ</th>
+                <th>Bệnh nhân</th>
+                <th>Ngày kê toa</th>
+                <th>Loại bệnh</th>
                 </thead>
                 <tbody style="font-size: 13px">
-                    <tr>
-                        <td>${prescription.id}</td>
-                        <td>${prescription.bacSi.ten}</td>
-                        <td>${prescription.benhNhan.ten}</td>
-                        <td>${prescription.ngayKeToa}</td>
-                        <td>${prescription.loaiBenh.tenBenh}</td>
-                    </tr>
+                <tr>
+                    <td>${prescription.id}</td>
+                    <td>${prescription.bacSi.ten}</td>
+                    <td>${prescription.benhNhan.ten}</td>
+                    <td>${prescription.ngayKeToa}</td>
+                    <td>${prescription.loaiBenh.tenBenh}</td>
+                </tr>
                 </tbody>
             </table>
-            <a href="javascript:;" class="btn btn-primary" onclick="showForm()">Thê chi tiết toa thuốc</a>
-            <form:form id="medicine-form" cssStyle="display: none; margin-top: 50px" method="post" modelAttribute="detail">
-                <form:hidden path="toaThuoc" value="${prescription.id}" />
+
+            <%--            <a href="javascript:;" class="btn btn-primary" onclick="showForm()">Thê chi tiết toa thuốc</a>--%>
+            <%--            <form:form id="medicine-form" cssStyle="display: none; margin-top: 50px" method="post" modelAttribute="detail">--%>
+            <a href="javascript:;" class="btn btn-primary" style="height: 33px" onclick="showForm()">Thêm chi tiết toa
+                thuốc</a>
+            <form:form id="medicine-form" cssStyle="display: none; margin-top: 50px; margin-left: -180px" method="post"
+                       modelAttribute="detail">
+                <form:hidden path="toaThuoc" value="${prescription.id}"/>
                 <form:errors path="*" element="div" cssClass="alert alert-danger"/>
                 <div class="form-group">
                     <label for="thuoc">Thuoc</label>
@@ -59,12 +66,12 @@
                     <th>Số lượng</th>
                     </thead>
                     <tbody style="font-size: 13px">
-                        <c:forEach items="${result}" var="i">
-                            <tr>
-                                <td>${i.thuoc.tenThuoc}</td>
-                                <td>${i.soLuong}</td>
-                            </tr>
-                        </c:forEach>
+                    <c:forEach items="${result}" var="i">
+                        <tr>
+                            <td>${i.thuoc.tenThuoc}</td>
+                            <td>${i.soLuong}</td>
+                        </tr>
+                    </c:forEach>
                     </tbody>
                 </table>
             </c:if>

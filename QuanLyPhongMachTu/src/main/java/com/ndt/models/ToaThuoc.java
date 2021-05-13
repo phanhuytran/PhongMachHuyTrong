@@ -13,18 +13,26 @@ public class ToaThuoc implements Serializable {
     @Id
     @Column(name = "id", length = 36)
     private String id;
+
     @NotNull(message = "Khong duoc rong")
     @Column(name = "NgayKeToa")
     private Date ngayKeToa;
+
+    @NotNull(message = "Khong duoc rong")
     @ManyToOne()
     @JoinColumn(name = "MaBacSi")
     private BacSi bacSi;
+
+    @NotNull(message = "Khong duoc rong")
     @ManyToOne
     @JoinColumn(name = "MaBenhNhan")
     private BenhNhan benhNhan;
+
+    @NotNull(message = "Khong duoc rong")
     @ManyToOne
     @JoinColumn(name = "MaLoaiBenh")
     private LoaiBenh loaiBenh;
+
     @OneToMany(mappedBy = "toaThuoc", fetch = FetchType.EAGER, cascade = CascadeType.REMOVE)
     private Set<ChiTietToaThuoc> dsChiTietToaThuoc;
 

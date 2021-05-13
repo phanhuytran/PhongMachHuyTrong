@@ -75,11 +75,16 @@ public class PrescriptionController {
     }
 
     @PostMapping("/add")
-    public String addProcess(@ModelAttribute("prescription")ToaThuoc toaThuoc, ModelMap model) {
-        toaThuoc.setId(UUID.randomUUID().toString());
-        ToaThuoc t = iToaThuocService.insert(toaThuoc);
-        if (t != null)
-            return "redirect:/prescription";
+    public String addProcess(@ModelAttribute("prescription")@Valid ToaThuoc toaThuoc,
+                             BindingResult result, ModelMap model) {
+
+        if (!result.hasErrors()){
+            toaThuoc.setId(UUID.randomUUID().toString());
+            ToaThuoc t = iToaThuocService.insert(toaThuoc);
+            if (t != null)
+                return "redirect:/prescription";
+        }
+
 
 
         model.addAttribute("doctors", iBacSiService.getAll(BacSi.class));

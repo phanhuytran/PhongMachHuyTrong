@@ -41,7 +41,7 @@ public class Appointment {
     @NotNull(message = "This field not null")
 //    @Future(message = "Đặt ngày ở tương lai")
 //    @DateTimeFormat(pattern = "dd/MM/yyyy")
-    @Pattern(regexp = "()")
+//    @Pattern(regexp = "()")
     @Temporal(TemporalType.DATE)
     private String ngayKham;
 

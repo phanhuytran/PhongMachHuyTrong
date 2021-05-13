@@ -82,7 +82,7 @@
 
             <li><a href="javascript:void(0);" class="waves-effect"><i class="fas fa-bar-chart" style="margin-right: 20px"></i> <span class="hide-menu"> Báo cáo <span style="float: right; margin-top: 3px" class="fas fa-chevron-right"></span></span></a>
                 <ul class="nav nav-second-level">
-                    <li><a href="/payment-report">Báo cáo thanh toán</a></li>
+                    <li><a href="/payment-report">Báo cáo bệnh nhân</a></li>
                     <li><a href="/income-report">Báo cáo thu nhập</a></li>
                     <li><a href="/sales-report">Báo cáo bán hàng</a></li>
                 </ul>
