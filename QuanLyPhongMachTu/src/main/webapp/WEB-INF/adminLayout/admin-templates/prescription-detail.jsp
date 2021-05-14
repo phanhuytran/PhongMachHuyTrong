@@ -3,7 +3,7 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles" %>
-
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <div id="page-wrapper">
     <div class="container-fluid">
         <div class="row bg-title">
@@ -35,11 +35,9 @@
                 </tr>
                 </tbody>
             </table>
-
-            <%--            <a href="javascript:;" class="btn btn-primary" onclick="showForm()">Thê chi tiết toa thuốc</a>--%>
-            <%--            <form:form id="medicine-form" cssStyle="display: none; margin-top: 50px" method="post" modelAttribute="detail">--%>
-            <a href="javascript:;" class="btn btn-primary" style="height: 33px" onclick="showForm()">Thêm chi tiết toa
-                thuốc</a>
+            <sec:authorize access="hasAnyRole('ROLE_ADMIN')">
+                <a href="javascript:;" class="btn btn-primary" style="height: 33px" onclick="showForm()">Thêm chi tiết toa thuốc</a>
+            </sec:authorize>
             <form:form id="medicine-form" cssStyle="display: none; margin-top: 50px; margin-left: -180px" method="post"
                        modelAttribute="detail">
                 <form:hidden path="toaThuoc" value="${prescription.id}"/>
